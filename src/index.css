@@ -2,15 +2,17 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
 }
 
 :root {
   --black: rgb(12, 11, 8);
-  --white: rgb(245, 245, 240);
-  --yellow: rgb(235, 215, 100);
+  --white: rgb(250, 250, 245);
+  --yellow: rgb(240, 230, 100);
 }
 
 body {
   min-height: 100%;
   background-color: var(--black);
+  overflow: hidden;
 }
