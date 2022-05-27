@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import styled from "styled-components";
 
 const HomeProjects = ({ hoveredOver, setHoveredOver }) => {
-  const [dims, setDims] = useState({ width: "60%", height: "40%" });
+  const [dims, setDims] = useState({});
 
   const hovered = () => {
     setHoveredOver("projects");
@@ -14,17 +14,15 @@ const HomeProjects = ({ hoveredOver, setHoveredOver }) => {
 
   useEffect(() => {
     if (hoveredOver === "projects") {
-      setDims({ width: "70%", height: "50%" });
-    } else if (hoveredOver === "about") {
-      setDims({ width: "50%", height: "30%" });
+      setDims({ width: "90%", height: "60%" });
     } else if (hoveredOver === "contact") {
-      setDims({ width: "40%", height: "50%" });
+      setDims({ width: "60%", height: "50%" });
     } else if (hoveredOver === "resume") {
       setDims({ width: "80%", height: "30%" });
     } else if (hoveredOver === "logo") {
-      setDims({ width: "30%", height: "70%" });
+      setDims({ width: "20%", height: "70%" });
     } else {
-      setDims({ width: "60%", height: "40%" });
+      setDims({ width: "80%", height: "50%" });
     }
   }, [hoveredOver]);
 

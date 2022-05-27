@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import styled from "styled-components";
 import {
-  HomeAbout,
   HomeLogo,
   HomeProjects,
   HomeContact,
@@ -29,7 +28,6 @@ const HomeMenu = () => {
     <Wrapper>
       <HomeLogo hoveredOver={hoveredOver} setHoveredOver={setHoveredOver} />
       <HomeProjects hoveredOver={hoveredOver} setHoveredOver={setHoveredOver} />
-      <HomeAbout hoveredOver={hoveredOver} setHoveredOver={setHoveredOver} />
       <HomeResume hoveredOver={hoveredOver} setHoveredOver={setHoveredOver} />
       <HomeContact hoveredOver={hoveredOver} setHoveredOver={setHoveredOver} />
     </Wrapper>
@@ -39,10 +37,9 @@ const HomeMenu = () => {
 const Wrapper = styled.div`
   position: absolute;
   top: 50px;
-  left: 50px;
-  width: calc(100% - 100px);
+  width: 100%;
   height: calc(100vh - 100px);
-  background-color: var(--main-dark);
+  background-color: var(--white);
 `;
 
 export default HomeMenu;

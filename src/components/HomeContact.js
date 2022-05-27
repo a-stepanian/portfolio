@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import styled from "styled-components";
 
 const HomeContact = ({ hoveredOver, setHoveredOver }) => {
-  const [dims, setDims] = useState({ width: "60%", height: "40%" });
+  const [styling, setStyling] = useState({});
 
   const hovered = () => {
     setHoveredOver("contact");
@@ -13,18 +13,16 @@ const HomeContact = ({ hoveredOver, setHoveredOver }) => {
   };
 
   useEffect(() => {
-    if (hoveredOver === "about") {
-      setDims({ width: "50%", height: "50%" });
-    } else if (hoveredOver === "projects") {
-      setDims({ width: "30%", height: "70%" });
+    if (hoveredOver === "projects") {
+      setStyling({ width: "45%", height: "30%", left: "45%" });
     } else if (hoveredOver === "contact") {
-      setDims({ width: "60%", height: "70%" });
+      setStyling({ width: "40%", height: "100%" });
     } else if (hoveredOver === "resume") {
-      setDims({ width: "20%", height: "50%" });
+      setStyling({ width: "30%", height: "100%" });
     } else if (hoveredOver === "logo") {
-      setDims({ width: "70%", height: "30%" });
+      setStyling({ width: "10%", height: "100%" });
     } else {
-      setDims({ width: "40%", height: "60%" });
+      setStyling({ left: "40%", width: "40%", height: "50%" });
     }
   }, [hoveredOver]);
 
@@ -32,8 +30,8 @@ const HomeContact = ({ hoveredOver, setHoveredOver }) => {
     <Wrapper
       onMouseEnter={hovered}
       style={{
-        width: dims.width,
-        height: dims.height,
+        width: styling.width,
+        height: styling.height,
       }}
       onMouseLeave={unhovered}
     >
@@ -44,9 +42,8 @@ const HomeContact = ({ hoveredOver, setHoveredOver }) => {
 
 const Wrapper = styled.div`
   position: absolute;
-  top: 0;
-  right: 0;
-  border-left: 4px solid var(--black);
+  bottom: 0;
+  left: 40%;
   background-color: var(--white);
   display: flex;
   justify-content: center;

@@ -3,13 +3,10 @@ import styled from "styled-components";
 
 const HomeLogo = ({ hoveredOver, setHoveredOver }) => {
   const [styling, setStyling] = useState({
-    width: "20%",
-    height: "20%",
-    top: "40%",
-    left: "40%",
-    border: "none",
-    boxShadow: "5px 5px 10px rgba(0, 0, 0, 0.5)",
-    transform: "translate(-10px, -10px)",
+    width: "10%",
+    height: "50%",
+    bottom: "0",
+    left: "60%",
   });
 
   const hovered = () => {
@@ -22,25 +19,23 @@ const HomeLogo = ({ hoveredOver, setHoveredOver }) => {
 
   useEffect(() => {
     if (hoveredOver === "projects") {
-      setStyling({ top: "50%", left: "50%" });
-    } else if (hoveredOver === "about") {
-      setStyling({ top: "30%", left: "30%" });
+      setStyling({ left: "90%", width: "10%" });
     } else if (hoveredOver === "contact") {
-      setStyling({ top: "50%", left: "20%" });
+      setStyling({ left: "90%", width: "10%" });
     } else if (hoveredOver === "resume") {
-      setStyling({ top: "30%", left: "60%" });
+      setStyling({ left: "90%", width: "10%" });
     } else if (hoveredOver === "logo") {
       setStyling({
-        top: "30%",
-        left: "30%",
-        width: "calc(40% + 20px)",
-        height: "calc(40% + 20px)",
+        bottom: "20%",
+        left: "20%",
+        width: "60%",
+        height: "60%",
         border: "5px solid var(--black)",
         boxShadow: "5px 5px 10px rgba(0, 0, 0, 0.5)",
         transform: "translate(-10px, -10px)",
       });
     } else {
-      setStyling({ width: "20%", height: "20%" });
+      setStyling({ width: "20%", height: "100%", bottom: "0", left: "80%" });
     }
   }, [hoveredOver]);
 
@@ -58,8 +53,7 @@ const HomeLogo = ({ hoveredOver, setHoveredOver }) => {
       }}
       onMouseLeave={unhovered}
     >
-      ALEX STEPANIAN <br />
-      WEB DEVELOPER
+      logo
     </Wrapper>
   );
 };
@@ -71,14 +65,14 @@ const Wrapper = styled.div`
   align-items: center;
   font-size: 2rem;
   font-weight: 400;
-  transition: 0.6s;
+  transition: 0.5s;
   z-index: 1;
-  width: 20%;
-  height: 20%;
   position: absolute;
-  top: 40%;
-  left: 40%;
-  border: none;
+  bottom: 0;
+  border-left: 4px solid var(--black);
+  left: 80%;
+  width: 20%;
+  height: 100%;
 `;
 
 export default HomeLogo;

@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import styled from "styled-components";
 
 const HomeResume = ({ hoveredOver, setHoveredOver }) => {
-  const [dims, setDims] = useState({ width: "60%", height: "40%" });
+  const [dims, setDims] = useState({});
 
   const hovered = () => {
     setHoveredOver("resume");
@@ -13,18 +13,16 @@ const HomeResume = ({ hoveredOver, setHoveredOver }) => {
   };
 
   useEffect(() => {
-    if (hoveredOver === "about") {
-      setDims({ width: "30%", height: "70%" });
-    } else if (hoveredOver === "projects") {
-      setDims({ width: "50%", height: "50%" });
+    if (hoveredOver === "projects") {
+      setDims({ width: "45%", height: "30%" });
     } else if (hoveredOver === "contact") {
-      setDims({ width: "20%", height: "50%" });
+      setDims({ width: "50%", height: "50%" });
     } else if (hoveredOver === "resume") {
       setDims({ width: "60%", height: "70%" });
     } else if (hoveredOver === "logo") {
-      setDims({ width: "70%", height: "30%" });
+      setDims({ width: "100%", height: "30%" });
     } else {
-      setDims({ width: "40%", height: "60%" });
+      setDims({ width: "40%", height: "50%" });
     }
   }, [hoveredOver]);
 
@@ -43,31 +41,21 @@ const HomeResume = ({ hoveredOver, setHoveredOver }) => {
 };
 
 const Wrapper = styled.div`
-  height: 19%;
-  border: 2px solid var(--black);
-  border-top: none;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  border-right: 4px solid var(--black);
   background-color: var(--white);
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 2rem;
   font-weight: 400;
-  @media (min-width: 480px) {
-    font-size: 3rem;
-    transition: 0.5s;
-    &:hover {
-      background-color: var(--main-light);
-    }
-  }
-  @media (min-width: 992px) {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 40%;
-    height: 60%;
-    border: none;
-    border-right: 4px solid var(--black);
-    transition: 0.5s;
+  font-size: 3rem;
+  transition: 0.5s;
+  width: 40%;
+  height: 50%;
+  &:hover {
+    background-color: var(--main-light);
   }
 `;
 

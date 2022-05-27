@@ -11,10 +11,7 @@ const Wrapper = styled.div`
   border: 2px solid var(--black);
   background-color: var(--main-pale);
   @media (min-width: 992px) {
-    width: calc(100% - 50px);
-    left: 50px;
     border: 3px solid var(--black);
-    border-left: none;
   }
 `;
 

@@ -1,20 +1,12 @@
-import {
-  HomeMenu,
-  MarqueeTop,
-  MarqueeLeft,
-  MarqueeRight,
-  MarqueeBottom,
-} from "../components";
+import { HomeMenu, MarqueeTop, MarqueeBottom } from "../components";
 import styled from "styled-components";
 
 const HomePage = () => {
   return (
     <Wrapper>
-      <MarqueeLeft />
-      <MarqueeBottom />
-      <MarqueeRight />
       <MarqueeTop />
       <HomeMenu />
+      <MarqueeBottom />
     </Wrapper>
   );
 };
