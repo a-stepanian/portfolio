@@ -8,6 +8,7 @@ import HomeLogo from "./HomeLogo";
 import HomeProjects from "./HomeProjects";
 import HomeResume from "./HomeResume";
 import HomeContact from "./HomeContact";
+import HomeMenuSmallScreen from "./HomeMenuSmallScreen";
 
 export {
   HomeMenu,
@@ -20,4 +21,5 @@ export {
   HomeProjects,
   HomeResume,
   HomeContact,
+  HomeMenuSmallScreen,
 };

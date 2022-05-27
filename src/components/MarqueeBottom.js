@@ -10,7 +10,7 @@ const Wrapper = styled.div`
   width: 100%;
   height: 50px;
   border: 2px solid var(--black);
-  background-color: var(--white);
+  background-color: var(--main-pale);
   @media (min-width: 992px) {
     width: calc(100% - 50px);
     right: 50px;

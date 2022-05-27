@@ -8,6 +8,8 @@ const HomeLogo = ({ hoveredOver, setHoveredOver }) => {
     top: "40%",
     left: "40%",
     border: "none",
+    boxShadow: "5px 5px 10px rgba(0, 0, 0, 0.5)",
+    transform: "translate(-10px, -10px)",
   });
 
   const hovered = () => {
@@ -29,11 +31,13 @@ const HomeLogo = ({ hoveredOver, setHoveredOver }) => {
       setStyling({ top: "30%", left: "60%" });
     } else if (hoveredOver === "logo") {
       setStyling({
-        top: "20%",
-        left: "20%",
-        width: "60%",
-        height: "60%",
-        border: "4px solid var(--black)",
+        top: "30%",
+        left: "30%",
+        width: "calc(40% + 20px)",
+        height: "calc(40% + 20px)",
+        border: "5px solid var(--black)",
+        boxShadow: "5px 5px 10px rgba(0, 0, 0, 0.5)",
+        transform: "translate(-10px, -10px)",
       });
     } else {
       setStyling({ width: "20%", height: "20%" });
@@ -49,6 +53,8 @@ const HomeLogo = ({ hoveredOver, setHoveredOver }) => {
         top: styling.top,
         left: styling.left,
         border: styling.border,
+        boxShadow: styling.boxShadow,
+        transform: styling.transform,
       }}
       onMouseLeave={unhovered}
     >
@@ -59,25 +65,20 @@ const HomeLogo = ({ hoveredOver, setHoveredOver }) => {
 };
 
 const Wrapper = styled.div`
-  height: 24%;
-  background-color: var(--yellow);
-  border: 2px solid var(--black);
-  border-top: none;
+  background-color: var(--main-light);
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 2rem;
   font-weight: 400;
-  transition: 0.5s;
-  @media (min-width: 992px) {
-    z-index: 1;
-    width: 20%;
-    height: 20%;
-    position: absolute;
-    top: 40%;
-    left: 40%;
-    border: none;
-  }
+  transition: 0.6s;
+  z-index: 1;
+  width: 20%;
+  height: 20%;
+  position: absolute;
+  top: 40%;
+  left: 40%;
+  border: none;
 `;
 
 export default HomeLogo;

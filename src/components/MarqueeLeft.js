@@ -13,7 +13,7 @@ const Wrapper = styled.div`
     height: calc(100% - 50px);
     border: 3px solid var(--black);
     border-bottom: none;
-    background-color: var(--white);
+    background-color: var(--main-pale);
     display: block;
   }
 `;

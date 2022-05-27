@@ -8,7 +8,9 @@
 :root {
   --black: rgb(12, 11, 8);
   --white: rgb(250, 250, 245);
-  --yellow: rgb(240, 230, 100);
+  --main-pale: rgb(246, 232, 215);
+  --main-light: rgb(255, 183, 96);
+  --main-dark: rgb(32, 62, 73);
 }
 
 body {

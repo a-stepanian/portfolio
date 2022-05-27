@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import styled from "styled-components";
 import {
   HomeAbout,
@@ -6,10 +6,25 @@ import {
   HomeProjects,
   HomeContact,
   HomeResume,
+  HomeMenuSmallScreen,
 } from "./index";
 
 const HomeMenu = () => {
+  const [innerWidth, setInnerWidth] = useState(window.innerWidth);
   const [hoveredOver, setHoveredOver] = useState("");
+
+  useEffect(() => {
+    const handleResize = () => {
+      setInnerWidth(window.innerWidth);
+    };
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  });
+
+  if (innerWidth < 992) {
+    return <HomeMenuSmallScreen />;
+  }
+
   return (
     <Wrapper>
       <HomeLogo hoveredOver={hoveredOver} setHoveredOver={setHoveredOver} />
@@ -24,13 +39,10 @@ const HomeMenu = () => {
 const Wrapper = styled.div`
   position: absolute;
   top: 50px;
-  width: 100%;
+  left: 50px;
+  width: calc(100% - 100px);
   height: calc(100vh - 100px);
-  background-color: var(--white);
-  @media (min-width: 992px) {
-    width: calc(100% - 100px);
-    left: 50px;
-  }
+  background-color: var(--main-dark);
 `;
 
 export default HomeMenu;

@@ -14,8 +14,8 @@ const Wrapper = styled.div`
     height: calc(100% - 50px);
     border: 3px solid var(--black);
     border-top: none;
-    background-color: var(--white);
-    display: block;
+    background-color: var(--main-pale);
+    display: flex;
   }
 `;
 
