@@ -1,7 +1,12 @@
 import styled from "styled-components";
+import ScrollingText from "./ScrollingText";
 
 const MarqueeTop = () => {
-  return <Wrapper>MarqueeTop</Wrapper>;
+  return (
+    <Wrapper>
+      <ScrollingText />
+    </Wrapper>
+  );
 };
 
 const Wrapper = styled.div`

@@ -14,13 +14,13 @@ const HomeResume = ({ hoveredOver, setHoveredOver }) => {
 
   useEffect(() => {
     if (hoveredOver === "projects") {
-      setDims({ width: "45%", height: "30%" });
+      setDims({ width: "45%", height: "40%" });
     } else if (hoveredOver === "contact") {
-      setDims({ width: "50%", height: "50%" });
+      setDims({ width: "30%", height: "65%" });
     } else if (hoveredOver === "resume") {
-      setDims({ width: "60%", height: "70%" });
+      setDims({ width: "80%", height: "70%" });
     } else if (hoveredOver === "logo") {
-      setDims({ width: "100%", height: "30%" });
+      setDims({ bottom: "30%", width: "30%", height: "30%" });
     } else {
       setDims({ width: "40%", height: "50%" });
     }
@@ -32,6 +32,7 @@ const HomeResume = ({ hoveredOver, setHoveredOver }) => {
       style={{
         width: dims.width,
         height: dims.height,
+        bottom: dims.bottom,
       }}
       onMouseLeave={unhovered}
     >
@@ -44,14 +45,13 @@ const Wrapper = styled.div`
   position: absolute;
   bottom: 0;
   left: 0;
-  border-right: 4px solid var(--black);
   background-color: var(--white);
   display: flex;
   justify-content: center;
   align-items: center;
   font-weight: 400;
   font-size: 3rem;
-  transition: 0.5s;
+  transition: 1s;
   width: 40%;
   height: 50%;
   &:hover {

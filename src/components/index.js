@@ -6,6 +6,7 @@ import HomeProjects from "./HomeProjects";
 import HomeResume from "./HomeResume";
 import HomeContact from "./HomeContact";
 import HomeMenuSmallScreen from "./HomeMenuSmallScreen";
+import ScrollingText from "./ScrollingText";
 
 export {
   HomeMenu,
@@ -16,4 +17,5 @@ export {
   HomeResume,
   HomeContact,
   HomeMenuSmallScreen,
+  ScrollingText,
 };

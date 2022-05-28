@@ -5,7 +5,6 @@ const HomeLogo = ({ hoveredOver, setHoveredOver }) => {
   const [styling, setStyling] = useState({
     width: "10%",
     height: "50%",
-    bottom: "0",
     left: "60%",
   });
 
@@ -19,23 +18,19 @@ const HomeLogo = ({ hoveredOver, setHoveredOver }) => {
 
   useEffect(() => {
     if (hoveredOver === "projects") {
-      setStyling({ left: "90%", width: "10%" });
+      setStyling({ left: "90%", width: "10%", height: "60%" });
     } else if (hoveredOver === "contact") {
-      setStyling({ left: "90%", width: "10%" });
+      setStyling({ left: "90%", width: "10%", height: "35%" });
     } else if (hoveredOver === "resume") {
       setStyling({ left: "90%", width: "10%" });
     } else if (hoveredOver === "logo") {
       setStyling({
-        bottom: "20%",
-        left: "20%",
-        width: "60%",
-        height: "60%",
-        border: "5px solid var(--black)",
-        boxShadow: "5px 5px 10px rgba(0, 0, 0, 0.5)",
-        transform: "translate(-10px, -10px)",
+        left: "30%",
+        width: "70%",
+        height: "100%",
       });
     } else {
-      setStyling({ width: "20%", height: "100%", bottom: "0", left: "80%" });
+      setStyling({ width: "20%", height: "50%", left: "80%" });
     }
   }, [hoveredOver]);
 
@@ -48,8 +43,7 @@ const HomeLogo = ({ hoveredOver, setHoveredOver }) => {
         top: styling.top,
         left: styling.left,
         border: styling.border,
-        boxShadow: styling.boxShadow,
-        transform: styling.transform,
+        bottom: styling.bottom,
       }}
       onMouseLeave={unhovered}
     >
@@ -65,14 +59,15 @@ const Wrapper = styled.div`
   align-items: center;
   font-size: 2rem;
   font-weight: 400;
-  transition: 0.5s;
+  transition: 1s;
   z-index: 1;
   position: absolute;
-  bottom: 0;
+  top: 0;
   border-left: 4px solid var(--black);
+  border-bottom: 4px solid var(--black);
   left: 80%;
   width: 20%;
-  height: 100%;
+  height: 50%;
 `;
 
 export default HomeLogo;

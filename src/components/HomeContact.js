@@ -2,7 +2,11 @@ import { useState, useEffect } from "react";
 import styled from "styled-components";
 
 const HomeContact = ({ hoveredOver, setHoveredOver }) => {
-  const [styling, setStyling] = useState({});
+  const [styling, setStyling] = useState({
+    left: "45%",
+    width: "40%",
+    height: "50%",
+  });
 
   const hovered = () => {
     setHoveredOver("contact");
@@ -14,15 +18,21 @@ const HomeContact = ({ hoveredOver, setHoveredOver }) => {
 
   useEffect(() => {
     if (hoveredOver === "projects") {
-      setStyling({ width: "45%", height: "30%", left: "45%" });
+      setStyling({ left: "45%", width: "55%", height: "40%" });
     } else if (hoveredOver === "contact") {
-      setStyling({ width: "40%", height: "100%" });
+      setStyling({ left: "30%", width: "70%", height: "65%" });
     } else if (hoveredOver === "resume") {
-      setStyling({ width: "30%", height: "100%" });
+      setStyling({ left: "80%", width: "20%", height: "50%" });
     } else if (hoveredOver === "logo") {
-      setStyling({ width: "10%", height: "100%" });
+      setStyling({
+        borderLeft: "none",
+        borderTop: "4px solid var(--black)",
+        left: "0",
+        width: "30%",
+        height: "30%",
+      });
     } else {
-      setStyling({ left: "40%", width: "40%", height: "50%" });
+      setStyling({ left: "40%", width: "60%", height: "50%" });
     }
   }, [hoveredOver]);
 
@@ -30,8 +40,11 @@ const HomeContact = ({ hoveredOver, setHoveredOver }) => {
     <Wrapper
       onMouseEnter={hovered}
       style={{
+        left: styling.left,
         width: styling.width,
         height: styling.height,
+        borderLeft: styling.borderLeft,
+        borderTop: styling.borderTop,
       }}
       onMouseLeave={unhovered}
     >
@@ -45,12 +58,13 @@ const Wrapper = styled.div`
   bottom: 0;
   left: 40%;
   background-color: var(--white);
+  border-left: 4px solid var(--black);
   display: flex;
   justify-content: center;
   align-items: center;
   font-weight: 400;
   font-size: 3rem;
-  transition: 0.5s;
+  transition: 1s;
   &:hover {
     background-color: var(--main-light);
   }

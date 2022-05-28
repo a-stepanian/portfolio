@@ -1,7 +1,12 @@
 import styled from "styled-components";
+import ScrollingText from "./ScrollingText";
 
 const MarqueeBottom = () => {
-  return <Wrapper>MarqueeBottom</Wrapper>;
+  return (
+    <Wrapper>
+      <ScrollingText />
+    </Wrapper>
+  );
 };
 
 const Wrapper = styled.div`
@@ -11,6 +16,7 @@ const Wrapper = styled.div`
   height: 50px;
   border: 2px solid var(--black);
   background-color: var(--main-pale);
+  overflow: hidden;
   @media (min-width: 992px) {
     border: 3px solid var(--black);
   }

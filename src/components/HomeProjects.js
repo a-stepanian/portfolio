@@ -16,11 +16,11 @@ const HomeProjects = ({ hoveredOver, setHoveredOver }) => {
     if (hoveredOver === "projects") {
       setDims({ width: "90%", height: "60%" });
     } else if (hoveredOver === "contact") {
-      setDims({ width: "60%", height: "50%" });
+      setDims({ width: "90%", height: "35%" });
     } else if (hoveredOver === "resume") {
-      setDims({ width: "80%", height: "30%" });
+      setDims({ width: "90%", height: "30%" });
     } else if (hoveredOver === "logo") {
-      setDims({ width: "20%", height: "70%" });
+      setDims({ width: "30%", height: "40%" });
     } else {
       setDims({ width: "80%", height: "50%" });
     }
@@ -51,7 +51,7 @@ const Wrapper = styled.div`
   align-items: center;
   font-weight: 400;
   font-size: 3rem;
-  transition: 0.5s;
+  transition: 1s;
   &:hover {
     background-color: var(--main-light);
   }
