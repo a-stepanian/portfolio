@@ -31,7 +31,6 @@ const Wrapper = styled.div`
   position: fixed;
   top: 0;
   left: 0;
-  height: 100%;
 
   nav {
     height: 5rem;
@@ -42,7 +41,7 @@ const Wrapper = styled.div`
   }
 
   .nav-open {
-    width: calc(100vw - 5rem);
+    width: calc(100vw - 6rem);
     height: 20rem;
     transition: width 0.3s, height 0.3s 0.3s;
   }

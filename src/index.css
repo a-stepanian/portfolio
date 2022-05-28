@@ -14,3 +14,33 @@
   --main-dark: rgb(32, 62, 73);
   --home-transition: 0.2s;
 }
+
+::-webkit-scrollbar {
+  -webkit-appearance: none;
+}
+
+::-webkit-scrollbar:vertical {
+  width: 0.5rem;
+}
+
+::-webkit-scrollbar:horizontal {
+  height: 0.5rem;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--black);
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--white);
+}
+
+@media (min-width: 992px) {
+  ::-webkit-scrollbar:vertical {
+      width: 1rem;
+    }
+  
+    ::-webkit-scrollbar:horizontal {
+      height: 1rem;
+    }
+} 

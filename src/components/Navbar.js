@@ -18,7 +18,9 @@ const Navbar = () => {
 };
 
 const Wrapper = styled.header`
-  position: relative;
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 5rem;
   border: 0.1rem solid var(--black);
@@ -64,6 +66,9 @@ const Wrapper = styled.header`
       a {
         color: var(--black);
         text-decoration: none;
+        &:hover {
+          text-decoration: underline;
+        }
       }
     }
 
