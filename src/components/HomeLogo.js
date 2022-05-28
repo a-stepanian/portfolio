@@ -59,7 +59,7 @@ const Wrapper = styled.div`
   align-items: center;
   font-size: 2rem;
   font-weight: 400;
-  transition: 1s;
+  transition: var(--home-transition);
   z-index: 1;
   position: absolute;
   top: 0;

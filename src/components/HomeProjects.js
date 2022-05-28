@@ -51,7 +51,7 @@ const Wrapper = styled.div`
   align-items: center;
   font-weight: 400;
   font-size: 3rem;
-  transition: 1s;
+  transition: var(--home-transition);
   &:hover {
     background-color: var(--main-light);
   }
