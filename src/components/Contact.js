@@ -1,21 +1,21 @@
 import React from "react";
 import styled from "styled-components";
 
-const Projects = () => {
+const Contact = () => {
   return (
     <Wrapper>
-      <div className="projects-section-scroll-target" />
+      <div className="contact-section-scroll-target" />
       <header>
-        <h2>PROJECTS</h2>
-        <p>1.0</p>
+        <h2>Contact</h2>
+        <p>3.0</p>
       </header>
     </Wrapper>
   );
 };
 
 const Wrapper = styled.section`
-  height: 50rem;
-  .projects-section-scroll-target {
+  height: 70rem;
+  .contact-section-scroll-target {
     height: 5rem;
     background-color: var(--black);
   }
@@ -37,4 +37,4 @@ const Wrapper = styled.section`
   }
 `;
 
-export default Projects;
+export default Contact;

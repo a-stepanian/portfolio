@@ -3,7 +3,12 @@ import styled from "styled-components";
 import { useGlobalContext } from "../context";
 
 const Sidebar = () => {
-  const { isSidebarOpen, setIsSidebarOpen } = useGlobalContext();
+  const {
+    isSidebarOpen,
+    scrollToProjectsSection,
+    scrollToExperienceSection,
+    scrollToContactSection,
+  } = useGlobalContext();
   return (
     <Wrapper>
       <nav className={`${isSidebarOpen && "nav-open"}`}>
@@ -12,15 +17,15 @@ const Sidebar = () => {
             isSidebarOpen ? "nav-links nav-links-open" : "nav-links"
           }`}
         >
-          <a href="/" onClick={() => setIsSidebarOpen(false)}>
+          <button type="button" onClick={scrollToProjectsSection}>
             Projects
-          </a>
-          <a href="/" onClick={() => setIsSidebarOpen(false)}>
-            Resume
-          </a>
-          <a href="/" onClick={() => setIsSidebarOpen(false)}>
+          </button>
+          <button type="button" onClick={scrollToExperienceSection}>
+            Experience
+          </button>
+          <button type="button" onClick={scrollToContactSection}>
             Contact
-          </a>
+          </button>
         </div>
       </nav>
     </Wrapper>
@@ -31,6 +36,7 @@ const Wrapper = styled.div`
   position: fixed;
   top: 0;
   left: 0;
+  z-index: 1;
 
   nav {
     height: 5rem;
@@ -41,8 +47,8 @@ const Wrapper = styled.div`
   }
 
   .nav-open {
-    width: calc(100vw - 6rem);
-    height: 20rem;
+    width: calc(100vw - 5rem);
+    height: 25rem;
     transition: width 0.3s, height 0.3s 0.3s;
   }
 
@@ -53,21 +59,31 @@ const Wrapper = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
-    font-size: 0.5rem;
-    transition: font-size 0.3s;
-    a {
+    button {
+      border: none;
+      background: transparent;
+      font-size: 1.2rem;
       opacity: 0;
-      transition: opacity 0.3s;
+      transition: opacity 0.3s, font-size 0.3s;
       color: var(--black);
       text-decoration: none;
+      &:hover {
+        cursor: pointer;
+        text-decoration: underline;
+      }
     }
   }
   .nav-links-open {
-    font-size: 1.2rem;
-    transition: font-size 0.3s 0.3s;
-    a {
+    button {
+      font-size: 1.5rem;
       opacity: 1;
-      transition: opacity 0.3s 0.3s;
+      transition: opacity 0.3s 0.3s, font-size 0.3s 0.3s;
+    }
+  }
+
+  @media (min-width: 480px) {
+    .nav-open {
+      width: calc(100vw - 5.5rem);
     }
   }
 

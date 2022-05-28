@@ -1,15 +1,27 @@
 import styled from "styled-components";
 import { HamburgerMenu } from "./index";
+import { useGlobalContext } from "../context";
 
 const Navbar = () => {
+  const {
+    scrollToProjectsSection,
+    scrollToExperienceSection,
+    scrollToContactSection,
+  } = useGlobalContext();
   return (
     <Wrapper>
       <div className="left-box" />
       <div className="logo">Alex Stepanian</div>
       <div className="nav-links">
-        <a href="/">Projects</a>
-        <a href="/">Resume</a>
-        <a href="/">Contact</a>
+        <button type="button" onClick={scrollToProjectsSection}>
+          Projects
+        </button>
+        <button type="button" onClick={scrollToExperienceSection}>
+          Experience
+        </button>
+        <button type="button" onClick={scrollToContactSection}>
+          Contact
+        </button>
       </div>
       <HamburgerMenu />
       <div className="right-box" />
@@ -21,6 +33,7 @@ const Wrapper = styled.header`
   position: fixed;
   top: 0;
   left: 0;
+  z-index: 1;
   width: 100%;
   height: 5rem;
   border: 0.1rem solid var(--black);
@@ -28,6 +41,7 @@ const Wrapper = styled.header`
   display: flex;
   align-items: center;
   overflow-x: hidden;
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
 
   .left-box {
     height: 100%;
@@ -59,14 +73,19 @@ const Wrapper = styled.header`
     }
 
     .nav-links {
-      margin-left: 10rem;
+      position: absolute;
+      left: calc(50vw - 10rem);
       width: 20rem;
       display: flex;
       justify-content: space-between;
-      a {
+      button {
+        border: none;
+        background: transparent;
+        font-size: 1rem;
         color: var(--black);
         text-decoration: none;
         &:hover {
+          cursor: pointer;
           text-decoration: underline;
         }
       }

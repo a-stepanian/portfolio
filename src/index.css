@@ -10,9 +10,13 @@
   --white: rgb(250, 250, 245);
   --gray: rgb(235, 235, 229);
   --main-pale: rgb(246, 232, 215);
-  --main: rgb(255, 183, 96);
+  --main: rgb(252, 217, 142);
   --main-dark: rgb(32, 62, 73);
   --home-transition: 0.2s;
+}
+
+body {
+  background-color: var(--white);
 }
 
 ::-webkit-scrollbar {
@@ -35,12 +39,3 @@
   background-color: var(--white);
 }
 
-@media (min-width: 992px) {
-  ::-webkit-scrollbar:vertical {
-      width: 1rem;
-    }
-  
-    ::-webkit-scrollbar:horizontal {
-      height: 1rem;
-    }
-} 

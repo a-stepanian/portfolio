@@ -1,21 +1,21 @@
 import React from "react";
 import styled from "styled-components";
 
-const Projects = () => {
+const Experience = () => {
   return (
     <Wrapper>
-      <div className="projects-section-scroll-target" />
+      <div className="experience-section-scroll-target" />
       <header>
-        <h2>PROJECTS</h2>
-        <p>1.0</p>
+        <h2>EXPERIENCE</h2>
+        <p>2.0</p>
       </header>
     </Wrapper>
   );
 };
 
 const Wrapper = styled.section`
-  height: 50rem;
-  .projects-section-scroll-target {
+  height: 70rem;
+  .experience-section-scroll-target {
     height: 5rem;
     background-color: var(--black);
   }
@@ -37,4 +37,4 @@ const Wrapper = styled.section`
   }
 `;
 
-export default Projects;
+export default Experience;
