@@ -78,6 +78,7 @@ const Wrapper = styled.header`
     margin-left: 1rem;
     background: transparent;
     h1 {
+      color: var(--black);
       font-size: 1.2rem;
       font-weight: 400;
       white-space: nowrap;

@@ -1,8 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { useGlobalContext } from "../context";
-import { BsLinkedin, BsGithub } from "react-icons/bs";
-import { AiTwotoneMail } from "react-icons/ai";
+import SidebarIcons from "./SidebarIcons";
 
 const Sidebar = () => {
   const {
@@ -32,25 +31,9 @@ const Sidebar = () => {
           <button type="button" onClick={scrollToContactSection}>
             Contact
           </button>
-          <div className="divider" />
-
-          <div className="icon-container">
-            <a href="/">
-              <BsLinkedin />
-            </a>
-            <a
-              href="https://github.com/a-stepanian"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <BsGithub />
-            </a>
-            <a href="/">
-              <AiTwotoneMail />
-            </a>
-          </div>
         </div>
       </nav>
+      <SidebarIcons />
     </Wrapper>
   );
 };
@@ -73,14 +56,17 @@ const Wrapper = styled.div`
     width: 2.1rem;
     border: 0.1rem solid var(--black);
     background-color: var(--main);
-    transition: width var(--hamburger) var(--hamburger), height var(--hamburger);
+    transition: width var(--hamburger) var(--hamburger), height var(--hamburger),
+      box-shadow var(--hamburger);
   }
 
   .nav-open {
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.3);
     pointer-events: auto;
     width: calc(100vw - 5rem);
     height: 25rem;
-    transition: width var(--hamburger), height var(--hamburger) var(--hamburger);
+    transition: width var(--hamburger), height var(--hamburger) var(--hamburger),
+      box-shadow var(--hamburger) var(--hamburger);
   }
 
   /* ---------------------------------- */
@@ -110,27 +96,9 @@ const Wrapper = styled.div`
     }
     .divider {
       opacity: 0;
-      width: 15rem;
+      width: 3rem;
       border-top: 0.15rem solid var(--black);
-      transition: opacity var(--hamburger);
-    }
-    .icon-container {
-      display: flex;
-      width: 15rem;
-      justify-content: space-evenly;
-      align-items: center;
-      opacity: 0;
-      transition: opacity var(--hamburger);
-      a {
-        height: 2.5rem;
-        width: 2.5rem;
-        color: var(--black);
-        transition: 0.2s;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 0.5rem;
-      }
+      transition: opacity var(--hamburger), width var(--hamburger);
     }
   }
 
@@ -145,31 +113,11 @@ const Wrapper = styled.div`
       transition: opacity var(--hamburger) var(--hamburger),
         font-size var(--hamburger) var(--hamburger);
     }
-    .icon-container {
-      transition: opacity var(--hamburger) var(--hamburger);
-      opacity: 1;
-      a:nth-of-type(1) {
-        font-size: 1.5rem;
-        &:hover {
-          font-size: 2rem;
-        }
-      }
-      a:nth-of-type(2) {
-        font-size: 1.6rem;
-        &:hover {
-          font-size: 2.2rem;
-        }
-      }
-      a:nth-of-type(3) {
-        font-size: 1.7rem;
-        &:hover {
-          font-size: 2.3rem;
-        }
-      }
-    }
     .divider {
-      transition: opacity var(--hamburger) var(--hamburger);
+      transition: opacity var(--hamburger) var(--hamburger),
+        width var(--hamburger) var(--hamburger);
       opacity: 1;
+      width: 12rem;
     }
   }
 

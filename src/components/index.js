@@ -7,6 +7,7 @@ import Experience from "./Experience";
 import Marquee from "./Marquee";
 import Contact from "./Contact";
 import IndividualProject from "./IndividualProject";
+import SidebarIcons from "./SidebarIcons";
 
 export {
   Navbar,
@@ -18,4 +19,5 @@ export {
   Marquee,
   Contact,
   IndividualProject,
+  SidebarIcons,
 };

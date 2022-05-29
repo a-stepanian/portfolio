@@ -3,7 +3,7 @@ import styled from "styled-components";
 const IndividualProject = ({ site }) => {
   return (
     <Wrapper>
-      <a href={site.url} target="_blank" rel="noreferrer" key={site.id}>
+      <a href={site.url} target="_blank" rel="noreferrer">
         <img src={site.thumbnail} alt="" />
       </a>
     </Wrapper>

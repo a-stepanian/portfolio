@@ -13,7 +13,7 @@ const Projects = () => {
       </header>
       <div className="project-wrapper">
         {data.map((site) => {
-          return <IndividualProject site={site} />;
+          return <IndividualProject key={site.id} site={site} />;
         })}
       </div>
     </Wrapper>
