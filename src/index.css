@@ -54,3 +54,10 @@ body {
       height: 1rem;
     }
 }
+
+/* This prevents the double click link bug on ios */
+@media(hover: hover) and (pointer: fine) {
+  .the_line_thumb:hover img {
+    filter: brightness(40%);
+  }
+}
