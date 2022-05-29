@@ -47,7 +47,9 @@ const Wrapper = styled.button`
     height: 0.15rem;
     border-radius: 0.1rem;
     background-color: var(--black);
-    transition: top 0.3s 0.3s, transform 0.3s, width 0.3s 0.3s, left 0.3s 0.3s;
+    transition: top var(--hamburger) var(--hamburger),
+      transform var(--hamburger), width var(--hamburger) var(--hamburger),
+      left var(--hamburger) var(--hamburger);
   }
 
   /**/
@@ -64,17 +66,19 @@ const Wrapper = styled.button`
   .open-top {
     top: 2.3rem;
     transform: rotate(-45deg);
-    transition: top 0.3s, transform 0.3s 0.3s;
+    transition: top var(--hamburger),
+      transform var(--hamburger) var(--hamburger);
   }
   .open-middle {
     width: 0;
     left: 2.3rem;
-    transition: width 0.1s, left 0.1s;
+    transition: width var(--hamburger), left var(--hamburger);
   }
   .open-bottom {
     top: 2.3rem;
     transform: rotate(-135deg);
-    transition: top 0.3s, transform 0.3s 0.3s;
+    transition: top var(--hamburger),
+      transform var(--hamburger) var(--hamburger);
   }
 
   @media (min-width: 992px) {

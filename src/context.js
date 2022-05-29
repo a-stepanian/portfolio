@@ -10,7 +10,7 @@ const AppProvider = ({ children }) => {
     if (isSidebarOpen) {
       setTimeout(() => {
         target.scrollIntoView({ behavior: "smooth", block: "start" });
-      }, 400);
+      }, 600);
     } else {
       target.scrollIntoView({ behavior: "smooth", block: "start" });
     }
@@ -22,7 +22,7 @@ const AppProvider = ({ children }) => {
     if (isSidebarOpen) {
       setTimeout(() => {
         target.scrollIntoView({ behavior: "smooth", block: "start" });
-      }, 400);
+      }, 600);
     } else {
       target.scrollIntoView({ behavior: "smooth", block: "start" });
     }
@@ -34,7 +34,7 @@ const AppProvider = ({ children }) => {
     if (isSidebarOpen) {
       setTimeout(() => {
         target.scrollIntoView({ behavior: "smooth", block: "start" });
-      }, 400);
+      }, 600);
     } else {
       target.scrollIntoView({ behavior: "smooth", block: "start" });
     }

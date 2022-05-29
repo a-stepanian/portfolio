@@ -11,6 +11,7 @@ const Sidebar = () => {
     scrollToExperienceSection,
     scrollToContactSection,
   } = useGlobalContext();
+
   return (
     <Wrapper>
       <nav className={`${isSidebarOpen && "nav-open"}`}>
@@ -60,19 +61,32 @@ const Wrapper = styled.div`
   left: 0;
   z-index: 1;
 
+  /* ---------------------------------- */
+  /* ORANGE NAV CONTAINER STYLING WHEN  */
+  /* CLOSED AND OPEN                    */
+  /* ---------------------------------- */
+
   nav {
+    user-select: none;
+    pointer-events: none;
     height: 5rem;
     width: 2.1rem;
     border: 0.1rem solid var(--black);
     background-color: var(--main);
-    transition: width 0.3s 0.3s, height 0.3s;
+    transition: width var(--hamburger) var(--hamburger), height var(--hamburger);
   }
 
   .nav-open {
+    pointer-events: auto;
     width: calc(100vw - 5rem);
-    height: 100vh;
-    transition: width 0.3s, height 0.3s 0.3s;
+    height: 25rem;
+    transition: width var(--hamburger), height var(--hamburger) var(--hamburger);
   }
+
+  /* ---------------------------------- */
+  /* STYLING INSIDE THE NAV CONTAINER   */
+  /* WHEN THE SIDEBAR IS CLOSED         */
+  /* ---------------------------------- */
 
   .nav-links {
     width: 100%;
@@ -84,9 +98,9 @@ const Wrapper = styled.div`
     button {
       border: none;
       background: transparent;
-      font-size: 1.2rem;
+      font-size: 0.5rem;
       opacity: 0;
-      transition: opacity 0.3s, font-size 0.3s;
+      transition: opacity var(--hamburger), font-size var(--hamburger);
       color: var(--black);
       text-decoration: none;
       &:hover {
@@ -94,65 +108,74 @@ const Wrapper = styled.div`
         text-decoration: underline;
       }
     }
+    .divider {
+      opacity: 0;
+      width: 15rem;
+      border-top: 0.15rem solid var(--black);
+      transition: opacity var(--hamburger);
+    }
+    .icon-container {
+      display: flex;
+      width: 15rem;
+      justify-content: space-evenly;
+      align-items: center;
+      opacity: 0;
+      transition: opacity var(--hamburger);
+      a {
+        height: 2.5rem;
+        width: 2.5rem;
+        color: var(--black);
+        transition: 0.2s;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.5rem;
+      }
+    }
   }
+
+  /* ---------------------------------- */
+  /* STYLING WHEN THE SIDEBAR IS OPEN   */
+  /* ---------------------------------- */
+
   .nav-links-open {
     button {
       font-size: 1.5rem;
       opacity: 1;
-      transition: opacity 0.3s 0.3s, font-size 0.3s 0.3s;
+      transition: opacity var(--hamburger) var(--hamburger),
+        font-size var(--hamburger) var(--hamburger);
     }
     .icon-container {
-      transition: opacity 0.3s 0.3s;
+      transition: opacity var(--hamburger) var(--hamburger);
       opacity: 1;
-    }
-    .divider {
-      transition: opacity 0.3s 0.3s;
-      opacity: 1;
-    }
-  }
-
-  .divider {
-    opacity: 0;
-    width: 15rem;
-    border-top: 0.15rem solid var(--black);
-    transition: opacity 0.3s;
-  }
-
-  .icon-container {
-    display: flex;
-    width: 15rem;
-    justify-content: space-evenly;
-    align-items: center;
-    opacity: 0;
-    transition: opacity 0.3s;
-    a {
-      height: 2.5rem;
-      width: 2.5rem;
-      color: var(--black);
-      transition: 0.2s;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      &:nth-of-type(1) {
+      a:nth-of-type(1) {
         font-size: 1.5rem;
         &:hover {
           font-size: 2rem;
         }
       }
-      &:nth-of-type(2) {
+      a:nth-of-type(2) {
         font-size: 1.6rem;
         &:hover {
           font-size: 2.2rem;
         }
       }
-      &:nth-of-type(3) {
+      a:nth-of-type(3) {
         font-size: 1.7rem;
         &:hover {
           font-size: 2.3rem;
         }
       }
     }
+    .divider {
+      transition: opacity var(--hamburger) var(--hamburger);
+      opacity: 1;
+    }
   }
+
+  /* ---------------------------------- */
+  /* MEDIA QUERIES                      */
+  /* ---------------------------------- */
 
   @media (min-width: 480px) {
     .nav-open {
