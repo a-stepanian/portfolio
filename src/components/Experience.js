@@ -29,6 +29,8 @@ const Wrapper = styled.section`
     line-height: 2rem;
     background-color: var(--black);
     color: var(--white);
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.3);
+
     h2,
     p {
       font-size: 1rem;

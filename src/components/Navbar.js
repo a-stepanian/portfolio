@@ -1,6 +1,8 @@
 import styled from "styled-components";
 import { HamburgerMenu } from "./index";
 import { useGlobalContext } from "../context";
+import { BsLinkedin, BsGithub } from "react-icons/bs";
+import { AiTwotoneMail } from "react-icons/ai";
 
 const Navbar = () => {
   const {
@@ -8,10 +10,17 @@ const Navbar = () => {
     scrollToExperienceSection,
     scrollToContactSection,
   } = useGlobalContext();
+
   return (
     <Wrapper>
       <div className="left-box" />
-      <div className="logo">Alex Stepanian</div>
+      <button
+        type="button"
+        className="logo"
+        onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+      >
+        <h1>Alex Stepanian</h1>
+      </button>
       <div className="nav-links">
         <button type="button" onClick={scrollToProjectsSection}>
           Projects
@@ -24,7 +33,21 @@ const Navbar = () => {
         </button>
       </div>
       <HamburgerMenu />
-      <div className="right-box" />
+      <div className="right-box">
+        <a href="/">
+          <BsLinkedin />
+        </a>
+        <a
+          href="https://github.com/a-stepanian"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <BsGithub />
+        </a>
+        <a href="/">
+          <AiTwotoneMail />
+        </a>
+      </div>
     </Wrapper>
   );
 };
@@ -41,7 +64,7 @@ const Wrapper = styled.header`
   display: flex;
   align-items: center;
   overflow-x: hidden;
-  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
 
   .left-box {
     height: 100%;
@@ -51,10 +74,17 @@ const Wrapper = styled.header`
   }
 
   .logo {
+    border: none;
     margin-left: 1rem;
-    font-size: 1.2rem;
-    font-weight: 400;
-    white-space: nowrap;
+    background: transparent;
+    h1 {
+      font-size: 1.2rem;
+      font-weight: 400;
+      white-space: nowrap;
+      &:hover {
+        cursor: pointer;
+      }
+    }
   }
 
   .nav-links {
@@ -79,6 +109,7 @@ const Wrapper = styled.header`
       display: flex;
       justify-content: space-between;
       button {
+        padding: 0.5rem;
         border: none;
         background: transparent;
         font-size: 1rem;
@@ -92,13 +123,42 @@ const Wrapper = styled.header`
     }
 
     .right-box {
-      display: block;
+      display: flex;
       position: absolute;
       right: 0;
       height: 100%;
       width: 15rem;
       border-left: 0.15rem solid var(--black);
       background-color: var(--main);
+      justify-content: space-evenly;
+      align-items: center;
+      a {
+        height: 2.5rem;
+        width: 2.5rem;
+        color: var(--black);
+        transition: 0.2s;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &:nth-of-type(1) {
+          font-size: 1.5rem;
+          &:hover {
+            font-size: 2rem;
+          }
+        }
+        &:nth-of-type(2) {
+          font-size: 1.6rem;
+          &:hover {
+            font-size: 2.2rem;
+          }
+        }
+        &:nth-of-type(3) {
+          font-size: 1.7rem;
+          &:hover {
+            font-size: 2.3rem;
+          }
+        }
+      }
     }
   }
 `;

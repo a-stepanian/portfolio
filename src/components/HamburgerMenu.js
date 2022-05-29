@@ -44,7 +44,8 @@ const Wrapper = styled.button`
     position: absolute;
     left: 1.4rem;
     width: 2rem;
-    height: 0.1rem;
+    height: 0.15rem;
+    border-radius: 0.1rem;
     background-color: var(--black);
     transition: top 0.3s 0.3s, transform 0.3s, width 0.3s 0.3s, left 0.3s 0.3s;
   }
@@ -68,7 +69,7 @@ const Wrapper = styled.button`
   .open-middle {
     width: 0;
     left: 2.3rem;
-    transition: width 0.3s, left 0.3s;
+    transition: width 0.1s, left 0.1s;
   }
   .open-bottom {
     top: 2.3rem;

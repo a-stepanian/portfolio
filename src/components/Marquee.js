@@ -14,13 +14,12 @@ const Marquee = () => {
 const Wrapper = styled.div`
   white-space: nowrap;
   position: absolute;
-  line-height: 10rem;
+  top: calc(50vh - 10rem);
   left: 0;
-  color: var(--white);
-  background-color: rgba(252, 217, 142, 0.2);
-  font-size: 1.5rem;
+  color: var(--black);
+  font-size: 10rem;
   font-weight: 300;
-  text-shadow: 0rem 0.15rem 0.1rem var(--main);
+  text-shadow: 0.3rem 0.8rem 0.1rem var(--main-dark);
   animation: marquee 100s linear forwards;
 
   @keyframes marquee {

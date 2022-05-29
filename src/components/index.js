@@ -6,6 +6,7 @@ import Hero from "./Hero";
 import Experience from "./Experience";
 import Marquee from "./Marquee";
 import Contact from "./Contact";
+import IndividualProject from "./IndividualProject";
 
 export {
   Navbar,
@@ -16,4 +17,5 @@ export {
   Experience,
   Marquee,
   Contact,
+  IndividualProject,
 };
