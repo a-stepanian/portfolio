@@ -42,7 +42,7 @@ const Wrapper = styled.div`
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 1;
+  z-index: 2;
 
   /* ---------------------------------- */
   /* ORANGE NAV CONTAINER STYLING WHEN  */
@@ -54,19 +54,35 @@ const Wrapper = styled.div`
     pointer-events: none;
     height: 5rem;
     width: 2.1rem;
-    border: 0.1rem solid var(--black);
+    border: var(--small-border);
     background-color: var(--main);
     transition: width var(--hamburger) var(--hamburger), height var(--hamburger),
       box-shadow var(--hamburger);
+    &::before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      content: "";
+      margin-top: 5rem;
+      height: 100vh;
+      width: 100vw;
+      z-index: -1;
+      background-color: transparent;
+      transition: background-color var(--hamburger);
+    }
   }
 
   .nav-open {
     box-shadow: 0 3px 3px rgba(0, 0, 0, 0.3);
     pointer-events: auto;
     width: calc(100vw - 5rem);
-    height: 25rem;
+    height: 20rem;
     transition: width var(--hamburger), height var(--hamburger) var(--hamburger),
       box-shadow var(--hamburger) var(--hamburger);
+    &::before {
+      background-color: var(--dark-cover);
+      transition: background-color var(--hamburger) var(--hamburger);
+    }
   }
 
   /* ---------------------------------- */
@@ -89,15 +105,11 @@ const Wrapper = styled.div`
       transition: opacity var(--hamburger), font-size var(--hamburger);
       color: var(--black);
       text-decoration: none;
-      &:hover {
-        cursor: pointer;
-        text-decoration: underline;
-      }
     }
     .divider {
       opacity: 0;
-      width: 3rem;
-      border-top: 0.15rem solid var(--black);
+      width: 0;
+      border-top: var(--small-border);
       transition: opacity var(--hamburger), width var(--hamburger);
     }
   }
@@ -117,7 +129,7 @@ const Wrapper = styled.div`
       transition: opacity var(--hamburger) var(--hamburger),
         width var(--hamburger) var(--hamburger);
       opacity: 1;
-      width: 12rem;
+      width: 100%;
     }
   }
 
@@ -126,8 +138,14 @@ const Wrapper = styled.div`
   /* ---------------------------------- */
 
   @media (min-width: 480px) {
+    .nav-links {
+      button:hover {
+        cursor: pointer;
+        text-decoration: underline;
+      }
+    }
     .nav-open {
-      width: calc(100vw - 5.5rem);
+      width: calc(100vw - 6rem);
     }
   }
 

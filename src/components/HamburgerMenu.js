@@ -34,7 +34,7 @@ const Wrapper = styled.button`
   width: 5rem;
   height: 100%;
   border: none;
-  border-left: 0.1rem solid var(--black);
+  border-left: var(--small-border);
   &:hover {
     cursor: pointer;
     background-color: var(--gray);

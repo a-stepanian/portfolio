@@ -59,17 +59,16 @@ const Wrapper = styled.header`
   z-index: 1;
   width: 100%;
   height: 5rem;
-  border: 0.1rem solid var(--black);
+  border: var(--small-border);
   background-color: var(--white);
   display: flex;
   align-items: center;
   overflow-x: hidden;
-  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
 
   .left-box {
     height: 100%;
-    width: 2rem;
-    border-right: 0.1rem solid var(--black);
+    width: 1.9rem;
+    border-right: var(--small-border);
     background-color: var(--main);
   }
 
@@ -80,11 +79,8 @@ const Wrapper = styled.header`
     h1 {
       color: var(--black);
       font-size: 1.2rem;
-      font-weight: 400;
+      font-weight: 500;
       white-space: nowrap;
-      &:hover {
-        cursor: pointer;
-      }
     }
   }
 
@@ -97,10 +93,19 @@ const Wrapper = styled.header`
   }
 
   @media (min-width: 992px) {
-    border: 0.15rem solid var(--black);
+    border: var(--large-border);
 
     .left-box {
-      border-right: 0.15rem solid var(--black);
+      width: 2rem;
+      border-right: var(--large-border);
+    }
+
+    @media (min-width: 480px) {
+      .logo {
+        h1:hover {
+          cursor: pointer;
+        }
+      }
     }
 
     .nav-links {
@@ -114,6 +119,7 @@ const Wrapper = styled.header`
         border: none;
         background: transparent;
         font-size: 1rem;
+        font-weight: 500;
         color: var(--black);
         text-decoration: none;
         &:hover {
@@ -129,7 +135,7 @@ const Wrapper = styled.header`
       right: 0;
       height: 100%;
       width: 15rem;
-      border-left: 0.15rem solid var(--black);
+      border-left: var(--large-border);
       background-color: var(--main);
       justify-content: space-evenly;
       align-items: center;

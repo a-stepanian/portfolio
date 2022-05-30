@@ -41,8 +41,8 @@ const Wrapper = styled.div`
     right: -5rem;
     width: 5rem;
     height: 0;
-    border-bottom: 0.1rem solid var(--black);
-    border-right: 0.1rem solid var(--black);
+    border-bottom: var(--small-border);
+    border-right: var(--small-border);
     background-color: var(--white);
     display: flex;
     flex-direction: column;
@@ -69,7 +69,7 @@ const Wrapper = styled.div`
   }
 
   .icon-container-open {
-    height: 20rem;
+    height: 15rem;
     transition: height var(--hamburger) var(--hamburger),
       opacity 0.01s var(--hamburger),
       box-shadow var(--hamburger) var(--hamburger);

@@ -55,8 +55,8 @@ const data = [
       "node.js",
       "express.js",
     ],
-    url: "link",
-    thumbnail: "pic",
+    url: "https://evening-shore-85582.herokuapp.com/",
+    thumbnail: "bookshelf.png",
     learnings: "learned alot",
   },
 ];

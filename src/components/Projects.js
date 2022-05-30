@@ -36,7 +36,7 @@ const Wrapper = styled.section`
     line-height: 2rem;
     background-color: var(--black);
     color: var(--white);
-
+    z-index: 1;
     h2,
     p {
       font-size: 1rem;
@@ -45,9 +45,10 @@ const Wrapper = styled.section`
   }
 
   .project-wrapper {
-    padding: 10rem 5%;
+    padding: 5rem 5%;
     display: grid;
-    grid-gap: 2rem;
+    grid-gap: 5rem;
+    justify-items: center;
   }
 
   @media (min-width: 1200px) {

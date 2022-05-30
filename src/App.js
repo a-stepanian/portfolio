@@ -22,9 +22,11 @@ function App() {
 }
 
 const Wrapper = styled.div`
-  border-right: 0.1rem solid var(--black);
+  border-left: var(--small-border);
+  border-right: var(--small-border);
   @media (min-width: 992px) {
-    border-right: 0.15rem solid var(--black);
+    border-left: var(--large-border);
+    border-right: var(--large-border);
   }
 `;
 

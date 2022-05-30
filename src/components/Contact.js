@@ -20,7 +20,6 @@ const Wrapper = styled.section`
     background-color: var(--black);
   }
   header {
-    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.3);
     scroll-margin-top: 5rem;
     display: flex;
     justify-content: space-between;
