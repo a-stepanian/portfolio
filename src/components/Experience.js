@@ -14,18 +14,18 @@ const Experience = () => {
 };
 
 const Wrapper = styled.section`
-  height: 70rem;
+  height: 150rem;
+
   .experience-section-scroll-target {
     height: 5rem;
     background-color: var(--black);
   }
   header {
-    scroll-margin-top: 5rem;
-    display: flex;
-    justify-content: space-between;
-    padding: 0 0.3rem;
     position: sticky;
     top: 5rem;
+    padding: 0 0.3rem;
+    display: flex;
+    justify-content: space-between;
     line-height: 2rem;
     background-color: var(--black);
     color: var(--white);

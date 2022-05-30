@@ -24,7 +24,7 @@ const Wrapper = styled.section`
   display: flex;
   justify-content: center;
   overflow: hidden;
-  background: linear-gradient(var(--white), var(--main-pale));
+  background: linear-gradient(var(--white), var(--main));
   img {
     width: 100%;
     height: 100%;

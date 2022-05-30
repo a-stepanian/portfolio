@@ -8,6 +8,7 @@ import Marquee from "./Marquee";
 import Contact from "./Contact";
 import IndividualProject from "./IndividualProject";
 import SidebarIcons from "./SidebarIcons";
+import InfoToggleButton from "./InfoToggleButton";
 
 export {
   Navbar,
@@ -20,4 +21,5 @@ export {
   Contact,
   IndividualProject,
   SidebarIcons,
+  InfoToggleButton,
 };

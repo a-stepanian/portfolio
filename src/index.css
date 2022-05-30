@@ -9,11 +9,15 @@
   --black: rgb(12, 11, 8);
   --white: rgb(250, 250, 245);
   --gray: rgb(235, 235, 229);
+  --dark-gray: rgb(78, 85, 75);
   --main-pale: rgb(251, 218, 178);
-  --dark-cover: rgba(17, 24, 14, 0.8);
-  --main: rgb(190, 249, 167);
-  --main-dark: rgb(218, 180, 98);
+  --dark-cover: rgba(17, 24, 14, 0.9);
+  --main: rgb(221, 255, 208);
+  --main-dark: rgba(21, 36, 15, 0.2);
+
   --hamburger: 0.5s;
+  --info: 0.5s;
+
   --small-border: 0.2rem solid var(--black);
   --large-border: 0.25rem solid var(--black);
 }

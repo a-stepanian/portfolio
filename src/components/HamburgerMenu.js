@@ -52,7 +52,6 @@ const Wrapper = styled.button`
       left var(--hamburger) var(--hamburger);
   }
 
-  /**/
   .top {
     top: 1.7rem;
   }
