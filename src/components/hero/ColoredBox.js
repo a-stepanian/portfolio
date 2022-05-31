@@ -14,9 +14,9 @@ const Wrapper = styled.div`
   width: 2.1rem;
   border: var(--small-border);
   background-color: var(--main);
-  animation: go-around-perimeter var(--hero) forwards;
+  animation: go-around-perimeter-small var(--hero) forwards;
 
-  @keyframes go-around-perimeter {
+  @keyframes go-around-perimeter-small {
     0% {
       top: 0;
       left: 0;
@@ -28,12 +28,12 @@ const Wrapper = styled.div`
     }
     50% {
       top: calc(100% - 5rem);
-      left: calc(100vw - 6.2rem);
+      left: calc(100vw - 5.2rem);
       width: 5.2rem;
     }
     75% {
       top: 0;
-      left: calc(100vw - 6.2rem);
+      left: calc(100vw - 5.2rem);
       width: 5.2rem;
     }
     99% {
@@ -44,6 +44,41 @@ const Wrapper = styled.div`
       left: 0;
       width: 2.1rem;
       opacity: 0;
+    }
+  }
+
+  @media (min-width: 480px) {
+    animation: go-around-perimeter-large var(--hero) forwards;
+
+    @keyframes go-around-perimeter-large {
+      0% {
+        top: 0;
+        left: 0;
+      }
+      25% {
+        top: calc(100% - 5rem);
+        left: 0;
+        width: 2.1rem;
+      }
+      50% {
+        top: calc(100% - 5rem);
+        left: calc(100vw - 6.2rem);
+        width: 5.2rem;
+      }
+      75% {
+        top: 0;
+        left: calc(100vw - 6.2rem);
+        width: 5.2rem;
+      }
+      99% {
+        opacity: 1;
+      }
+      100% {
+        top: 0;
+        left: 0;
+        width: 2.1rem;
+        opacity: 0;
+      }
     }
   }
 `;
