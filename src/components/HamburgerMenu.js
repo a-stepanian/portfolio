@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { useGlobalContext } from "../context";
 
 const HamburgerMenu = () => {
-  const { isSidebarOpen, setIsSidebarOpen, toggleSidebar } = useGlobalContext();
+  const { isSidebarOpen, toggleSidebar } = useGlobalContext();
 
   return (
     <Wrapper onClick={toggleSidebar}>

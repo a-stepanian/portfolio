@@ -4,8 +4,7 @@ import { useGlobalContext } from "../context";
 import SidebarIcons from "./SidebarIcons";
 
 const Sidebar = () => {
-  const { isSidebarOpen, scrollToTargetAdjusted, toggleSidebar } =
-    useGlobalContext();
+  const { isSidebarOpen, scrollToTargetAdjusted } = useGlobalContext();
 
   return (
     <Wrapper>

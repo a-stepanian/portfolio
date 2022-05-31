@@ -19,7 +19,6 @@ function App() {
       <Navbar />
       <Sidebar />
       <Hero />
-      <div className="spacer" />
       <div className="content-wrapper">
         <Projects />
         <Experience />
@@ -30,9 +29,6 @@ function App() {
 }
 
 const Wrapper = styled.div`
-  .spacer {
-    height: 5rem;
-  }
   .content-wrapper {
     border-left: var(--small-border);
     border-right: var(--small-border);
