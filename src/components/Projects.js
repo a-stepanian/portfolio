@@ -8,7 +8,7 @@ const Projects = () => {
     <Wrapper>
       <div className="projects-section-scroll-target" />
       <header>
-        <h2>PROJECTS</h2>
+        <h2>PORTFOLIO</h2>
         <p>1.0</p>
       </header>
       <div className="project-wrapper">

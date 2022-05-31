@@ -1,33 +1,54 @@
 import React from "react";
 import styled from "styled-components";
-const Marquee = () => {
+
+const Marquee = ({ name }) => {
   return (
     <Wrapper>
-      <p>
-        welcome to my portfolio. welcome to my portfolio. welcome to my
-        portfolio. welcome to my portfolio. welcome to my portfolio. welcome to
-        my portfolio. welcome to my portfolio. welcome to my portfolio.{" "}
+      <p class="marquee">
+        <span>
+          {name}-{name}-{name}-{name}-{name}-{name}-{name}-{name}-{name}-{name}-
+          {name}-{name}-{name}-{name}-{name}-{name}-{name}-{name}-{name}-{name}-
+          {name}-{name}-{name}-{name}-{name}-{name}-{name}-{name}-{name}-{name}-
+        </span>
+      </p>
+      <p class="marquee marquee2">
+        <span>
+          {name}-{name}-{name}-{name}-{name}-{name}-{name}-{name}-{name}-{name}-
+          {name}-{name}-{name}-{name}-{name}-{name}-{name}-{name}-{name}-{name}-
+          {name}-{name}-{name}-{name}-{name}-{name}-{name}-{name}-{name}-{name}-
+        </span>
       </p>
     </Wrapper>
   );
 };
 const Wrapper = styled.div`
-  white-space: nowrap;
-  position: absolute;
-  top: calc(50vh - 10rem);
-  left: 0;
-  color: var(--black);
-  font-size: 10rem;
-  font-weight: 300;
-  text-shadow: 0.3rem 0.8rem 0.1rem var(--main-dark);
-  animation: marquee 100s linear forwards;
+  .marquee {
+    margin: 0 auto;
+    white-space: nowrap;
+    overflow: hidden;
+    position: absolute;
+    color: var(--white);
+    font-size: 0.6rem;
+    font-weight: 300;
+    letter-spacing: 0.1rem;
+  }
+
+  .marquee span {
+    display: inline-block;
+    padding-left: 100%;
+    animation: marquee 20s linear infinite;
+  }
+
+  .marquee2 span {
+    animation-delay: 10s;
+  }
 
   @keyframes marquee {
     0% {
-      transform: translateX(0);
+      transform: translate(0, 0);
     }
     100% {
-      transform: translateX(-100%);
+      transform: translate(-100%, 0);
     }
   }
 `;

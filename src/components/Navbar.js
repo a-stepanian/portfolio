@@ -23,7 +23,7 @@ const Navbar = () => {
       </button>
       <div className="nav-links">
         <button type="button" onClick={scrollToProjectsSection}>
-          Projects
+          Portfolio
         </button>
         <button type="button" onClick={scrollToExperienceSection}>
           Experience

@@ -62,3 +62,44 @@ const data = [
 ];
 
 export default data;
+
+export const experience = [
+  {
+    company: "United States Gypsum Company",
+    location: "Rainier, OR",
+    title: "Engineering and Mill Manager",
+    date: "2020 - 2021",
+    description: [
+      "Manage the safety, development, productivity and engagement of 36 employees comprised of PLC Programmers, electricians, engineers, and other plant staff.",
+      "Define and implement the long-term capital strategy of the plant and execute over $4MM in project work.",
+      "Evaluate improvement efforts to improve profitability of the facility and grow the business.",
+    ],
+  },
+  {
+    company: "United States Gypsum Company",
+    location: "Chamblee, GA",
+    title: "Engineering, Production, and Supply Chain Manager",
+    date: "2017 - 2020",
+    description: [
+      "Managed the safety, development, productivity and engagement of 27 employees.",
+      "Ran trials and reformulated Dry Joint compound products to save over $300,000 annually.",
+      "Increased Dry Joint efficiency 5% YTD in 2020 over 2019 by keeping employees focused and engaged.",
+      "Strategically reduced annual maintenance material spending by 41% ($174,000) in 2018.",
+      "Reduced energy consumption by 35%, saving the facility $90,000 annually.",
+      "Installed new automation equipment to improve safety and reduce Sherwin Williams product delay by 24%.",
+    ],
+  },
+  {
+    company: "United States Gypsum Company",
+    location: "Baltimore, MD",
+    title: "Reliability and Project Engineer",
+    date: "2013 - 2017",
+    description: [
+      "Lead numerous reliability and process improvement projects throughout the plant.",
+      "Facilitated efficiency improvement projects and trained associates to lead their own projects.",
+      "Conducted training and mentored employees on problem solving techniques.",
+      "Oversaw the equipment reliability and maintenance program for a multi-departmental production facility.",
+      "Planned and executed multiple concurrent capital investment projects on time and under budget.",
+    ],
+  },
+];

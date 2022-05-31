@@ -44,7 +44,7 @@ const Wrapper = styled.button`
     position: absolute;
     left: 1.4rem;
     width: 2rem;
-    height: 0.15rem;
+    height: 0.2rem;
     border-radius: 0.1rem;
     background-color: var(--black);
     transition: top var(--hamburger) var(--hamburger),

@@ -12,13 +12,9 @@ const IndividualProject = ({ site }) => {
   };
 
   return (
-    <Wrapper>
+    <Wrapper onClick={toggleInfo}>
       <div className="img-container">
-        <img
-          src={site.thumbnail}
-          alt={`screenshot of ${site.title} website`}
-          onClick={toggleInfo}
-        />
+        <img src={site.thumbnail} alt={`screenshot of ${site.title} website`} />
         <div className={`${isInfoOpen ? "info info-open" : "info"}`}>
           <p>{site.description}</p>
           <p>{site.learnings}</p>
@@ -31,7 +27,7 @@ const IndividualProject = ({ site }) => {
           </a>
         </div>
       </div>
-      <footer onClick={toggleInfo}>
+      <footer>
         <h3>{site.title}</h3>
         <InfoToggleButton
           isInfoOpen={isInfoOpen}
@@ -95,6 +91,12 @@ const Wrapper = styled.article`
     h3 {
       font-size: 1.5rem;
       font-weight: 600;
+    }
+  }
+
+  @media (min-width: 480px) {
+    &:hover {
+      cursor: pointer;
     }
   }
 `;

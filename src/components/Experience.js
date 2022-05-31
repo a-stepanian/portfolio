@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { experience } from "../data";
 
 const Experience = () => {
   return (
@@ -9,6 +10,9 @@ const Experience = () => {
         <h2>EXPERIENCE</h2>
         <p>2.0</p>
       </header>
+      {experience.map((job, index) => {
+        return <div key={index}>{job.title}</div>;
+      })}
     </Wrapper>
   );
 };

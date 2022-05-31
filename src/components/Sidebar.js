@@ -20,7 +20,7 @@ const Sidebar = () => {
           }`}
         >
           <button type="button" onClick={scrollToProjectsSection}>
-            Projects
+            Portfolio
           </button>
           <div className="divider" />
           <button type="button" onClick={scrollToExperienceSection}>
@@ -43,6 +43,7 @@ const Wrapper = styled.div`
   top: 0;
   left: 0;
   z-index: 3;
+  display: block;
 
   /* ---------------------------------- */
   /* ORANGE NAV CONTAINER STYLING WHEN  */
