@@ -21,6 +21,9 @@ const Projects = () => {
 };
 
 const Wrapper = styled.section`
+  box-shadow: inset -10px 0 15px rgba(0, 0, 0, 0.3),
+    inset 10px 0 15px rgba(0, 0, 0, 0.3);
+
   header {
     z-index: 1;
     position: sticky;
@@ -40,9 +43,9 @@ const Wrapper = styled.section`
   }
 
   .project-wrapper {
-    padding: 5rem 5%;
+    padding: 2.5rem 5%;
     display: grid;
-    row-gap: 7rem;
+    row-gap: 5rem;
     justify-items: center;
   }
 

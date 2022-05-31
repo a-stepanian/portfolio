@@ -3,12 +3,7 @@ import styled from "styled-components";
 import { useGlobalContext } from "../context";
 
 const HamburgerMenu = () => {
-  const { isSidebarOpen, setIsSidebarOpen } = useGlobalContext();
-
-  const toggleSidebar = () => {
-    if (isSidebarOpen) setIsSidebarOpen(false);
-    if (!isSidebarOpen) setIsSidebarOpen(true);
-  };
+  const { isSidebarOpen, setIsSidebarOpen, toggleSidebar } = useGlobalContext();
 
   return (
     <Wrapper onClick={toggleSidebar}>
@@ -45,7 +40,6 @@ const Wrapper = styled.button`
     left: 1.4rem;
     width: 2rem;
     height: 0.2rem;
-    border-radius: 0.1rem;
     background-color: var(--black);
     transition: top var(--hamburger) var(--hamburger),
       transform var(--hamburger), width var(--hamburger) var(--hamburger),

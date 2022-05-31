@@ -40,7 +40,7 @@ const IndividualProject = ({ site }) => {
 
 const Wrapper = styled.article`
   position: relative;
-  background-color: rgba(221, 255, 208, 0.1);
+  background-color: rgba(221, 255, 208, 0.3);
   box-shadow: 0 2px 5px var(--main-dark);
   padding: 1rem;
   h3,
@@ -68,6 +68,8 @@ const Wrapper = styled.article`
     width: 100%;
     background-color: var(--main);
     transition: height var(--info), padding var(--info);
+    box-shadow: inset 0 3px 3px rgba(0, 0, 0, 0.1),
+      inset 3px 0 3px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     span {
       opacity: 0;

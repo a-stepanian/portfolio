@@ -4,11 +4,12 @@ import { useGlobalContext } from "../context";
 import SidebarIcons from "./SidebarIcons";
 
 const Sidebar = () => {
-  const { isSidebarOpen, scrollToTargetAdjusted } = useGlobalContext();
+  const { isSidebarOpen, scrollToTargetAdjusted, toggleSidebar } =
+    useGlobalContext();
 
   return (
     <Wrapper>
-      <nav className={`${isSidebarOpen && "nav-open"}`}>
+      <nav className={`${isSidebarOpen ? "nav-open" : null}`}>
         <div
           className={`${
             isSidebarOpen ? "nav-links nav-links-open" : "nav-links"
@@ -52,11 +53,24 @@ const Wrapper = styled.div`
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 3;
+  z-index: 6;
   display: block;
+  animation: appear var(--hero) forwards;
+
+  @keyframes appear {
+    0% {
+      opacity: 0;
+    }
+    99% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
 
   /* ---------------------------------- */
-  /* ORANGE NAV CONTAINER STYLING WHEN  */
+  /* GREEN NAV CONTAINER STYLING WHEN   */
   /* CLOSED AND OPEN                    */
   /* ---------------------------------- */
 

@@ -5,14 +5,16 @@ const AppContext = React.createContext();
 const AppProvider = ({ children }) => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
+  const toggleSidebar = () => {
+    if (isSidebarOpen) setIsSidebarOpen(false);
+    if (!isSidebarOpen) setIsSidebarOpen(true);
+  };
+
   function scrollToTargetAdjusted(targetClassName) {
     const target = document.querySelector(targetClassName);
     const headerOffset = 80;
     const targetPosition = target.getBoundingClientRect().top;
     const offsetPosition = targetPosition + window.pageYOffset - headerOffset;
-    console.log(
-      `target: ${target}, headerOffset: 80, targetPosition: ${targetPosition}, offsetPosition: ${offsetPosition}, window.pageYOffset: ${window.pageYOffset}`
-    );
     if (isSidebarOpen) {
       setTimeout(() => {
         window.scrollTo({
@@ -35,6 +37,7 @@ const AppProvider = ({ children }) => {
         isSidebarOpen,
         setIsSidebarOpen,
         scrollToTargetAdjusted,
+        toggleSidebar,
       }}
     >
       {children}

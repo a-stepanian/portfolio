@@ -1,4 +1,3 @@
-import React from "react";
 import styled from "styled-components";
 
 const Marquee = ({ name }) => {
@@ -6,16 +5,30 @@ const Marquee = ({ name }) => {
     <Wrapper>
       <p class="marquee">
         <span>
-          {name}-{name}-{name}-{name}-{name}-{name}-{name}-{name}-{name}-{name}-
-          {name}-{name}-{name}-{name}-{name}-{name}-{name}-{name}-{name}-{name}-
-          {name}-{name}-{name}-{name}-{name}-{name}-{name}-{name}-{name}-{name}-
+          &#9632; DEVELOPER PORTFOLIO &#9632; DEVELOPER PORTFOLIO &#9632;
+          DEVELOPER PORTFOLIO &#9632; DEVELOPER PORTFOLIO &#9632; DEVELOPER
+          PORTFOLIO &#9632; DEVELOPER PORTFOLIO &#9632; DEVELOPER PORTFOLIO{" "}
+          &#9632; DEVELOPER PORTFOLIO &#9632; DEVELOPER PORTFOLIO &#9632;
+          DEVELOPER PORTFOLIO &#9632; DEVELOPER PORTFOLIO &#9632; DEVELOPER
+          PORTFOLIO &#9632; DEVELOPER PORTFOLIO &#9632; DEVELOPER PORTFOLIO{" "}
+          &#9632; DEVELOPER PORTFOLIO &#9632; DEVELOPER PORTFOLIO &#9632;
+          DEVELOPER PORTFOLIO &#9632; DEVELOPER PORTFOLIO &#9632; DEVELOPER
+          PORTFOLIO &#9632; DEVELOPER PORTFOLIO &#9632; DEVELOPER PORTFOLIO{" "}
+          &#9632; DEVELOPER PORTFOLIO &#9632; DEVELOPER PORTFOLIO{" "}
         </span>
       </p>
       <p class="marquee marquee2">
         <span>
-          {name}-{name}-{name}-{name}-{name}-{name}-{name}-{name}-{name}-{name}-
-          {name}-{name}-{name}-{name}-{name}-{name}-{name}-{name}-{name}-{name}-
-          {name}-{name}-{name}-{name}-{name}-{name}-{name}-{name}-{name}-{name}-
+          &#9632; DEVELOPER PORTFOLIO &#9632; DEVELOPER PORTFOLIO &#9632;
+          DEVELOPER PORTFOLIO &#9632; DEVELOPER PORTFOLIO &#9632; DEVELOPER
+          PORTFOLIO &#9632; DEVELOPER PORTFOLIO &#9632; DEVELOPER PORTFOLIO{" "}
+          &#9632; DEVELOPER PORTFOLIO &#9632; DEVELOPER PORTFOLIO &#9632;
+          DEVELOPER PORTFOLIO &#9632; DEVELOPER PORTFOLIO &#9632; DEVELOPER
+          PORTFOLIO &#9632; DEVELOPER PORTFOLIO &#9632; DEVELOPER PORTFOLIO{" "}
+          &#9632; DEVELOPER PORTFOLIO &#9632; DEVELOPER PORTFOLIO &#9632;
+          DEVELOPER PORTFOLIO &#9632; DEVELOPER PORTFOLIO &#9632; DEVELOPER
+          PORTFOLIO &#9632; DEVELOPER PORTFOLIO &#9632; DEVELOPER PORTFOLIO{" "}
+          &#9632; DEVELOPER PORTFOLIO &#9632; DEVELOPER PORTFOLIO{" "}
         </span>
       </p>
     </Wrapper>
@@ -27,7 +40,7 @@ const Wrapper = styled.div`
     white-space: nowrap;
     overflow: hidden;
     position: absolute;
-    color: var(--white);
+    color: var(--black);
     font-size: 0.6rem;
     font-weight: 300;
     letter-spacing: 0.1rem;

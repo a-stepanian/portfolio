@@ -67,7 +67,7 @@ const Wrapper = styled.header`
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 2;
+  z-index: 5;
   width: 100%;
   height: 5rem;
   border: var(--small-border);
@@ -104,13 +104,6 @@ const Wrapper = styled.header`
   }
 
   @media (min-width: 992px) {
-    border: var(--large-border);
-
-    .left-box {
-      width: 2rem;
-      border-right: var(--large-border);
-    }
-
     @media (min-width: 480px) {
       .logo {
         h1:hover {

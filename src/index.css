@@ -17,9 +17,10 @@
 
   --hamburger: 0.5s;
   --info: 0.5s;
+  --hero: 4s;
 
   --small-border: 0.2rem solid var(--black);
-  --large-border: 0.25rem solid var(--black);
+  --large-border: 0.2rem solid var(--black);
 }
 
 body {
