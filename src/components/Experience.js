@@ -19,11 +19,6 @@ const Experience = () => {
 
 const Wrapper = styled.section`
   height: 150rem;
-
-  .experience-section-scroll-target {
-    height: 5rem;
-    background-color: var(--black);
-  }
   header {
     position: sticky;
     top: 5rem;

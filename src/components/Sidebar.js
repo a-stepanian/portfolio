@@ -4,12 +4,7 @@ import { useGlobalContext } from "../context";
 import SidebarIcons from "./SidebarIcons";
 
 const Sidebar = () => {
-  const {
-    isSidebarOpen,
-    scrollToProjectsSection,
-    scrollToExperienceSection,
-    scrollToContactSection,
-  } = useGlobalContext();
+  const { isSidebarOpen, scrollToTargetAdjusted } = useGlobalContext();
 
   return (
     <Wrapper>
@@ -19,16 +14,31 @@ const Sidebar = () => {
             isSidebarOpen ? "nav-links nav-links-open" : "nav-links"
           }`}
         >
-          <button type="button" onClick={scrollToProjectsSection}>
+          <button
+            type="button"
+            onClick={() =>
+              scrollToTargetAdjusted(".portfolio-section-scroll-target")
+            }
+          >
             Portfolio
           </button>
           <div className="divider" />
-          <button type="button" onClick={scrollToExperienceSection}>
+          <button
+            type="button"
+            onClick={() =>
+              scrollToTargetAdjusted(".experience-section-scroll-target")
+            }
+          >
             Experience
           </button>
           <div className="divider" />
 
-          <button type="button" onClick={scrollToContactSection}>
+          <button
+            type="button"
+            onClick={() =>
+              scrollToTargetAdjusted(".contact-section-scroll-target")
+            }
+          >
             Contact
           </button>
         </div>

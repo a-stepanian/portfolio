@@ -15,10 +15,6 @@ const Contact = () => {
 
 const Wrapper = styled.section`
   height: 70rem;
-  .contact-section-scroll-target {
-    height: 5rem;
-    background-color: var(--black);
-  }
   header {
     z-index: 1;
     position: sticky;

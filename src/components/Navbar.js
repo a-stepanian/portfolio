@@ -5,11 +5,7 @@ import { BsLinkedin, BsGithub } from "react-icons/bs";
 import { AiTwotoneMail } from "react-icons/ai";
 
 const Navbar = () => {
-  const {
-    scrollToProjectsSection,
-    scrollToExperienceSection,
-    scrollToContactSection,
-  } = useGlobalContext();
+  const { scrollToTargetAdjusted } = useGlobalContext();
 
   return (
     <Wrapper>
@@ -22,13 +18,28 @@ const Navbar = () => {
         <h1>Alex Stepanian</h1>
       </button>
       <div className="nav-links">
-        <button type="button" onClick={scrollToProjectsSection}>
+        <button
+          type="button"
+          onClick={() =>
+            scrollToTargetAdjusted(".portfolio-section-scroll-target")
+          }
+        >
           Portfolio
         </button>
-        <button type="button" onClick={scrollToExperienceSection}>
+        <button
+          type="button"
+          onClick={() =>
+            scrollToTargetAdjusted(".experience-section-scroll-target")
+          }
+        >
           Experience
         </button>
-        <button type="button" onClick={scrollToContactSection}>
+        <button
+          type="button"
+          onClick={() =>
+            scrollToTargetAdjusted(".contact-section-scroll-target")
+          }
+        >
           Contact
         </button>
       </div>

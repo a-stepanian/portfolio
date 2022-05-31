@@ -1,96 +1,73 @@
 import React, { useEffect } from "react";
 import styled from "styled-components";
-import Marquee from "./Marquee";
+import data from "../data";
 
 const Hero = () => {
-  useEffect(() => {
-    let timer = 0;
-    for (let i = 0; i < 5; i++) {
-      let box = document.querySelectorAll(".box")[i];
-      setTimeout(() => {
-        box.classList.add("stretch");
-      }, timer);
-      timer += 100;
-    }
-  });
-
   return (
     <Wrapper>
-      <Marquee />
-
-      <div className="box" />
-      <div className="box" />
-      <div className="box" />
-      <div className="box" />
-      <div className="box" />
+      <div className="box">
+        <img src={data[0].thumbnail} alt="" />
+      </div>
+      <div className="box">
+        <img src={data[1].thumbnail} alt="" />
+      </div>
+      <div className="box">
+        <img src={data[2].thumbnail} alt="" />
+      </div>
+      <div className="box">
+        <img src={data[3].thumbnail} alt="" />
+      </div>
+      <div className="box">
+        <img src={data[4].thumbnail} alt="" />
+      </div>
     </Wrapper>
   );
 };
 
 const Wrapper = styled.section`
   width: 100%;
-  height: 100vh;
+  height: calc(100vh - 7rem);
+  margin-top: 7rem;
   position: relative;
-  overflow: hidden;
   .box {
-    border: var(--small-border);
     position: absolute;
-    background-color: var(--white);
-    z-index: 4;
-    width: 100%;
-    height: 5rem;
-    left: -100vw;
+    border: var(--large-border);
+    overflow: hidden;
     &:nth-of-type(1) {
       top: 0;
+      left: 0;
+      height: 30%;
+      width: 70%;
     }
     &:nth-of-type(2) {
-      top: 10rem;
+      bottom: 0;
+      left: 0;
+      height: 70%;
+      width: 30%;
     }
     &:nth-of-type(3) {
-      top: 20rem;
+      top: 0;
+      right: 0;
+      height: 70%;
+      width: 30%;
     }
     &:nth-of-type(4) {
-      top: 30rem;
+      bottom: 0;
+      right: 0;
+      height: 30%;
+      width: 70%;
     }
     &:nth-of-type(5) {
-      top: 40rem;
+      top: 50%;
+      left: 50%;
+      height: 30%;
+      width: 30%;
     }
-  }
-
-  .stretch {
-    animation: stretch 1.5s ease-out forwards;
-  }
-
-  @keyframes stretch {
-    0% {
-      width: 0;
-      left: -100vw;
-    }
-    33% {
+    img {
       width: 100%;
-      left: 0;
-    }
-    50% {
-      width: 100%;
-      left: 0;
-    }
-    100% {
-      width: 0;
-      left: 100vw;
+      object-fit: cover;
     }
   }
-
-  /* styling when marquee was the only thing in the wrapper
-  position: relative;
-  margin-top: 5rem;
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  overflow: hidden;
-
-  background: linear-gradient(var(--white), var(--main));
-  */
 `;
 
 export default Hero;

@@ -6,7 +6,7 @@ import IndividualProject from "./IndividualProject";
 const Projects = () => {
   return (
     <Wrapper>
-      <div className="projects-section-scroll-target" />
+      <div className="portfolio-section-scroll-target" />
       <header>
         <h2>PORTFOLIO</h2>
         <p>1.0</p>
@@ -21,11 +21,6 @@ const Projects = () => {
 };
 
 const Wrapper = styled.section`
-  .projects-section-scroll-target {
-    height: 5rem;
-    background-color: var(--black);
-  }
-
   header {
     z-index: 1;
     position: sticky;

@@ -1,4 +1,11 @@
-import { Navbar, Sidebar, Projects, Experience, Contact } from "./components";
+import {
+  Navbar,
+  Sidebar,
+  Projects,
+  Experience,
+  Contact,
+  Hero,
+} from "./components";
 import styled from "styled-components";
 
 function App() {
@@ -6,24 +13,20 @@ function App() {
     <Wrapper>
       <Navbar />
       <Sidebar />
-      <Projects />
-      <Experience />
-      <Contact />
+      <div className="spacer" />
+      <div className="container">
+        {/* <Hero /> */}
+        <Projects />
+        <Experience />
+        <Contact />
+      </div>
     </Wrapper>
   );
 }
 
 const Wrapper = styled.div`
-  border-left: var(--small-border);
-  border-right: var(--small-border);
-
-  .invisible {
-    display: none;
-  }
-
-  useEffect(()=>{}) @media (min-width: 992px) {
-    border-left: var(--large-border);
-    border-right: var(--large-border);
+  .spacer {
+    height: 5rem;
   }
 `;
 

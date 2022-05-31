@@ -5,50 +5,36 @@ const AppContext = React.createContext();
 const AppProvider = ({ children }) => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
-  const scrollToProjectsSection = () => {
-    const target = document.querySelector(".projects-section-scroll-target");
+  function scrollToTargetAdjusted(targetClassName) {
+    const target = document.querySelector(targetClassName);
+    const headerOffset = 80;
+    const targetPosition = target.getBoundingClientRect().top;
+    const offsetPosition = targetPosition + window.pageYOffset - headerOffset;
+    console.log(
+      `target: ${target}, headerOffset: 80, targetPosition: ${targetPosition}, offsetPosition: ${offsetPosition}, window.pageYOffset: ${window.pageYOffset}`
+    );
     if (isSidebarOpen) {
       setTimeout(() => {
-        target.scrollIntoView({ behavior: "smooth", block: "start" });
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: "smooth",
+        });
       }, 600);
     } else {
-      target.scrollIntoView({ behavior: "smooth", block: "start" });
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth",
+      });
     }
     setIsSidebarOpen(false);
-  };
-
-  const scrollToExperienceSection = () => {
-    const target = document.querySelector(".experience-section-scroll-target");
-    if (isSidebarOpen) {
-      setTimeout(() => {
-        target.scrollIntoView({ behavior: "smooth", block: "start" });
-      }, 600);
-    } else {
-      target.scrollIntoView({ behavior: "smooth", block: "start" });
-    }
-    setIsSidebarOpen(false);
-  };
-
-  const scrollToContactSection = () => {
-    const target = document.querySelector(".contact-section-scroll-target");
-    if (isSidebarOpen) {
-      setTimeout(() => {
-        target.scrollIntoView({ behavior: "smooth", block: "start" });
-      }, 600);
-    } else {
-      target.scrollIntoView({ behavior: "smooth", block: "start" });
-    }
-    setIsSidebarOpen(false);
-  };
+  }
 
   return (
     <AppContext.Provider
       value={{
         isSidebarOpen,
         setIsSidebarOpen,
-        scrollToProjectsSection,
-        scrollToExperienceSection,
-        scrollToContactSection,
+        scrollToTargetAdjusted,
       }}
     >
       {children}
