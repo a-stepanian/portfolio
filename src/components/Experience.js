@@ -7,18 +7,21 @@ const Experience = () => {
     <Wrapper>
       <div className="experience-section-scroll-target" />
       <header>
-        <h2>EXPERIENCE</h2>
+        <h2>BACKGROUND</h2>
         <p>2.0</p>
       </header>
+      <h3>Work History</h3>
       {experience.map((job, index) => {
         return <div key={index}>{job.title}</div>;
       })}
+      <h3>Education</h3>
     </Wrapper>
   );
 };
 
 const Wrapper = styled.section`
   height: 150rem;
+  background-color: var(--white);
   header {
     position: sticky;
     top: 5rem;

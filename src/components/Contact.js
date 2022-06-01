@@ -14,9 +14,9 @@ const Contact = () => {
 };
 
 const Wrapper = styled.section`
-  height: 70rem;
+  height: 120vh;
   header {
-    z-index: 1;
+    z-index: 5;
     position: sticky;
     top: 5rem;
     padding: 0 0.3rem;

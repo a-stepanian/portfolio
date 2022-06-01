@@ -2,11 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 const BigBlock = () => {
-  return (
-    <Wrapper className="big-block">
-      <h1>welcome</h1>
-    </Wrapper>
-  );
+  return <Wrapper className="big-block"></Wrapper>;
 };
 
 const Wrapper = styled.div`
@@ -21,31 +17,9 @@ const Wrapper = styled.div`
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
-  h1 {
-    font-size: 0;
-    font-weight: 400;
-    color: var(--black);
-    opacity: 0;
-    animation: var(--hero-delay) h1-appear;
-  }
 
   animation: var(--hero-delay) shrink,
     go-around-perimeter-small var(--hero) forwards var(--hero-delay);
-
-  @keyframes h1-appear {
-    0% {
-      opacity: 0;
-      font-size: 0;
-    }
-    50% {
-      opacity: 1;
-      font-size: 1.5rem;
-    }
-    100% {
-      opacity: 0;
-      font-size: 0;
-    }
-  }
 
   @keyframes shrink {
     0% {

@@ -65,7 +65,7 @@ const Wrapper2 = styled.div`
 const Wrapper1 = styled.div`
   height: 100%;
   opacity: 0;
-  background: url("https://images.unsplash.com/photo-1598940603846-a1edd0ef2574?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1935&q=80");
+  background: url("xl-hero.jpg");
   background-size: cover;
   background-position: center;
   animation: appear calc(var(--hero) / 2) forwards

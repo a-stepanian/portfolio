@@ -19,37 +19,34 @@ const InfoToggleButton = ({ isInfoOpen, setIsInfoOpen }) => {
 
 const Wrapper = styled.button`
   position: relative;
-  width: 5rem;
-  height: 5rem;
+  width: 4rem;
+  height: 4rem;
   border: none;
   background-color: transparent;
-  margin: 1rem 0;
 
   .line {
     position: absolute;
-    left: 1.3rem;
-    width: 2rem;
+    right: 0rem;
+    width: 1.5rem;
     height: 0.2rem;
-    border-radius: 0.1rem;
     background-color: var(--black);
     transition: 0.5s;
   }
 
   .vertical {
-    top: 2.2rem;
+    top: 1.7rem;
     transform: rotate(90deg);
   }
   .vertical-open {
     transform: rotate(270deg);
     width: 0;
-    left: 2.2rem;
+    right: 0.75rem;
   }
 
   .horizontal {
-    top: 2.2rem;
+    top: 1.7rem;
   }
   .horizontal-open {
-    top: 2.2rem;
     transform: rotate(180deg);
   }
 

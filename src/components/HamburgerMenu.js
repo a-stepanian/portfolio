@@ -30,9 +30,10 @@ const Wrapper = styled.button`
   height: 100%;
   border: none;
   border-left: var(--small-border);
+  background-color: var(--white);
+
   &:hover {
     cursor: pointer;
-    background-color: var(--gray);
   }
 
   .line {

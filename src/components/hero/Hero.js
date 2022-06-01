@@ -15,7 +15,7 @@ const Hero = () => {
     setTimeout(() => {
       const coloredBox = document.querySelector(".big-block");
       coloredBox.classList.add("remove");
-    }, 4500);
+    }, 4100);
   });
   return (
     <Wrapper>
