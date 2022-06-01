@@ -21,7 +21,7 @@ const AppProvider = ({ children }) => {
           top: offsetPosition,
           behavior: "smooth",
         });
-      }, 600);
+      }, 500);
     } else {
       window.scrollTo({
         top: offsetPosition,

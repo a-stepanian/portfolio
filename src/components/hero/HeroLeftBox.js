@@ -12,8 +12,8 @@ const Wrapper = styled.div`
   height: 5rem;
   width: 2.1rem;
   border: var(--small-border);
-  background-color: var(--white);
-  animation: stretch-down var(--hero) forwards;
+  background-color: var(--white-opaque);
+  animation: stretch-down var(--hero) forwards var(--hero-delay);
 
   @keyframes stretch-down {
     0% {

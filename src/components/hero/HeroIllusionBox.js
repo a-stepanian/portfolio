@@ -13,7 +13,7 @@ const Wrapper = styled.div`
   height: 4.8rem;
   width: 1.7rem;
   background-color: var(--white);
-  animation: disappear var(--hero) forwards;
+  animation: disappear var(--hero) forwards var(--hero-delay);
 
   @keyframes disappear {
     0% {

@@ -10,11 +10,12 @@ const Wrapper = styled.div`
   right: 0;
   bottom: 0;
   height: 5rem;
+  opacity: 0;
   width: 5.2rem;
   border: var(--small-border);
-  background-color: var(--white);
+  background-color: var(--white-opaque);
 
-  animation: stretch-up var(--hero) forwards;
+  animation: stretch-up var(--hero) forwards var(--hero-delay);
 
   @keyframes stretch-up {
     0% {
@@ -33,7 +34,12 @@ const Wrapper = styled.div`
     }
     100% {
       height: 100%;
+      opacity: 1;
     }
+  }
+
+  @media (min-width: 992px) {
+    width: 15.2rem;
   }
 `;
 

@@ -13,7 +13,7 @@ const Wrapper = styled.div`
   width: calc(100% - 2.1rem);
   background-color: var(--white);
 
-  animation: shrink-left var(--hero) forwards;
+  animation: shrink-left var(--hero) forwards var(--hero-delay);
 
   @keyframes shrink-left {
     0% {
