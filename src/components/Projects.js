@@ -21,8 +21,8 @@ const Projects = () => {
 };
 
 const Wrapper = styled.section`
-  box-shadow: inset -10px 0 15px rgba(0, 0, 0, 0.3),
-    inset 10px 0 15px rgba(0, 0, 0, 0.3);
+  // box-shadow: inset -10px 0 15px rgba(0, 0, 0, 0.3),
+  //   inset 10px 0 15px rgba(0, 0, 0, 0.3);
 
   header {
     z-index: 1;

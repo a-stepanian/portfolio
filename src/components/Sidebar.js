@@ -29,7 +29,7 @@ const Sidebar = () => {
               scrollToTargetAdjusted(".experience-section-scroll-target")
             }
           >
-            Experience
+            Background
           </button>
           <div className="divider" />
 

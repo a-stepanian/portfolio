@@ -31,12 +31,12 @@ const IndividualProject = ({ site }) => {
           </div>
           <div className="links">
             <a href={site.url} target="_blank" rel="noreferrer">
-              <span>Visit Website</span>
-              <RiExternalLinkFill />
+              <RiExternalLinkFill className="web" />
+              <span>Website</span>
             </a>
             <a href={site.repo} target="_blank" rel="noreferrer">
-              <span>View Repo</span>
               <BsGithub />
+              <span>Git Repo</span>
             </a>
           </div>
         </div>
@@ -83,7 +83,7 @@ const Wrapper = styled.article`
     left: 0;
     height: 0;
     width: 100%;
-    padding: 0 1rem;
+    padding: 0 0.5rem;
     background-color: var(--main);
     transition: height var(--info), padding var(--info);
     box-shadow: inset 0 3px 3px rgba(0, 0, 0, 0.1),
@@ -93,7 +93,7 @@ const Wrapper = styled.article`
     flex-direction: column;
     justify-content: space-between;
     h4 {
-      font-size: 1.2rem;
+      font-size: 0.8rem;
       font-weight: 900;
     }
     .tech {
@@ -103,36 +103,44 @@ const Wrapper = styled.article`
         margin: 0.2rem;
         border: 0.1rem solid var(--black);
         background-color: gray;
-        padding: 0.2rem;
+        padding: 0 0.3rem 0.2rem;
         white-space: nowrap;
       }
     }
     .links {
       display: flex;
-      justify-content: space-between;
-      margin: 0 1rem 2rem;
+      justify-content: space-evenly;
+      margin-bottom: 1rem;
     }
     a {
+      height: 4.2rem;
+      width: 4.2rem;
       color: var(--black);
-      font-size: 2rem;
+      font-size: 1.2rem;
       display: flex;
       flex-direction: column;
       align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      .web {
+        font-size: 1.3rem;
+      }
       span {
-        font-size: 1.2rem;
+        font-size: 0.8rem;
         font-weight: 900;
       }
     }
   }
   .info-open {
     height: 100%;
-    padding: 1rem;
+    padding: 0.5rem;
     span {
       opacity: 1;
     }
   }
 
   footer {
+    margin-top: 0.8rem;
     div {
       display: flex;
       justify-content: space-between;
@@ -144,7 +152,7 @@ const Wrapper = styled.article`
       }
     }
     p {
-      padding-bottom: 0.5rem;
+      padding: 0.5rem 0;
     }
   }
 
@@ -154,6 +162,35 @@ const Wrapper = styled.article`
     }
     .info:hover {
       cursor: auto;
+    }
+    .info {
+      h4 {
+        font-size: 1rem;
+      }
+      .tech {
+        display: flex;
+        flex-wrap: wrap;
+        p {
+          padding: 0 0.3rem 0.2rem;
+          font-size: 1.1rem;
+        }
+      }
+      a {
+        color: var(--black);
+        font-size: 2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        .web {
+          font-size: 2.3rem;
+        }
+        span {
+          font-size: 1rem;
+          font-weight: 900;
+        }
+      }
     }
   }
 `;
