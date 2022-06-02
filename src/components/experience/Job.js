@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { BiCheckboxSquare } from "react-icons/bi";
 
 const Job = ({ job }) => {
-  const { company, location, stateImg, title, date, description } = job;
+  const { company, title, description } = job;
 
   return (
     <Wrapper>
@@ -17,10 +17,10 @@ const Job = ({ job }) => {
       <ul>
         {description.map((jobDuty, index) => {
           return (
-            <li key={index}>
+            <div key={index} className="duty">
               <BiCheckboxSquare className="bullet" />
-              {jobDuty}
-            </li>
+              <li>{jobDuty}</li>
+            </div>
           );
         })}
       </ul>
@@ -34,8 +34,9 @@ const Wrapper = styled.article`
     z-index: 1;
     background: var(--main);
     position: sticky;
-    top: 12.9rem;
+    top: 12.8rem;
     padding-right: 6rem;
+    padding-left: 0.3rem;
     border-bottom: 3px solid black;
     .title-company {
       height: 100%;
@@ -52,14 +53,66 @@ const Wrapper = styled.article`
       font-size: 0.7rem;
     }
   }
-
+  .duty {
+    display: flex;
+    padding: 0.3rem;
+  }
+  ul {
+    padding: 2rem 0;
+  }
   li {
+    width: 80%;
     list-style-type: none;
     font-size: 0.8rem;
   }
   .bullet {
+    width: 15%;
     font-size: 1rem;
     transform: translateY(0.15rem);
+  }
+
+  @media (min-width: 768px) {
+    .job-header {
+      height: 6.6rem;
+      z-index: 1;
+      background: var(--main);
+      position: sticky;
+      top: 12.8rem;
+      padding-right: 6rem;
+      padding-left: 0.3rem;
+      border-bottom: 3px solid black;
+      .title-company {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+      h3 {
+        margin-top: 0.5rem;
+        font-size: 0.9rem;
+        line-height: 1rem;
+      }
+      h4 {
+        font-size: 0.7rem;
+      }
+    }
+    .duty {
+      display: flex;
+      padding: 0.3rem;
+    }
+    ul {
+      padding: 2rem 0;
+    }
+    li {
+      width: 80%;
+      list-style-type: none;
+      font-size: 0.8rem;
+    }
+    .bullet {
+      width: 15%;
+      font-size: 1rem;
+      transform: translateY(0.15rem);
+    }
   }
 `;
 

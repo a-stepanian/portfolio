@@ -22,8 +22,8 @@
 
   --hamburger: 0.5s;
   --info: 0.7s;
-  --hero: 3s;
-  --hero-delay: 1s;
+  --hero: 1s;
+  --hero-delay: 0.5s;
 
   --small-border: 0.2rem solid var(--black);
   --large-border: 0.2rem solid var(--black);

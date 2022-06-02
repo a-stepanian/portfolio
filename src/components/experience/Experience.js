@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { experience } from "../../data";
-import { Job, StateCube, JobCube } from "../index";
+import { Job, StateCube } from "../index";
 
 const Experience = () => {
   return (
@@ -30,8 +30,6 @@ const Experience = () => {
 };
 
 const Wrapper = styled.section`
-  background-color: var(--main);
-
   /* BACKGROUND 2.0 BLACK STICKY BANNER*/
   .background-sticky {
     z-index: 3;
@@ -63,17 +61,22 @@ const Wrapper = styled.section`
 
   .cube-wrapper {
     height: 6rem;
-    padding-top: 0.5rem;
+    padding-top: 0.8rem;
     padding-right: 0.5rem;
     width: 100%;
     position: sticky;
-    top: 7rem;
+    top: 6.8rem;
     display: flex;
     justify-content: flex-end;
     z-index: 2;
   }
 
+  .work-history-container {
+    border: 4px solid red;
+  }
+
   .experience-container {
+    border: 4px solid orange;
     transform: translateY(-6rem);
   }
 
