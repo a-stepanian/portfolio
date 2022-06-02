@@ -13,16 +13,16 @@
   --dark-gray: rgb(78, 85, 75);
   --main-pale: rgb(251, 218, 178);
   --dark-cover: rgba(17, 24, 14, 0.9);
-  --main: rgb(207, 253, 189);
+  --main: rgb(224, 249, 214);
   --main-brighter: rgba(72, 255, 0, 1);
   --main-bright: rgb(150, 255, 108);
   --main-light: rgb(240, 254, 234);
   --main-dark: rgba(21, 36, 15, 0.2);
-  --cube: rgba(207, 253, 189, 0.8);
+  --cube: rgba(207, 253, 189, 0.85);
 
   --hamburger: 0.5s;
   --info: 0.7s;
-  --hero: 1s;
+  --hero: 3s;
   --hero-delay: 0.5s;
 
   --small-border: 0.2rem solid var(--black);

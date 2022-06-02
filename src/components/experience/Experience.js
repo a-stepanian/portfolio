@@ -1,9 +1,39 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import { experience } from "../../data";
 import { Job, StateCube } from "../index";
 
 const Experience = () => {
+  const [showState, setShowState] = useState("oregon");
+
+  // select the chamblee green info box
+  // find distance from that box to top of viewport
+  // when that distance equals a certain number, change showState state.
+
+  //on scroll event check the distance between chamblee green box and top of viewport, if it meets the requirements, change the state
+  useEffect(() => {
+    const handleScroll = () => {
+      const oregon = document.querySelectorAll(".title-company")[0];
+      const oregonDistanceFromTop = oregon.getBoundingClientRect().top;
+      if (oregonDistanceFromTop < 200 && oregonDistanceFromTop > 50) {
+        setShowState("oregon");
+      }
+      const georgia = document.querySelectorAll(".title-company")[1];
+      const georgiaDistanceFromTop = georgia.getBoundingClientRect().top;
+      if (georgiaDistanceFromTop < 200 && georgiaDistanceFromTop > 50) {
+        setShowState("georgia");
+      }
+      const maryland = document.querySelectorAll(".title-company")[2];
+      const marylandDistanceFromTop = maryland.getBoundingClientRect().top;
+      if (marylandDistanceFromTop < 200 && marylandDistanceFromTop > 50) {
+        setShowState("maryland");
+      }
+    };
+    window.addEventListener("scroll", handleScroll);
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  });
+
   return (
     <Wrapper>
       <div className="experience-section-scroll-target" />
@@ -11,19 +41,17 @@ const Experience = () => {
         <h2>BACKGROUND</h2>
         <p>2.0</p>
       </header>
+
       <section className="work-history-container">
-        <div className="cube-wrapper">
-          <StateCube />
-        </div>
-        <div className="experience-container">
+        <div className="experience-wrapper">
           {experience.map((job, index) => {
             return <Job key={index} job={job} />;
           })}
         </div>
-      </section>
-      <section className="education-container">
-        <h3>Education</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+
+        <div className="cube-wrapper">
+          <StateCube showState={showState} />
+        </div>
       </section>
     </Wrapper>
   );
@@ -48,36 +76,16 @@ const Wrapper = styled.section`
     }
   }
 
-  /* WORK HISTORY & EDUCATION HEADER STICKY BANNERS*/
-  section > h3 {
-    padding: 0 0.3rem;
-    line-height: 2rem;
-    color: var(--black);
-    background-color: var(--white);
-    font-size: 1rem;
-    font-weight: 500;
-    text-align: center;
-  }
-
-  .cube-wrapper {
-    height: 6rem;
-    padding-top: 0.8rem;
-    padding-right: 0.5rem;
-    width: 100%;
-    position: sticky;
-    top: 6.8rem;
-    display: flex;
-    justify-content: flex-end;
-    z-index: 2;
-  }
-
   .work-history-container {
-    border: 4px solid red;
-  }
+    display: flex;
 
-  .experience-container {
-    border: 4px solid orange;
-    transform: translateY(-6rem);
+    .experience-wrapper {
+      width: 100vw;
+    }
+
+    .cube-wrapper {
+      width: 0;
+    }
   }
 
   .education-container {
