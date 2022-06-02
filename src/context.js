@@ -4,6 +4,7 @@ const AppContext = React.createContext();
 
 const AppProvider = ({ children }) => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  const [stateMap, setStateMap] = useState(null);
 
   const toggleSidebar = () => {
     if (isSidebarOpen) setIsSidebarOpen(false);
@@ -38,6 +39,8 @@ const AppProvider = ({ children }) => {
         setIsSidebarOpen,
         scrollToTargetAdjusted,
         toggleSidebar,
+        stateMap,
+        setStateMap,
       }}
     >
       {children}

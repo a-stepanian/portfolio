@@ -22,7 +22,7 @@ const IndividualProject = ({ site }) => {
         />
         <div className={`${isInfoOpen ? "info info-open" : "info"}`}>
           <div>
-            <h4>Technologies:</h4>
+            <h4>Built with:</h4>
             <div className="tech">
               {site.builtWith.map((tech, index) => {
                 return <p key={index}>{tech}</p>;
@@ -43,7 +43,7 @@ const IndividualProject = ({ site }) => {
       </div>
       <footer onClick={toggleInfo}>
         <div>
-          <h3>{site.title}</h3>
+          <h3 className="project-title">{site.title}</h3>
           <InfoToggleButton
             isInfoOpen={isInfoOpen}
             setIsInfoOpen={setIsInfoOpen}
@@ -59,8 +59,8 @@ const Wrapper = styled.article`
   position: relative;
   background-color: rgba(221, 255, 208, 0.3);
   box-shadow: 0 2px 5px var(--main-dark);
+  border: 3px solid black;
   padding: 1rem;
-  h3,
   p,
   span {
     font-family: "Lato", sans-serif;
@@ -101,8 +101,8 @@ const Wrapper = styled.article`
       flex-wrap: wrap;
       p {
         margin: 0.2rem;
-        border: 0.1rem solid var(--black);
-        background-color: gray;
+        background-color: var(--black);
+        color: var(--white);
         padding: 0 0.3rem 0.2rem;
         white-space: nowrap;
       }
@@ -145,10 +145,11 @@ const Wrapper = styled.article`
       display: flex;
       justify-content: space-between;
       align-items: center;
-      h3 {
+      .project-title {
         font-family: "Bebas Neue", cursive;
         font-size: 2rem;
         font-weight: 600;
+        padding: 0;
       }
     }
     p {

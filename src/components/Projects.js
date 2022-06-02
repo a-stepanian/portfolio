@@ -11,6 +11,10 @@ const Projects = () => {
         <h2>PORTFOLIO</h2>
         <p>1.0</p>
       </header>
+      <h3>
+        Made with love, built from scratch. Check out the websites or view the
+        code in the github repositories.
+      </h3>
       <div className="project-wrapper">
         {data.map((site) => {
           return <IndividualProject key={site.id} site={site} />;
@@ -42,6 +46,10 @@ const Wrapper = styled.section`
     }
   }
 
+  h3 {
+    padding: 2.5rem 5% 0;
+  }
+
   .project-wrapper {
     padding: 2.5rem 5%;
     display: grid;
@@ -55,16 +63,10 @@ const Wrapper = styled.section`
     }
   }
 
-  @media (min-width: 768px) {
-    .project-wrapper {
-      padding: 5rem 5%;
-      grid-template-columns: 1fr 1fr;
-    }
-  }
-
   @media (min-width: 992px) {
     .project-wrapper {
-      padding: 5rem 15%;
+      grid-template-columns: 1fr 1fr;
+      column-gap: 5rem;
     }
   }
 `;

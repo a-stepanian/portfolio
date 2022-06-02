@@ -15,6 +15,8 @@ import HeroTopBox from "./hero/HeroTopBox";
 import HeroIllusionBox from "./hero/HeroIllusionBox";
 import InnerBox from "./hero/InnerBox";
 import BigBlock from "./hero/BigBlock";
+import Job from "./Job";
+import StateCube from "./StateCube";
 
 export {
   Navbar,
@@ -34,4 +36,6 @@ export {
   HeroIllusionBox,
   InnerBox,
   BigBlock,
+  Job,
+  StateCube,
 };
