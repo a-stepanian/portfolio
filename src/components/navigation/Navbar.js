@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import { HamburgerMenu } from "./index";
-import { useGlobalContext } from "../context";
+import { HamburgerMenu } from "../index";
+import { useGlobalContext } from "../../context";
 import { BsLinkedin, BsGithub } from "react-icons/bs";
 import { AiTwotoneMail } from "react-icons/ai";
 

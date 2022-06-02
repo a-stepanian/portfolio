@@ -1,13 +1,11 @@
-import Navbar from "./Navbar";
-import HamburgerMenu from "./HamburgerMenu";
-import Sidebar from "./Sidebar";
-import Projects from "./Projects";
+// navigation components
+import Navbar from "./navigation/Navbar";
+import HamburgerMenu from "./navigation/HamburgerMenu";
+import Sidebar from "./navigation/Sidebar";
+import SidebarIcons from "./navigation/SidebarIcons";
+
+// hero components
 import Hero from "./hero/Hero";
-import Experience from "./Experience";
-import Contact from "./Contact";
-import IndividualProject from "./IndividualProject";
-import SidebarIcons from "./SidebarIcons";
-import InfoToggleButton from "./InfoToggleButton";
 import HeroLeftBox from "./hero/HeroLeftBox";
 import HeroBottomBox from "./hero/HeroBottomBox";
 import HeroRightBox from "./hero/HeroRightBox";
@@ -15,19 +13,31 @@ import HeroTopBox from "./hero/HeroTopBox";
 import HeroIllusionBox from "./hero/HeroIllusionBox";
 import InnerBox from "./hero/InnerBox";
 import BigBlock from "./hero/BigBlock";
-import Job from "./Job";
-import StateCube from "./StateCube";
+
+// portfolio components
+import Projects from "./portfolio/Projects";
+import IndividualProject from "./portfolio/IndividualProject";
+import InfoToggleButton from "./portfolio/InfoToggleButton";
+
+// experience components
+import Experience from "./experience/Experience";
+import Job from "./experience/Job";
+import StateCube from "./experience/StateCube";
+import JobCube from "./experience/JobCube";
+
+// contact components
+import Contact from "./Contact";
 
 export {
   Navbar,
   HamburgerMenu,
   Sidebar,
+  SidebarIcons,
   Projects,
   Hero,
   Experience,
   Contact,
   IndividualProject,
-  SidebarIcons,
   HeroLeftBox,
   InfoToggleButton,
   HeroBottomBox,
@@ -38,4 +48,5 @@ export {
   BigBlock,
   Job,
   StateCube,
+  JobCube,
 };

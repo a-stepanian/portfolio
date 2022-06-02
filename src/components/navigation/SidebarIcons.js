@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { BsLinkedin, BsGithub } from "react-icons/bs";
 import { AiTwotoneMail } from "react-icons/ai";
-import { useGlobalContext } from "../context";
+import { useGlobalContext } from "../../context";
 
 const SidebarIcons = () => {
   const { isSidebarOpen } = useGlobalContext();

@@ -100,6 +100,7 @@ const Wrapper = styled.article`
       display: flex;
       flex-wrap: wrap;
       p {
+        font-size: 0.7rem;
         margin: 0.2rem;
         background-color: var(--black);
         color: var(--white);
@@ -154,6 +155,25 @@ const Wrapper = styled.article`
     }
     p {
       padding: 0.5rem 0;
+    }
+  }
+
+  @media (min-width: 330px) {
+    .info {
+      .tech {
+        p {
+          font-size: 0.9rem;
+        }
+      }
+    }
+  }
+  @media (min-width: 360px) {
+    .info {
+      .tech {
+        p {
+          font-size: 1rem;
+        }
+      }
     }
   }
 

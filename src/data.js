@@ -73,7 +73,7 @@ export default data;
 
 export const experience = [
   {
-    company: "United States Gypsum Company",
+    company: "United States Gypsum",
     location: "Rainier, OR",
     stateImg: "or.png",
     title: "Engineering and Mill Manager",
@@ -85,7 +85,7 @@ export const experience = [
     ],
   },
   {
-    company: "United States Gypsum Company",
+    company: "United States Gypsum",
     location: "Chamblee, GA",
     stateImg: "ga.png",
     title: "Engineering, Production, and Supply Chain Manager",
@@ -100,7 +100,7 @@ export const experience = [
     ],
   },
   {
-    company: "United States Gypsum Company",
+    company: "United States Gypsum",
     location: "Baltimore, MD",
     stateImg: "md.png",
     title: "Reliability and Project Engineer",
