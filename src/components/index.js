@@ -23,6 +23,8 @@ import InfoToggleButton from "./portfolio/InfoToggleButton";
 import Experience from "./experience/Experience";
 import Job from "./experience/Job";
 import StateCube from "./experience/StateCube";
+import BigCube from "./experience/BigCube";
+import School from "./experience/School";
 
 // contact components
 import Contact from "./Contact";
@@ -47,4 +49,6 @@ export {
   BigBlock,
   Job,
   StateCube,
+  BigCube,
+  School,
 };

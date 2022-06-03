@@ -77,6 +77,8 @@ export const experience = [
     company: "United States Gypsum",
     location: "Rainier, OR",
     stateImg: "or.png",
+    companyUrl: "https://www.usg.com/",
+    logo: "usglogobw.bmp",
     title: "Engineering and Mill Manager",
     date: "2020 - 2021",
     description: [
@@ -90,6 +92,8 @@ export const experience = [
     company: "United States Gypsum",
     location: "Chamblee, GA",
     stateImg: "ga.png",
+    companyUrl: "https://www.usg.com/",
+    logo: "usglogobw.bmp",
     title: "Engineering, Production, and Supply Chain Manager",
     date: "2017 - 2020",
     description: [
@@ -106,6 +110,8 @@ export const experience = [
     company: "United States Gypsum",
     location: "Baltimore, MD",
     stateImg: "md.png",
+    companyUrl: "https://www.usg.com/",
+    logo: "usglogobw.bmp",
     title: "Reliability and Project Engineer",
     date: "2013 - 2017",
     description: [
@@ -121,6 +127,8 @@ export const experience = [
     company: "Manitowoc",
     location: "Shady Grove, PA",
     stateImg: "md.png",
+    companyUrl: "https://www.manitowoc.com/",
+    logo: "manitowoc.bmp",
     title: "Manufacturing Engineer Intern",
     date: "2012",
     description: [
@@ -129,5 +137,69 @@ export const experience = [
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, labore.",
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, labore.",
     ],
+  },
+];
+
+export const education = [
+  {
+    id: "pennsylvania",
+    company: "The Pennsylvania State University",
+    location: "State College, PA",
+    date: "2008 - 2012",
+    major: "Industrial Engineering",
+    minor: "Six Sigma",
+    course: "",
+    instructor: "",
+    logo: "psu.png",
+    relevantCourses: [
+      {
+        title: "CMPSC 200: Programming for Engineers with MATLAB",
+        description:
+          "This course introduces basic programming concepts including algorithm development, simple data types, number representation, control structures, functions, plotting, and basic numerical analysis techniques, all in the context of science and engineering. The course enables students to develop computer programs in a scientific programming language to solve simple engineering and science problems. The basic numerical analysis techniques covered in the course include matrix operations, systems of equations, solving equations, roots, curve fitting, interpolation, numerical integration, and numerical solutions of ordinary differential equations. Students analyze engineering and science problems, develop algorithms to solve those problems, implement their algorithms in an appropriate programming language, and produce informative output in both numerical and graphical form. The general programming concepts learned in the course are commonly found in most programming languages. The problem-solving skills learned in the course can then be utilized in upper-level engineering and science courses. This course includes an exploration of the conceptual and syntactical background needed for the successful completion of practical programming assignments. The course also includes an emphasis on the actual design and implementation of computer programs necessary for solving computational problems",
+      },
+      {
+        title: "IE 330 Engineering Analytics",
+        description:
+          "The study and application of Computing, Information Technology and Analytics to Industrial Engineering. IE 330 Engineering Analytics (3) Engineering Analytics is a required course for all baccalaureate students in the Industrial Engineering major. It provides students with a quantitative background in descriptive analytics which deals with data mining, predictive analytics which deals with forecasting, and the use of Big Data in analysis. Examples of analytics will be presented in various industries including manufacturing, healthcare, and distribution. The students will learn to work in settings to make data-informed decisions from large data sets. Students taking this course should be familiar with differential and integral calculus, statistics, and basic computing.",
+      },
+      {
+        title: "IE 408 Cognitive Work Design",
+        description:
+          "Design and evaluation of cognitive work, including the human/computer interface, visual displays, software design, and automated system monitoring, with emphasis on human performance. I E 408 Cognitive Work Design (3)Cognitive Work Designis a senior level course offered in the Department of Industrial and Manufacturing Engineering. It is one of two courses which follow I E 327, Introduction to Work Design. This course focuses on the cognitive part of human factors and work design. It will be offered in fall and spring semesters. This course will enable students to design, implement, and evaluate human-computer interfaces according to principles outlined in foundational human-computer interaction readings. Students will be engaged in the active learning of design, programming, and usability concepts by way of building interfaces on the personal computer.Students taking this course should be familiar with computer programming and introduction to work design.",
+      },
+    ],
+  },
+  {
+    id: "washington",
+    company: "udemy",
+    location: "Longview, WA",
+    date: "2021 - 2022",
+    major: "",
+    minor: "",
+    course: "The Web Developer Bootcamp 2021/2022",
+    instructor: "Colt Steele",
+    logo: "udemy.png",
+  },
+  {
+    id: "washington",
+    company: "udemy",
+    location: "Longview, WA",
+    date: "2022",
+    major: "",
+    minor: "",
+    course: "The Git & Github Bootcamp",
+    instructor: "Colt Steele",
+    logo: "udemy.png",
+  },
+  {
+    id: "washington",
+    company: "udemy",
+    location: "Longview, WA",
+    date: "2022 - present",
+    major: "",
+    minor: "",
+    course: "React Tutorial and Projects Course (2022)",
+    instructor: "John Smigla",
+    logo: "udemy.png",
   },
 ];

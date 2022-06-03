@@ -19,6 +19,7 @@
   --main-light: rgb(240, 254, 234);
   --main-dark: rgba(21, 36, 15, 0.2);
   --cube: rgba(207, 253, 189, 0.95);
+  --big-cube: rgba(207, 253, 189, 0.8);
 
   --hamburger: 0.5s;
   --info: 0.7s;
@@ -29,6 +30,7 @@
   --large-border: 0.2rem solid var(--black);
 
   --cube-width: 5rem;
+  --big-cube-width: 10rem;
 }
 
 body {

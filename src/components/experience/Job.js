@@ -1,15 +1,15 @@
 import styled from "styled-components";
 
 const Job = ({ job }) => {
-  const { company, title, description, id } = job;
+  const { company, companyUrl, title, description, id, logo } = job;
 
   return (
     <Wrapper>
       <header className={`job-header ${id}`}>
         <div className="title-company">
           <h3>{title}</h3>
-          <a href="https://www.usg.com/" target="_blank" rel="noreferrer">
-            <img src="usglogobw.bmp" alt="United States Gypsum Company Logo" />
+          <a href={companyUrl} target="_blank" rel="noreferrer">
+            <img src={logo} alt={`${company} logo`} />
             <h4>{company}</h4>
           </a>
         </div>
@@ -34,7 +34,7 @@ const Wrapper = styled.article`
     height: 6.6rem;
     z-index: 1;
     background: var(--main);
-    padding-right: 6.5rem;
+    padding-right: 8.5rem;
     padding-left: 0.3rem;
     border-bottom: 3px solid black;
     .title-company {
@@ -45,12 +45,14 @@ const Wrapper = styled.article`
       justify-content: space-between;
     }
     h3 {
+      font-family: "Bebas Neue", cursive;
       margin-top: 0.5rem;
-      font-size: 0.9rem;
-      line-height: 1rem;
+      font-size: 1.3rem;
+      line-height: 1.2rem;
     }
 
     a {
+      height: 1.2rem;
       text-decoration: none;
       background-color: var(--black);
       display: flex;
@@ -63,8 +65,8 @@ const Wrapper = styled.article`
         font-size: 0.7rem;
       }
       img {
-        width: 2rem;
-        margin: 0.2rem 0.2rem;
+        height: 80%;
+        margin: 0.1rem 0.2rem;
       }
     }
   }
@@ -78,6 +80,48 @@ const Wrapper = styled.article`
         margin-left: 0.5rem;
         list-style-type: square;
         font-size: 0.8rem;
+      }
+    }
+  }
+
+  /* ------------- */
+  /* MEDIA QUERIES */
+  /* ------------- */
+
+  @media (min-width: 480px) {
+    .job-header {
+      h3 {
+        margin-top: 0.4rem;
+        font-size: 1.9rem;
+        line-height: 1.8rem;
+      }
+    }
+    ul {
+      padding: 3rem 0 5rem;
+      .duty {
+        li {
+          margin-left: 1rem;
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+
+  @media (min-width: 768px) {
+    border: var(--small-border);
+    border-right: none;
+    .job-header {
+      h3 {
+        font-size: 2.4rem;
+        line-height: 2rem;
+      }
+    }
+
+    ul {
+      .duty {
+        li {
+          font-size: 1.1rem;
+        }
       }
     }
   }

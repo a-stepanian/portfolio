@@ -1,42 +1,39 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
-import { experience } from "../../data";
-import { Job, StateCube } from "../index";
+import { experience, education } from "../../data";
+import { Job, StateCube, BigCube, School } from "../index";
 
 const Experience = () => {
-  const [showState, setShowState] = useState("");
+  const [cubeFace, setCubeFace] = useState("oregon");
 
-  // select the chamblee green info box
-  // find distance from that box to top of viewport
-  // when that distance equals a certain number, change showState state.
-
-  //on scroll event check the distance between chamblee green box and top of viewport, if it meets the requirements, change the state
   useEffect(() => {
     const handleScroll = () => {
-      const oregon = document.querySelectorAll(".title-company")[0];
+      const states = [
+        "oregon",
+        "georgia",
+        "maryland",
+        "pennsylvania",
+        "psu",
+        "washington1",
+        "washington2",
+        "washington3",
+      ];
+
+      for (let i = 0; i < 8; i++) {
+        // select job title header element
+        const jobHeader = document.querySelectorAll(".title-company")[i];
+        // get distance from the top of the viewport
+        const jobHeaderDistanceFromTop = jobHeader.getBoundingClientRect().top;
+        // when that distance is between 80 and 170px, set the cube face state from the corresponding states array.
+        if (jobHeaderDistanceFromTop < 150 && jobHeaderDistanceFromTop > 80) {
+          setCubeFace(states[i]);
+        }
+      }
+
+      //Set the state to null after scrolling above oregon section.
+      const oregon = document.querySelector(".title-company");
       const oregonDistanceFromTop = oregon.getBoundingClientRect().top;
-      if (oregonDistanceFromTop < 170 && oregonDistanceFromTop > 80) {
-        setShowState("oregon");
-      }
-      const georgia = document.querySelectorAll(".title-company")[1];
-      const georgiaDistanceFromTop = georgia.getBoundingClientRect().top;
-      if (georgiaDistanceFromTop < 170 && georgiaDistanceFromTop > 80) {
-        setShowState("georgia");
-      }
-      const maryland = document.querySelectorAll(".title-company")[2];
-      const marylandDistanceFromTop = maryland.getBoundingClientRect().top;
-      if (marylandDistanceFromTop < 170 && marylandDistanceFromTop > 80) {
-        setShowState("maryland");
-      }
-      const pennsylvania = document.querySelectorAll(".title-company")[3];
-      const pennsylvaniaDistanceFromTop =
-        pennsylvania.getBoundingClientRect().top;
-      if (
-        pennsylvaniaDistanceFromTop < 170 &&
-        pennsylvaniaDistanceFromTop > 80
-      ) {
-        setShowState("pennsylvania");
-      }
+      if (oregonDistanceFromTop > 150) setCubeFace(null);
     };
     window.addEventListener("scroll", handleScroll);
 
@@ -48,7 +45,25 @@ const Experience = () => {
       <div className="experience-section-scroll-target" />
       <header className="background-sticky">
         <h2>BACKGROUND</h2>
-        <p>2.0</p>
+        <p>{`${
+          cubeFace === "oregon"
+            ? "WORK HISTORY 2.1"
+            : cubeFace === "georgia"
+            ? "WORK HISTORY 2.2"
+            : cubeFace === "maryland"
+            ? "WORK HISTORY 2.3"
+            : cubeFace === "pennsylvania"
+            ? "WORK HISTORY 2.4"
+            : cubeFace === "psu"
+            ? "EDUCATION 3.1"
+            : cubeFace === "washington1"
+            ? "EDUCATION 3.2"
+            : cubeFace === "washington2"
+            ? "EDUCATION 3.3"
+            : cubeFace === "washington3"
+            ? "EDUCATION 3.4"
+            : "2.0"
+        }`}</p>
       </header>
       <div className="story">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit,
@@ -63,10 +78,14 @@ const Experience = () => {
           {experience.map((job, index) => {
             return <Job key={index} job={job} />;
           })}
+          {education.map((school, index) => {
+            return <School key={index} school={school} />;
+          })}
         </div>
 
         <div className="cube-wrapper">
-          <StateCube showState={showState} />
+          <StateCube cubeFace={cubeFace} />
+          <BigCube cubeFace={cubeFace} />
         </div>
       </section>
     </Wrapper>
@@ -94,13 +113,23 @@ const Wrapper = styled.section`
 
   .work-history-container {
     display: flex;
-
     .experience-wrapper {
       width: 100vw;
     }
-
     .cube-wrapper {
       width: 0;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .work-history-container {
+      flex-direction: row-reverse;
+      .experience-wrapper {
+        width: calc(100vw - 20rem);
+      }
+      .cube-wrapper {
+        width: 20rem;
+      }
     }
   }
 `;
