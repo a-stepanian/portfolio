@@ -4,7 +4,7 @@ import { experience } from "../../data";
 import { Job, StateCube } from "../index";
 
 const Experience = () => {
-  const [showState, setShowState] = useState("oregon");
+  const [showState, setShowState] = useState("");
 
   // select the chamblee green info box
   // find distance from that box to top of viewport
@@ -28,6 +28,15 @@ const Experience = () => {
       if (marylandDistanceFromTop < 170 && marylandDistanceFromTop > 80) {
         setShowState("maryland");
       }
+      const pennsylvania = document.querySelectorAll(".title-company")[3];
+      const pennsylvaniaDistanceFromTop =
+        pennsylvania.getBoundingClientRect().top;
+      if (
+        pennsylvaniaDistanceFromTop < 170 &&
+        pennsylvaniaDistanceFromTop > 80
+      ) {
+        setShowState("pennsylvania");
+      }
     };
     window.addEventListener("scroll", handleScroll);
 
@@ -41,7 +50,14 @@ const Experience = () => {
         <h2>BACKGROUND</h2>
         <p>2.0</p>
       </header>
-
+      <div className="story">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit,
+        cupiditate? Dicta distinctio asperiores ad earum incidunt ipsum ullam
+        corrupti ratione, dolores quis aut voluptate quasi porro fugit
+        quibusdam! Alias quo porro nisi veniam ea perferendis quidem debitis?
+        Suscipit autem labore voluptas. Hic, assumenda explicabo. Laboriosam
+        exercitationem placeat officia necessitatibus iusto.
+      </div>
       <section className="work-history-container">
         <div className="experience-wrapper">
           {experience.map((job, index) => {
@@ -86,10 +102,6 @@ const Wrapper = styled.section`
     .cube-wrapper {
       width: 0;
     }
-  }
-
-  .education-container {
-    height: 50vh;
   }
 `;
 

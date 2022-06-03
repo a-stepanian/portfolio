@@ -116,4 +116,18 @@ export const experience = [
       "Planned and executed multiple concurrent capital investment projects on time and under budget.",
     ],
   },
+  {
+    id: "pa",
+    company: "Manitowoc",
+    location: "Shady Grove, PA",
+    stateImg: "md.png",
+    title: "Manufacturing Engineer Intern",
+    date: "2012",
+    description: [
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, labore.",
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, labore.",
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, labore.",
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, labore.",
+    ],
+  },
 ];

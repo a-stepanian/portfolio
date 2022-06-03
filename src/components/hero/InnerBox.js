@@ -24,7 +24,7 @@ const Wrapper2 = styled.div`
   align-items: center;
   h1 {
     font-family: "Bebas Neue", cursive;
-    font-size: 28vw;
+    font-size: 26vw;
     font-weight: 900;
     color: var(--black);
     opacity: 0;

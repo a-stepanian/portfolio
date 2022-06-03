@@ -9,7 +9,11 @@ const StateCube = ({ showState }) => {
             ? "cube show-front"
             : showState === "georgia"
             ? "cube show-right"
-            : "cube show-back"
+            : showState === "maryland"
+            ? "cube show-back"
+            : showState === "pennsylvania"
+            ? "cube show-left"
+            : "cube show-top"
         }`}
       >
         <div className="face front">
@@ -34,10 +38,10 @@ const StateCube = ({ showState }) => {
           </div>
         </div>
         <div className="face left">
-          <img src="wa.png" alt={`Outline of the Washington state map`} />
+          <img src="pa.png" alt={`Outline of the Pennsylvania state map`} />
         </div>
         <div className="face top">
-          <img src="pa.png" alt={`Outline of the Pennsylvania state map`} />
+          <img src="wa.png" alt={`Outline of the Washington state map`} />
         </div>
         <div className="face bottom">
           <p>Work History</p>
@@ -50,16 +54,18 @@ const StateCube = ({ showState }) => {
 const Wrapper = styled.div`
   position: sticky;
   top: 7rem;
-  padding-top: 0.7rem;
   z-index: 2;
   transform: translateX(-6.1rem);
   width: var(--cube-width);
   height: var(--cube-width);
   perspective: 20rem; //zoom in and out of cube
+  padding-bottom: 6.55rem;
+
   .cube {
     width: 100%;
     height: 100%;
     position: relative;
+    padding-top: 0.7rem;
     transform-style: preserve-3d;
     transition: transform 0.4s;
     transform: translateZ(0) rotateY(0); //shifts to/from viewer
@@ -74,6 +80,7 @@ const Wrapper = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
     img {
       max-width: 70%;
       max-height: 60%;
@@ -95,15 +102,19 @@ const Wrapper = styled.div`
 
   .front {
     transform: rotateY(0deg) translateZ(calc(var(--cube-width) / 2));
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
   }
   .right {
     transform: rotateY(90deg) translateZ(calc(var(--cube-width) / 2));
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
   }
   .back {
     transform: rotateY(180deg) translateZ(calc(var(--cube-width) / 2));
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
   }
   .left {
     transform: rotateY(-90deg) translateZ(calc(var(--cube-width) / 2));
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
   }
   .top {
     transform: rotateX(90deg) translateZ(calc(var(--cube-width) / 2));
@@ -126,7 +137,7 @@ const Wrapper = styled.div`
     transform: rotateY(-180deg);
   }
   .show-left {
-    transform: rotateY(90deg);
+    transform: rotateY(-270deg);
   }
   .show-top {
     transform: rotateX(-90deg);

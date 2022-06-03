@@ -30,7 +30,7 @@ const Job = ({ job }) => {
 const Wrapper = styled.article`
   .job-header {
     position: sticky;
-    top: 7rem;
+    top: 6.95rem;
     height: 6.6rem;
     z-index: 1;
     background: var(--main);
