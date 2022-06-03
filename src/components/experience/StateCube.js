@@ -61,7 +61,7 @@ const Wrapper = styled.div`
     height: 100%;
     position: relative;
     transform-style: preserve-3d;
-    transition: transform 1s;
+    transition: transform 0.4s;
     transform: translateZ(0) rotateY(0); //shifts to/from viewer
   }
   .face {

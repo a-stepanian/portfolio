@@ -15,17 +15,17 @@ const Experience = () => {
     const handleScroll = () => {
       const oregon = document.querySelectorAll(".title-company")[0];
       const oregonDistanceFromTop = oregon.getBoundingClientRect().top;
-      if (oregonDistanceFromTop < 200 && oregonDistanceFromTop > 50) {
+      if (oregonDistanceFromTop < 170 && oregonDistanceFromTop > 80) {
         setShowState("oregon");
       }
       const georgia = document.querySelectorAll(".title-company")[1];
       const georgiaDistanceFromTop = georgia.getBoundingClientRect().top;
-      if (georgiaDistanceFromTop < 200 && georgiaDistanceFromTop > 50) {
+      if (georgiaDistanceFromTop < 170 && georgiaDistanceFromTop > 80) {
         setShowState("georgia");
       }
       const maryland = document.querySelectorAll(".title-company")[2];
       const marylandDistanceFromTop = maryland.getBoundingClientRect().top;
-      if (marylandDistanceFromTop < 200 && marylandDistanceFromTop > 50) {
+      if (marylandDistanceFromTop < 170 && marylandDistanceFromTop > 80) {
         setShowState("maryland");
       }
     };
