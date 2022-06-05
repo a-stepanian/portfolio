@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { useEffect } from "react";
 import styled from "styled-components";
 import {
@@ -13,17 +12,6 @@ import {
 } from "../index";
 
 const Hero = () => {
-  const [screenHeight, setScreenHeight] = useState(window.innerHeight);
-
-  useEffect(() => {
-    const handleResize = () => {
-      setScreenHeight(window.innerHeight);
-    };
-
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  });
-
   useEffect(() => {
     setTimeout(() => {
       const coloredBox = document.querySelector(".big-block");
@@ -31,7 +19,7 @@ const Hero = () => {
     }, 4100);
   });
   return (
-    <Wrapper style={{ height: screenHeight }}>
+    <Wrapper>
       <HeroLeftBox />
       <HeroBottomBox />
       <HeroRightBox />
