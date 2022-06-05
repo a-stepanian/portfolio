@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { useEffect } from "react";
 import styled from "styled-components";
 import {
@@ -8,9 +9,21 @@ import {
   HeroIllusionBox,
   InnerBox,
   BigBlock,
+  HeroCube,
 } from "../index";
 
 const Hero = () => {
+  const [screenHeight, setScreenHeight] = useState(window.innerHeight);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setScreenHeight(window.innerHeight);
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  });
+
   useEffect(() => {
     setTimeout(() => {
       const coloredBox = document.querySelector(".big-block");
@@ -18,13 +31,14 @@ const Hero = () => {
     }, 4100);
   });
   return (
-    <Wrapper>
+    <Wrapper style={{ height: screenHeight }}>
       <HeroLeftBox />
       <HeroBottomBox />
       <HeroRightBox />
       <HeroTopBox />
       <HeroIllusionBox />
       <BigBlock />
+      <HeroCube />
       <InnerBox />
     </Wrapper>
   );
@@ -33,7 +47,6 @@ const Hero = () => {
 const Wrapper = styled.section`
   position: relative;
   width: 100%;
-  height: 100vh;
   overflow: hidden;
 
   .remove {

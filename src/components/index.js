@@ -13,6 +13,7 @@ import HeroTopBox from "./hero/HeroTopBox";
 import HeroIllusionBox from "./hero/HeroIllusionBox";
 import InnerBox from "./hero/InnerBox";
 import BigBlock from "./hero/BigBlock";
+import HeroCube from "./hero/HeroCube";
 
 // portfolio components
 import Projects from "./portfolio/Projects";
@@ -51,4 +52,5 @@ export {
   StateCube,
   BigCube,
   School,
+  HeroCube,
 };

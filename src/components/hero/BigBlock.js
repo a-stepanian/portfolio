@@ -23,19 +23,13 @@ const Wrapper = styled.div`
 
   @keyframes shrink {
     0% {
-      background-color: var(--main);
-      height: 5rem;
-      width: 2.1rem;
+      z-index: 0;
     }
-    50% {
-      background-color: var(--main-bright);
-      height: 6rem;
-      width: 8rem;
+    95% {
+      z-index: 0;
     }
     100% {
-      background-color: var(--main);
-      height: 5rem;
-      width: 2.1rem;
+      z-index: 7;
     }
   }
 
