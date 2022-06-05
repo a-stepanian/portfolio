@@ -12,6 +12,8 @@ import {
 } from "../index";
 
 const Hero = () => {
+  console.log("rendered Hero component");
+
   useEffect(() => {
     setTimeout(() => {
       const coloredBox = document.querySelector(".big-block");
@@ -35,6 +37,7 @@ const Hero = () => {
 const Wrapper = styled.section`
   position: relative;
   width: 100%;
+  height: 100vh;
   overflow: hidden;
 
   .remove {

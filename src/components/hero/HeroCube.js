@@ -1,6 +1,8 @@
 import styled from "styled-components";
 
-const BigCube = ({ cubeFace }) => {
+const BigCube = () => {
+  console.log("rendered Hero  cube component");
+
   return (
     <Wrapper>
       <div className="cube">
@@ -103,7 +105,7 @@ const Wrapper = styled.div`
     0% {
       opacity: 1;
       height: 10rem;
-      width: 10rem;
+      width: 15rem;
       --big-cube: rgba(207, 253, 189, 0.5);
     }
     75% {

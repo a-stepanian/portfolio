@@ -111,6 +111,8 @@ const Wrapper = styled.article`
     border: var(--small-border);
     border-right: none;
     .job-header {
+      padding-right: 0.3rem;
+      padding-left: 0.3rem;
       h3 {
         font-size: 2.4rem;
         line-height: 2rem;
@@ -122,6 +124,15 @@ const Wrapper = styled.article`
         li {
           font-size: 1.1rem;
         }
+      }
+    }
+  }
+
+  @media (min-width: 992px) {
+    border: var(--small-border);
+    .job-header {
+      h3 {
+        font-size: 3rem;
       }
     }
   }

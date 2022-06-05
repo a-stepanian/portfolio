@@ -2,6 +2,8 @@ import React from "react";
 import styled from "styled-components";
 
 const BigBlock = () => {
+  console.log("rendered BIG BLOCK component");
+
   return <Wrapper className="big-block"></Wrapper>;
 };
 
@@ -19,7 +21,7 @@ const Wrapper = styled.div`
   align-items: flex-end;
 
   animation: var(--hero-delay) shrink,
-    go-around-perimeter-small var(--hero) forwards var(--hero-delay);
+    go-around-perimeter var(--hero) forwards var(--hero-delay);
 
   @keyframes shrink {
     0% {
@@ -33,7 +35,7 @@ const Wrapper = styled.div`
     }
   }
 
-  @keyframes go-around-perimeter-small {
+  @keyframes go-around-perimeter {
     0% {
       top: 0;
       left: 0;
@@ -69,42 +71,39 @@ const Wrapper = styled.div`
   }
 
   @media (min-width: 992px) {
-    animation: var(--hero-delay) shrink,
-      go-around-perimeter-xl var(--hero) forwards var(--hero-delay);
-  }
-
-  @keyframes go-around-perimeter-xl {
-    0% {
-      top: 0;
-      left: 0;
-      height: 5rem;
-    }
-    25% {
-      top: calc(100% - 40%);
-      height: 40%;
-      left: 0;
-      width: 2.1rem;
-    }
-    50% {
-      top: calc(100% - 40%);
-      height: 40%;
-      left: calc(100vw - 15.2rem);
-      width: 15.2rem;
-    }
-    75% {
-      height: 5rem;
-      top: 0;
-      left: calc(100vw - 15.2rem);
-      width: 15.2rem;
-    }
-    99% {
-      opacity: 1;
-    }
-    100% {
-      top: 0;
-      left: 0;
-      width: 2.1rem;
-      opacity: 0;
+    @keyframes go-around-perimeter {
+      0% {
+        top: 0;
+        left: 0;
+        height: 5rem;
+      }
+      25% {
+        top: calc(100% - 40%);
+        height: 40%;
+        left: 0;
+        width: 2.1rem;
+      }
+      50% {
+        top: calc(100% - 40%);
+        height: 40%;
+        left: calc(100vw - 15.2rem);
+        width: 15.2rem;
+      }
+      75% {
+        height: 5rem;
+        top: 0;
+        left: calc(100vw - 15.2rem);
+        width: 15.2rem;
+      }
+      99% {
+        opacity: 1;
+      }
+      100% {
+        top: 0;
+        left: 0;
+        width: 2.1rem;
+        opacity: 0;
+      }
     }
   }
 `;

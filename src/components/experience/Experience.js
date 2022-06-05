@@ -46,22 +46,16 @@ const Experience = () => {
       <header className="background-sticky">
         <h2>BACKGROUND</h2>
         <p>{`${
-          cubeFace === "oregon"
+          cubeFace === "oregon" ||
+          cubeFace === "georgia" ||
+          cubeFace === "maryland" ||
+          cubeFace === "pennsylvania"
             ? "WORK HISTORY 2.1"
-            : cubeFace === "georgia"
-            ? "WORK HISTORY 2.2"
-            : cubeFace === "maryland"
-            ? "WORK HISTORY 2.3"
-            : cubeFace === "pennsylvania"
-            ? "WORK HISTORY 2.4"
-            : cubeFace === "psu"
-            ? "EDUCATION 3.1"
-            : cubeFace === "washington1"
-            ? "EDUCATION 3.2"
-            : cubeFace === "washington2"
-            ? "EDUCATION 3.3"
-            : cubeFace === "washington3"
-            ? "EDUCATION 3.4"
+            : cubeFace === "psu" ||
+              cubeFace === "washington1" ||
+              cubeFace === "washington2" ||
+              cubeFace === "washington3"
+            ? "EDUCATION 2.2"
             : "2.0"
         }`}</p>
       </header>
@@ -129,6 +123,15 @@ const Wrapper = styled.section`
       }
       .cube-wrapper {
         width: 20rem;
+      }
+    }
+  }
+  @media (min-width: 992px) {
+    .work-history-container {
+      padding: 0 5%;
+      justify-content: center;
+      .experience-wrapper {
+        max-width: 40rem;
       }
     }
   }

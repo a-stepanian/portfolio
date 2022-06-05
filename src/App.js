@@ -10,6 +10,8 @@ import styled from "styled-components";
 import { useEffect } from "react";
 
 function App() {
+  console.log("rendered App");
+
   useEffect(() => {
     window.scrollTo(0, 0);
   });

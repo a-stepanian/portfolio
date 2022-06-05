@@ -94,7 +94,7 @@ export const experience = [
     stateImg: "ga.png",
     companyUrl: "https://www.usg.com/",
     logo: "usglogobw.bmp",
-    title: "Engineering, Production, and Supply Chain Manager",
+    title: "Engineering and Operations Manager",
     date: "2017 - 2020",
     description: [
       "Managed the safety, development, productivity and engagement of 27 employees.",
