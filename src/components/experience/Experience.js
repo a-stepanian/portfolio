@@ -60,12 +60,14 @@ const Experience = () => {
         }`}</p>
       </header>
       <div className="story">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit,
-        cupiditate? Dicta distinctio asperiores ad earum incidunt ipsum ullam
-        corrupti ratione, dolores quis aut voluptate quasi porro fugit
-        quibusdam! Alias quo porro nisi veniam ea perferendis quidem debitis?
-        Suscipit autem labore voluptas. Hic, assumenda explicabo. Laboriosam
-        exercitationem placeat officia necessitatibus iusto.
+        <p>
+          I spent the past decade solving problems of all shapes and sizes. I
+          have worked on many teams, large and small, near and far, and I thrive
+          working independently as well. I've had complete ownership and
+          accountability of numerous projects and initiatives throughout my
+          career. I look forward to bringing this experience to your company to
+          help you achieve your goals!
+        </p>
       </div>
       <section className="work-history-container">
         <div className="experience-wrapper">
@@ -87,8 +89,10 @@ const Experience = () => {
 };
 
 const Wrapper = styled.section`
+  background-color: var(--main-bg);
   /* BACKGROUND 2.0 BLACK STICKY BANNER*/
   .background-sticky {
+    width: 100%;
     z-index: 3;
     position: sticky;
     top: 4.95rem;
@@ -105,6 +109,19 @@ const Wrapper = styled.section`
     }
   }
 
+  .story {
+    display: flex;
+    justify-content: center;
+    margin: 2.5rem 0;
+    padding: 0 5%;
+    p {
+      font-size: 1rem;
+      line-height: 2rem;
+      color: var(--black);
+      font-weight: 900;
+    }
+  }
+
   .work-history-container {
     display: flex;
     .experience-wrapper {
@@ -115,7 +132,23 @@ const Wrapper = styled.section`
     }
   }
 
+  @media (min-width: 480px) {
+    .story {
+      p {
+        font-size: 1.2rem;
+      }
+    }
+  }
+
   @media (min-width: 768px) {
+    .story {
+      margin: 5rem 0;
+      p {
+        font-size: 1.5rem;
+        line-height: 2.5rem;
+        max-width: 60rem;
+      }
+    }
     .work-history-container {
       flex-direction: row-reverse;
       .experience-wrapper {

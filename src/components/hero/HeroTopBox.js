@@ -11,7 +11,7 @@ const Wrapper = styled.div`
   left: 2.1rem;
   height: 5rem;
   width: calc(100% - 2.1rem);
-  background-color: var(--white);
+  background-color: white;
 
   animation: hide-full-nav var(--hero-delay),
     shrink-left var(--hero) forwards var(--hero-delay);

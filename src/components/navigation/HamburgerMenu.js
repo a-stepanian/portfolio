@@ -6,7 +6,7 @@ const HamburgerMenu = () => {
   const { isSidebarOpen, toggleSidebar } = useGlobalContext();
 
   return (
-    <Wrapper onClick={toggleSidebar}>
+    <Wrapper type="button" onClick={toggleSidebar}>
       <div
         className={`${isSidebarOpen ? "line top open-top" : "line top"}`}
       ></div>

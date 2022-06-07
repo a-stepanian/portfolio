@@ -2,8 +2,6 @@ import React from "react";
 import styled from "styled-components";
 
 const BigBlock = () => {
-  console.log("rendered BIG BLOCK component");
-
   return <Wrapper className="big-block"></Wrapper>;
 };
 

@@ -12,13 +12,11 @@ import {
 } from "../index";
 
 const Hero = () => {
-  console.log("rendered Hero component");
-
   useEffect(() => {
     setTimeout(() => {
       const coloredBox = document.querySelector(".big-block");
       coloredBox.classList.add("remove");
-    }, 4100);
+    }, 5000);
   });
   return (
     <Wrapper>

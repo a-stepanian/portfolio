@@ -139,7 +139,7 @@ const Wrapper = styled.header`
       right: 0;
       height: 100%;
       width: 15rem;
-      border-left: var(--large-border);
+      border-left: var(--small-border);
       background-color: var(--main);
       justify-content: space-evenly;
       align-items: center;

@@ -1,8 +1,6 @@
 import styled from "styled-components";
 
 const BigCube = () => {
-  console.log("rendered Hero  cube component");
-
   return (
     <Wrapper>
       <div className="cube">
@@ -39,7 +37,7 @@ const Wrapper = styled.div`
     position: absolute;
     width: 5rem;
     height: 5rem;
-    background-color: var(--big-cube);
+    background-color: var(--main);
     border: var(--small-border);
     animation: skinny-face var(--hero-delay) forwards;
   }
@@ -73,7 +71,6 @@ const Wrapper = styled.div`
     0% {
       top: calc(50% - 5rem / 2);
       left: calc(50% - 5rem / 2);
-      perspective: 50rem; //zoom in and out of cube
     }
     25% {
       top: calc(50% - 5rem / 2);
@@ -86,12 +83,11 @@ const Wrapper = styled.div`
     100% {
       top: 0;
       left: 0;
-      perspective: 100rem; //zoom in and out of cube
     }
   }
   @keyframes spin-cube {
     0% {
-      transform: rotateY(-270deg);
+      transform: rotateY(-360deg);
     }
     75% {
       transform: rotateY(0);
@@ -103,18 +99,18 @@ const Wrapper = styled.div`
 
   @keyframes skinny-face {
     0% {
+      background-color: var(--main-transparent);
       opacity: 1;
-      height: 10rem;
-      width: 15rem;
-      --big-cube: rgba(207, 253, 189, 0.5);
+      height: 20rem;
+      width: 20rem;
     }
     75% {
+      background-color: var(--main);
       height: 5rem;
       width: 2.1rem;
     }
     99% {
       opacity: 1;
-      --big-cube: rgba(207, 253, 189, 0.8);
     }
     100% {
       opacity: 0;

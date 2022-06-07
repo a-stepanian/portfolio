@@ -104,7 +104,7 @@ const Wrapper = styled.div`
     transition: width var(--hamburger), height var(--hamburger) var(--hamburger),
       box-shadow var(--hamburger) var(--hamburger);
     &::before {
-      background-color: var(--dark-cover);
+      background-color: var(--sidebar-hider);
       transition: background-color var(--hamburger) var(--hamburger);
     }
   }

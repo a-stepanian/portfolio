@@ -65,9 +65,7 @@ const Wrapper2 = styled.div`
 const Wrapper1 = styled.div`
   height: 100%;
   opacity: 0;
-  background: url("xl-hero.jpg");
-  background-size: cover;
-  background-position: center;
+  background-color: var(--main-bg);
   animation: appear calc(var(--hero) / 2) forwards
     calc(var(--hero-delay) + var(--hero));
 

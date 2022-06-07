@@ -30,6 +30,9 @@ import School from "./experience/School";
 // contact components
 import Contact from "./Contact";
 
+// footer
+import Footer from "./Footer";
+
 export {
   Navbar,
   HamburgerMenu,
@@ -53,4 +56,5 @@ export {
   BigCube,
   School,
   HeroCube,
+  Footer,
 };

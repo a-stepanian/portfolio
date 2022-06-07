@@ -57,9 +57,9 @@ const IndividualProject = ({ site }) => {
 
 const Wrapper = styled.article`
   position: relative;
-  background-color: rgba(221, 255, 208, 0.3);
-  box-shadow: 0 2px 5px var(--main-dark);
-  border: 3px solid black;
+  color: var(--black);
+  background-color: var(--main-bg);
+  border: 3px solid var(--black);
   padding: 1rem;
   p,
   span {
@@ -84,7 +84,7 @@ const Wrapper = styled.article`
     height: 0;
     width: 100%;
     padding: 0 0.5rem;
-    background-color: var(--main);
+    background-color: var(--main-muted);
     transition: height var(--info), padding var(--info);
     box-shadow: inset 0 3px 3px rgba(0, 0, 0, 0.1),
       inset 3px 0 3px rgba(0, 0, 0, 0.1);
@@ -210,6 +210,13 @@ const Wrapper = styled.article`
         span {
           font-size: 1rem;
           font-weight: 900;
+        }
+      }
+    }
+    footer {
+      div {
+        .project-title {
+          font-size: 2.8rem;
         }
       }
     }

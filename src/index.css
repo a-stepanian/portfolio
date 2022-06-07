@@ -6,35 +6,37 @@
 }
 
 :root {
-  --black: rgb(12, 11, 8);
-  --white: rgb(250, 250, 245);
-  --white-opaque: rgba(250, 250, 245, 0.3);
-  --gray: rgb(235, 235, 229);
-  --dark-gray: rgb(78, 85, 75);
-  --main-pale: rgb(251, 218, 178);
-  --dark-cover: rgba(17, 24, 14, 0.9);
-  --main: rgb(224, 249, 214);
-  --main-brighter: rgba(72, 255, 0, 1);
-  --main-bright: rgb(150, 255, 108);
-  --main-light: rgb(240, 254, 234);
-  --main-dark: rgba(21, 36, 15, 0.2);
-  --cube: rgba(207, 253, 189, 0.95);
-  --big-cube: rgba(207, 253, 189, 0.8);
+  /* last 2 character hex equivalent of alpha value in rgba format*/
+  /* 0.2 = 33 */
+  /* 0.3 = 4d */
+  /* 0.5 = 80 */
+  /* 0.7 = b3 */
+  /* 0.8 = cc */
+  /* 0.9 = e6 */
+
+  --black: #092947;
+  --sidebar-hider: #092947cc;
+  --white: #fafdff;
+
+  /* hero drawn boxes, experience content boxes */
+  --white-opaque: #fffffa80;
+
+  --main: #c7ff4f;
+  --main-muted: #c7ff4f;
+  --main-bg: #e7fbf9e2;
+  --main-7: #c7ff4f33; /* project card background */
+  --cube: #c6e1facc;
+  --big-cube: #c7ff4fcc;
 
   --hamburger: 0.5s;
   --info: 0.7s;
   --hero: 2.5s;
-  --hero-delay: 1.5s;
+  --hero-delay: 2.5s;
 
   --small-border: 0.2rem solid var(--black);
-  --large-border: 0.2rem solid var(--black);
 
   --cube-width: 5rem;
   --big-cube-width: 10rem;
-}
-
-body {
-  background-color: var(--white);
 }
 
 ::-webkit-scrollbar {

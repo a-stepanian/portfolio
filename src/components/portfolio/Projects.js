@@ -11,9 +11,8 @@ const Projects = () => {
         <h2>PORTFOLIO</h2>
         <p>1.0</p>
       </header>
-      <h3>
-        Made with love, built from scratch. Check out the websites or view the
-        code in the github repositories.
+      <h3 className="instructions">
+        Choose a project to check out the website or view the code on github.
       </h3>
       <div className="project-wrapper">
         {data.map((site) => {
@@ -25,10 +24,13 @@ const Projects = () => {
 };
 
 const Wrapper = styled.section`
-  // box-shadow: inset -10px 0 15px rgba(0, 0, 0, 0.3),
-  //   inset 10px 0 15px rgba(0, 0, 0, 0.3);
+  background-color: var(--white);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
   header {
+    width: 100%;
     z-index: 1;
     position: sticky;
     top: 5rem;
@@ -46,8 +48,12 @@ const Wrapper = styled.section`
     }
   }
 
-  h3 {
-    padding: 2.5rem 5% 0;
+  .instructions {
+    margin-top: 2.5rem;
+    padding: 0 5%;
+    font-size: 1.8rem;
+    line-height: 2.2rem;
+    color: var(--black);
   }
 
   .project-wrapper {
@@ -61,12 +67,40 @@ const Wrapper = styled.section`
     .project-wrapper {
       padding: 5rem 10%;
     }
+    .instructions {
+      margin-top: 5rem;
+      padding: 5%;
+      text-align: center;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .instructions {
+      margin-top: 5rem;
+      padding: 0;
+      max-width: 40rem;
+    }
   }
 
   @media (min-width: 992px) {
+    padding-bottom: 5rem;
     .project-wrapper {
       grid-template-columns: 1fr 1fr;
       column-gap: 5rem;
+    }
+    .instructions {
+      margin: 7.5rem 0 0;
+      font-size: 2.4rem;
+      line-height: 2.8rem;
+      max-width: 52rem;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    .instructions {
+      font-size: 2.6rem;
+      line-height: 2.8rem;
+      max-width: 56rem;
     }
   }
 `;

@@ -95,7 +95,7 @@ const Wrapper = styled.div`
       width: var(--big-cube-width);
       height: var(--big-cube-width);
       background-color: var(--big-cube);
-      border: 0.1rem solid black;
+      border: 0.1rem solid var(--black);
       display: flex;
       flex-direction: column;
       justify-content: center;

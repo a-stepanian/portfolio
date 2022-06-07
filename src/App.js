@@ -5,13 +5,12 @@ import {
   Experience,
   Contact,
   Hero,
+  Footer,
 } from "./components";
 import styled from "styled-components";
 import { useEffect } from "react";
 
 function App() {
-  console.log("rendered App");
-
   useEffect(() => {
     window.scrollTo(0, 0);
   });
@@ -34,6 +33,7 @@ function App() {
           <Experience />
           <Contact />
         </div>
+        <Footer />
       </div>
     </Wrapper>
   );

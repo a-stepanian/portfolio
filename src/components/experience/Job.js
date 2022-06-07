@@ -28,15 +28,17 @@ const Job = ({ job }) => {
 };
 
 const Wrapper = styled.article`
+  color: var(--black);
+  background-color: var(--white-opaque);
   .job-header {
     position: sticky;
     top: 6.95rem;
     height: 6.6rem;
     z-index: 1;
-    background: var(--main);
+    background: var(--main-muted);
     padding-right: 8.5rem;
     padding-left: 0.3rem;
-    border-bottom: 3px solid black;
+    border-bottom: var(--small-border);
     .title-company {
       padding: 0.5rem 0;
       height: 100%;
@@ -132,7 +134,7 @@ const Wrapper = styled.article`
     border: var(--small-border);
     .job-header {
       h3 {
-        font-size: 3rem;
+        font-size: 2.5rem;
       }
     }
   }
