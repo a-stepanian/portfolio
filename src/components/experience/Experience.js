@@ -61,9 +61,9 @@ const Experience = () => {
       </header>
       <div className="story">
         <p>
-          I spent the past decade solving problems of all shapes and sizes. I
-          have worked on many teams, large and small, near and far, and I thrive
-          working independently as well. I've had complete ownership and
+          I have spent the past decade solving problems of all shapes and sizes.
+          I have worked on many teams, large and small, near and far, and I
+          thrive working independently as well. I've had complete ownership and
           accountability of numerous projects and initiatives throughout my
           career. I look forward to bringing this experience to your company to
           help you achieve your goals!
