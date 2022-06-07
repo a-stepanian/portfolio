@@ -132,10 +132,9 @@ export const experience = [
     title: "Manufacturing Engineer Intern",
     date: "2012",
     description: [
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, labore.",
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, labore.",
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, labore.",
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, labore.",
+      "Combined multiple product lines into a single production line to increase throughput.",
+      "Implement 5S and other organizational techniques to improve workplace efficiency.",
+      "Trial new technology to speed up a key manufacturing bottleneck.",
     ],
   },
 ];

@@ -76,7 +76,7 @@ const Wrapper = styled.div`
       top: calc(50% - 5rem / 2);
       left: calc(50% - 5rem / 2);
     }
-    75% {
+    90% {
       top: 0;
       left: 0;
     }
@@ -89,7 +89,7 @@ const Wrapper = styled.div`
     0% {
       transform: rotateY(-360deg);
     }
-    75% {
+    90% {
       transform: rotateY(0);
     }
     100% {
@@ -104,7 +104,7 @@ const Wrapper = styled.div`
       height: 20rem;
       width: 20rem;
     }
-    75% {
+    90% {
       background-color: var(--main);
       height: 5rem;
       width: 2.1rem;
@@ -123,7 +123,7 @@ const Wrapper = styled.div`
     0% {
       transform: rotateY(0deg) translateZ(10rem);
     }
-    75% {
+    90% {
       transform: rotateY(0deg) translateZ(1rem);
     }
     100% {
@@ -134,7 +134,7 @@ const Wrapper = styled.div`
     0% {
       transform: rotateY(90deg) translateZ(10rem);
     }
-    75% {
+    90% {
       transform: rotateY(90deg) translateZ(1rem);
     }
     100% {
@@ -145,7 +145,7 @@ const Wrapper = styled.div`
     0% {
       transform: rotateY(180deg) translateZ(10rem);
     }
-    75% {
+    90% {
       transform: rotateY(180deg) translateZ(1rem);
     }
     100% {
@@ -156,7 +156,7 @@ const Wrapper = styled.div`
     0% {
       transform: rotateY(270deg) translateZ(10rem);
     }
-    75% {
+    90% {
       transform: rotateY(270deg) translateZ(1rem);
     }
     100% {

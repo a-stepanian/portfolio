@@ -16,7 +16,7 @@ const School = ({ school }) => {
 
   return (
     <Wrapper>
-      <header className={`job-header ${id}`}>
+      <header className={`school-header ${id}`}>
         <div className="title-company" target="_blank" rel="noreferrer">
           <h3>{major}</h3>
           <a href={schoolUrl}>
@@ -39,7 +39,8 @@ const School = ({ school }) => {
 
 const Wrapper = styled.article`
   color: var(--black);
-  .job-header {
+  background-color: var(--white-opaque);
+  .school-header {
     position: sticky;
     top: 6.95rem;
     height: 6.6rem;
@@ -97,7 +98,7 @@ const Wrapper = styled.article`
   /* ------------- */
 
   @media (min-width: 480px) {
-    .job-header {
+    .school-header {
       h3 {
         margin-top: 0.4rem;
         font-size: 1.9rem;
@@ -116,7 +117,7 @@ const Wrapper = styled.article`
   @media (min-width: 768px) {
     border: var(--small-border);
     border-right: none;
-    .job-header {
+    .school-header {
       padding-right: 0.3rem;
       padding-left: 0.3rem;
       h3 {
@@ -134,7 +135,7 @@ const Wrapper = styled.article`
 
   @media (min-width: 992px) {
     border: var(--small-border);
-    .job-header {
+    .school-header {
       h3 {
         font-size: 2.5rem;
       }

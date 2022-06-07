@@ -31,12 +31,13 @@ const Wrapper = styled.article`
   color: var(--black);
   background-color: var(--white-opaque);
   .job-header {
+    z-index: 1;
     position: sticky;
     top: 6.95rem;
+    width: 100%;
     height: 6.6rem;
-    z-index: 1;
     background: var(--main-muted);
-    padding-right: 8.5rem;
+    padding-right: 7rem;
     padding-left: 0.3rem;
     border-bottom: var(--small-border);
     .title-company {
@@ -48,9 +49,8 @@ const Wrapper = styled.article`
     }
     h3 {
       font-family: "Bebas Neue", cursive;
-      margin-top: 0.5rem;
-      font-size: 1.3rem;
-      line-height: 1.2rem;
+      font-size: 1.8rem;
+      line-height: 1.8rem;
     }
 
     a {
@@ -64,7 +64,7 @@ const Wrapper = styled.article`
         width: fit-content;
         padding: 0.1rem;
         color: var(--white);
-        font-size: 0.7rem;
+        font-size: 0.6rem;
       }
       img {
         height: 80%;
@@ -74,11 +74,10 @@ const Wrapper = styled.article`
   }
 
   ul {
-    padding: 2rem 0;
-    li {
-      padding: 1rem;
-      margin-left: 0.5rem;
-      list-style-type: square;
+    padding: 3rem;
+    list-style-type: square;
+    .duty {
+      padding-bottom: 3rem;
       font-size: 0.8rem;
     }
   }
@@ -96,9 +95,7 @@ const Wrapper = styled.article`
       }
     }
     ul {
-      padding: 3rem 0 5rem;
       .duty {
-        margin-left: 1rem;
         font-size: 1rem;
       }
     }

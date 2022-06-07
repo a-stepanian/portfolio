@@ -99,12 +99,15 @@ const Wrapper = styled.section`
     padding: 0 0.3rem;
     display: flex;
     justify-content: space-between;
-    line-height: 2rem;
+    align-items: center;
+    height: 2rem;
     background-color: var(--black);
     color: var(--white);
+    box-shadow: 0 5px 8px rgba(0, 0, 0, 0.3);
+
     h2,
     p {
-      font-size: 1rem;
+      font-size: 0.7rem;
       font-weight: 500;
     }
   }
@@ -133,6 +136,12 @@ const Wrapper = styled.section`
   }
 
   @media (min-width: 480px) {
+    .background-sticky {
+      h2,
+      p {
+        font-size: 0.8rem;
+      }
+    }
     .story {
       p {
         font-size: 1.2rem;
@@ -141,6 +150,12 @@ const Wrapper = styled.section`
   }
 
   @media (min-width: 768px) {
+    .background-sticky {
+      h2,
+      p {
+        font-size: 1rem;
+      }
+    }
     .story {
       margin: 5rem 0;
       p {

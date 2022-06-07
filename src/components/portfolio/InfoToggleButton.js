@@ -9,6 +9,10 @@ const InfoToggleButton = ({ isInfoOpen }) => {
           ? "Hide project information and links to website and github"
           : "Show project information and links to website and github"
       }`}
+      style={{
+        backgroundColor: `${isInfoOpen ? "transparent" : "var(--main)"}`,
+        transform: `${isInfoOpen ? "rotate(90deg)" : "rotate(0)"}`,
+      }}
     >
       <div
         className={`${
@@ -29,11 +33,12 @@ const Wrapper = styled.button`
   width: 3rem;
   height: 3rem;
   border: none;
-  background-color: transparent;
+  transition: background-color 0.5s, transform 0.5s;
+  border: var(--small-border);
 
   .line {
     position: absolute;
-    right: 0.65rem;
+    right: 0.55rem;
     width: 1.5rem;
     height: 0.2rem;
     background-color: var(--black);
@@ -41,20 +46,20 @@ const Wrapper = styled.button`
   }
 
   .vertical {
-    top: 1.4rem;
+    top: 1.2rem;
     transform: rotate(90deg);
   }
   .vertical-open {
-    transform: rotate(270deg);
+    transform: rotate(180deg);
     width: 0;
-    right: 1.4rem;
+    right: 1.3rem;
   }
 
   .horizontal {
-    top: 1.4rem;
+    top: 1.2rem;
   }
   .horizontal-open {
-    transform: rotate(180deg);
+    transform: rotate(90deg);
   }
 
   @media (min-width: 480px) {
