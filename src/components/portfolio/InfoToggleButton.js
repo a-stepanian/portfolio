@@ -1,8 +1,15 @@
 import styled from "styled-components";
 
-const InfoToggleButton = ({ isInfoOpen, setIsInfoOpen }) => {
+const InfoToggleButton = ({ isInfoOpen }) => {
   return (
-    <Wrapper>
+    <Wrapper
+      type="button"
+      aria-label={`${
+        isInfoOpen
+          ? "Hide project information and links to website and github"
+          : "Show project information and links to website and github"
+      }`}
+    >
       <div
         className={`${
           isInfoOpen ? "line vertical vertical-open" : "line vertical"

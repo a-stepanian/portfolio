@@ -17,9 +17,9 @@ const Job = ({ job }) => {
       <ul>
         {description.map((jobDuty, index) => {
           return (
-            <div key={index} className="duty">
-              <li>{jobDuty}</li>
-            </div>
+            <li key={index} className="duty">
+              {jobDuty}
+            </li>
           );
         })}
       </ul>
@@ -75,14 +75,11 @@ const Wrapper = styled.article`
 
   ul {
     padding: 2rem 0;
-    .duty {
+    li {
       padding: 1rem;
-      display: flex;
-      li {
-        margin-left: 0.5rem;
-        list-style-type: square;
-        font-size: 0.8rem;
-      }
+      margin-left: 0.5rem;
+      list-style-type: square;
+      font-size: 0.8rem;
     }
   }
 
@@ -101,10 +98,8 @@ const Wrapper = styled.article`
     ul {
       padding: 3rem 0 5rem;
       .duty {
-        li {
-          margin-left: 1rem;
-          font-size: 1rem;
-        }
+        margin-left: 1rem;
+        font-size: 1rem;
       }
     }
   }
@@ -123,9 +118,7 @@ const Wrapper = styled.article`
 
     ul {
       .duty {
-        li {
-          font-size: 1.1rem;
-        }
+        font-size: 1.1rem;
       }
     }
   }

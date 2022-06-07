@@ -6,7 +6,7 @@ const HamburgerMenu = () => {
   const { isSidebarOpen, toggleSidebar } = useGlobalContext();
 
   return (
-    <Wrapper type="button" onClick={toggleSidebar}>
+    <Wrapper type="button" onClick={toggleSidebar} aria-label="Navigation Menu">
       <div
         className={`${isSidebarOpen ? "line top open-top" : "line top"}`}
       ></div>

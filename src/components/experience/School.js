@@ -26,12 +26,12 @@ const School = ({ school }) => {
         </div>
       </header>
       <ul>
-        <li>{location}</li>
-        <li>{date}</li>
-        <li>{major}</li>
-        <li>{minor}</li>
-        <li>{course}</li>
-        <li>{instructor}</li>
+        <li className="duty">{location}</li>
+        <li className="duty">{date}</li>
+        <li className="duty">{major}</li>
+        <li className="duty">{minor}</li>
+        <li className="duty">{course}</li>
+        <li className="duty">{instructor}</li>
       </ul>
     </Wrapper>
   );
@@ -87,12 +87,9 @@ const Wrapper = styled.article`
     padding: 2rem 0;
     .duty {
       padding: 1rem;
-      display: flex;
-      li {
-        margin-left: 0.5rem;
-        list-style-type: square;
-        font-size: 0.8rem;
-      }
+      margin-left: 0.5rem;
+      list-style-type: square;
+      font-size: 0.8rem;
     }
   }
   /* ------------- */
@@ -110,10 +107,8 @@ const Wrapper = styled.article`
     ul {
       padding: 3rem 0 5rem;
       .duty {
-        li {
-          margin-left: 1rem;
-          font-size: 1rem;
-        }
+        margin-left: 1rem;
+        font-size: 1rem;
       }
     }
   }
@@ -132,9 +127,7 @@ const Wrapper = styled.article`
 
     ul {
       .duty {
-        li {
-          font-size: 1.1rem;
-        }
+        font-size: 1.1rem;
       }
     }
   }

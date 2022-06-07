@@ -15,7 +15,7 @@ const SidebarIcons = () => {
             : "icon-container"
         }`}
       >
-        <a href="/">
+        <a href="/" aria-label="LinkedIn Account">
           <BsLinkedin />
         </a>
         <a
@@ -23,10 +23,10 @@ const SidebarIcons = () => {
           target="_blank"
           rel="noreferrer"
         >
-          <BsGithub />
+          <BsGithub aria-label="Github Account" />
         </a>
         <a href="/">
-          <AiTwotoneMail />
+          <AiTwotoneMail aria-label="Email Address" />
         </a>
       </div>
     </Wrapper>
