@@ -46,6 +46,9 @@ const Wrapper = styled.form`
   }
   input,
   textarea {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
     padding: 0.15rem;
     border: 0.15rem solid var(--black);
     border-radius: none;

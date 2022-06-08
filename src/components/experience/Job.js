@@ -62,12 +62,12 @@ const Wrapper = styled.article`
       background-color: var(--black);
       display: flex;
       align-items: center;
-      width: fit-content;
+      width: min-content;
       h4 {
-        width: fit-content;
         padding: 0.1rem;
         color: var(--white);
         font-size: 0.6rem;
+        white-space: nowrap;
       }
       img {
         height: 80%;

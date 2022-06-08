@@ -110,7 +110,7 @@ const Wrapper = styled.div`
       font-weight: 900;
     }
     .state-college {
-      font-size: 0.45rem;
+      font-size: 0.4rem;
     }
   }
 
