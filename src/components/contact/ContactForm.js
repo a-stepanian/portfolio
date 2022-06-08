@@ -51,8 +51,9 @@ const Wrapper = styled.form`
     appearance: none;
     padding: 0.15rem;
     border: 0.15rem solid var(--black);
-    border-radius: none;
+    border-radius: 0;
     background-color: var(--white);
+    font-size: 16px;
     &:focus {
       outline: none;
       outline: 0.15rem solid var(--main);

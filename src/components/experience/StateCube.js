@@ -108,6 +108,7 @@ const Wrapper = styled.div`
       text-align: center;
       font-size: 0.5rem;
       font-weight: 900;
+      white-space: nowrap;
     }
     .state-college {
       font-size: 0.4rem;
