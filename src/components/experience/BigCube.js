@@ -1,21 +1,21 @@
 import styled from "styled-components";
 
-const BigCube = ({ cubeFace }) => {
+const BigCube = ({ bigCubeFace }) => {
   return (
     <Wrapper>
       <div
         className={`${
-          cubeFace === "oregon"
+          bigCubeFace === "oregon"
             ? "cube show-oregon"
-            : cubeFace === null
+            : bigCubeFace === null
             ? "cube show-oregon"
-            : cubeFace === "georgia"
+            : bigCubeFace === "georgia"
             ? "cube show-georgia"
-            : cubeFace === "maryland"
+            : bigCubeFace === "maryland"
             ? "cube show-maryland"
-            : cubeFace === "pennsylvania"
+            : bigCubeFace === "pennsylvania"
             ? "cube show-pennsylvania"
-            : cubeFace === "psu"
+            : bigCubeFace === "psu"
             ? "cube show-psu"
             : "cube show-washington"
         }`}
@@ -73,13 +73,13 @@ const Wrapper = styled.div`
 
   @media (min-width: 768px) {
     position: sticky;
-    top: calc(50% - var(--big-cube-width) / 2);
+    top: 9rem;
     z-index: 2;
     transform: translateX(5rem);
     width: var(--big-cube-width);
     height: var(--big-cube-width);
     perspective: 20rem; //zoom in and out of cube
-    padding-bottom: 6.55rem;
+    padding-bottom: 15rem;
     display: block;
 
     .cube {

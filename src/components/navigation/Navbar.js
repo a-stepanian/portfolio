@@ -32,7 +32,7 @@ const Navbar = () => {
             scrollToTargetAdjusted(".experience-section-scroll-target")
           }
         >
-          Experience
+          Background
         </button>
         <button
           type="button"

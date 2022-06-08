@@ -178,7 +178,7 @@ const Wrapper = styled.article`
   }
 
   @media (min-width: 480px) {
-    &:hover {
+    img:hover {
       cursor: pointer;
     }
     .info:hover {

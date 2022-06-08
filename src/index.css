@@ -15,13 +15,14 @@
   /* 0.9 = e6 */
 
   --black: #092947;
-  --sidebar-hider: #092947cc;
+  --sidebar-hider: #092947e6;
   --white: #fafdff;
 
   /* hero drawn boxes, experience content boxes */
-  --white-opaque: #fffffa80;
+  --white-opaque: #fefffa80;
 
   --main: #c7ff4f;
+  --main-transparent: #c7ff4f00;
   --main-muted: #c7ff4f;
   --main-bg: #e7fbf9e2;
   --main-7: #c7ff4f33; /* project card background */
@@ -31,7 +32,7 @@
   --hamburger: 0.5s;
   --info: 0.7s;
   --hero: 2.5s;
-  --hero-delay: 2.5s;
+  --hero-delay: 2s;
 
   --small-border: 0.2rem solid var(--black);
 

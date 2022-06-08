@@ -84,15 +84,14 @@ const Wrapper = styled.article`
   }
 
   ul {
-    list-style: none;
-    padding: 2rem 0;
+    padding: 3rem;
+    list-style-type: square;
     .duty {
-      padding: 1rem;
-      margin-left: 0.5rem;
-      list-style-type: square;
+      padding-bottom: 3rem;
       font-size: 0.8rem;
     }
   }
+
   /* ------------- */
   /* MEDIA QUERIES */
   /* ------------- */
@@ -106,15 +105,14 @@ const Wrapper = styled.article`
       }
     }
     ul {
-      padding: 3rem 0 5rem;
       .duty {
-        margin-left: 1rem;
         font-size: 1rem;
       }
     }
   }
 
   @media (min-width: 768px) {
+    margin-bottom: 5rem;
     border: var(--small-border);
     border-right: none;
     .school-header {

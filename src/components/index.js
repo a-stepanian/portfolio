@@ -28,7 +28,8 @@ import BigCube from "./experience/BigCube";
 import School from "./experience/School";
 
 // contact components
-import Contact from "./Contact";
+import Contact from "./contact/Contact";
+import ContactForm from "./contact/ContactForm";
 
 // footer
 import Footer from "./Footer";
@@ -57,4 +58,5 @@ export {
   School,
   HeroCube,
   Footer,
+  ContactForm,
 };

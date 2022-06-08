@@ -24,7 +24,7 @@ const Wrapper2 = styled.div`
   align-items: center;
   h1 {
     font-family: "Bebas Neue", cursive;
-    font-size: 26vw;
+    font-size: 24vw;
     font-weight: 900;
     color: var(--black);
     opacity: 0;
@@ -48,17 +48,17 @@ const Wrapper2 = styled.div`
 
   @media (min-width: 400px) {
     h1 {
-      font-size: 29.3vw;
+      font-size: 27.3vw;
     }
   }
   @media (min-width: 600px) {
     h1 {
-      font-size: 31vw;
+      font-size: 29vw;
     }
   }
   @media (min-width: 900px) {
     h1 {
-      font-size: 32vw;
+      font-size: 30vw;
     }
   }
 `;

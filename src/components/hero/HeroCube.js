@@ -87,7 +87,7 @@ const Wrapper = styled.div`
   }
   @keyframes spin-cube {
     0% {
-      transform: rotateY(-360deg);
+      transform: rotateY(-540deg);
     }
     90% {
       transform: rotateY(0);
@@ -104,12 +104,15 @@ const Wrapper = styled.div`
       height: 20rem;
       width: 20rem;
     }
+    20% {
+      background-color: var(--main-transparent);
+    }
     90% {
-      background-color: var(--main);
       height: 5rem;
       width: 2.1rem;
     }
     99% {
+      background-color: var(--main);
       opacity: 1;
     }
     100% {

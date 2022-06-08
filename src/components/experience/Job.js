@@ -102,6 +102,7 @@ const Wrapper = styled.article`
   }
 
   @media (min-width: 768px) {
+    margin-bottom: 5rem;
     border: var(--small-border);
     border-right: none;
     .job-header {

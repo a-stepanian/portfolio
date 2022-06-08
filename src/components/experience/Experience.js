@@ -2,9 +2,13 @@ import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import { experience, education } from "../../data";
 import { Job, StateCube, BigCube, School } from "../index";
+import { MdFactCheck } from "react-icons/md";
+import { FaPeopleCarry } from "react-icons/fa";
+import { GiProgression } from "react-icons/gi";
 
 const Experience = () => {
   const [cubeFace, setCubeFace] = useState("oregon");
+  const [bigCubeFace, setBigCubeFace] = useState("oregon");
 
   useEffect(() => {
     const handleScroll = () => {
@@ -27,6 +31,9 @@ const Experience = () => {
         // when that distance is between 80 and 170px, set the cube face state from the corresponding states array.
         if (jobHeaderDistanceFromTop < 150 && jobHeaderDistanceFromTop > 80) {
           setCubeFace(states[i]);
+        }
+        if (jobHeaderDistanceFromTop < 200 && jobHeaderDistanceFromTop > 100) {
+          setBigCubeFace(states[i]);
         }
       }
 
@@ -60,13 +67,19 @@ const Experience = () => {
         }`}</p>
       </header>
       <div className="story">
+        <GiProgression className="background-icon" />
         <p>
           I have spent the past decade solving problems of all shapes and sizes.
+        </p>
+        <FaPeopleCarry className="background-icon" />
+        <p>
           I have worked on many teams, large and small, near and far, and I
-          thrive working independently as well. I've had complete ownership and
-          accountability of numerous projects and initiatives throughout my
-          career. I look forward to bringing this experience to your company to
-          help you achieve your goals!
+          thrive working independently as well.
+        </p>
+        <MdFactCheck className="background-icon" />
+        <p>
+          I've had complete ownership and accountability of numerous projects
+          and initiatives throughout my career.
         </p>
       </div>
       <section className="work-history-container">
@@ -81,7 +94,7 @@ const Experience = () => {
 
         <div className="cube-wrapper">
           <StateCube cubeFace={cubeFace} />
-          <BigCube cubeFace={cubeFace} />
+          <BigCube bigCubeFace={bigCubeFace} />
         </div>
       </section>
     </Wrapper>
@@ -113,27 +126,39 @@ const Wrapper = styled.section`
   }
 
   .story {
-    display: flex;
-    justify-content: center;
+    display: grid;
+    align-items: start;
+    grid-template-columns: 3rem 1fr;
+    row-gap: 1.8rem;
     margin: 2.5rem 0;
     padding: 0 5%;
-    p {
-      font-size: 1rem;
-      line-height: 2rem;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    color: var(--black);
+    font-weight: 900;
+
+    .background-icon {
+      margin-top: 0.3rem;
       color: var(--black);
-      font-weight: 900;
+      font-size: 2rem;
     }
   }
 
   .work-history-container {
     display: flex;
+
     .experience-wrapper {
-      width: 100vw;
+      width: 100%;
     }
+
     .cube-wrapper {
       width: 0;
     }
   }
+
+  /*---------------*/
+  /* MEDIA QUERIES */
+  /*---------------*/
 
   @media (min-width: 480px) {
     .background-sticky {
@@ -142,9 +167,15 @@ const Wrapper = styled.section`
         font-size: 0.8rem;
       }
     }
+
     .story {
+      margin: 5rem 0;
+      row-gap: 2rem;
       p {
         font-size: 1.2rem;
+      }
+      .background-icon {
+        margin-top: 0.2rem;
       }
     }
   }
@@ -156,14 +187,11 @@ const Wrapper = styled.section`
         font-size: 1rem;
       }
     }
+
     .story {
-      margin: 5rem 0;
-      p {
-        font-size: 1.5rem;
-        line-height: 2.5rem;
-        max-width: 60rem;
-      }
+      margin: 5rem 10%;
     }
+
     .work-history-container {
       flex-direction: row-reverse;
       .experience-wrapper {
@@ -174,7 +202,12 @@ const Wrapper = styled.section`
       }
     }
   }
+
   @media (min-width: 992px) {
+    .story {
+      max-width: 50rem;
+    }
+
     .work-history-container {
       padding: 0 5%;
       justify-content: center;

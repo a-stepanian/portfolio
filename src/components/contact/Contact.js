@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import ContactForm from "./ContactForm";
 
 const Contact = () => {
   return (
@@ -9,16 +10,18 @@ const Contact = () => {
         <h2>CONTACT</h2>
         <p>3.0</p>
       </header>
+      <div className="form-wrapper">
+        <h3 className="lets-connect">Let's connect!</h3>
+        <ContactForm />
+      </div>
     </Wrapper>
   );
 };
 
 const Wrapper = styled.section`
-  height: calc(100vh - 5rem);
   background-color: var(--main-bg);
   border-bottom: var(--small-border);
   box-shadow: 1px 10px 8px rgba(0, 0, 0, 0.3);
-
 
   header {
     z-index: 3;
@@ -32,6 +35,7 @@ const Wrapper = styled.section`
     background-color: var(--black);
     color: var(--white);
     box-shadow: 0 5px 8px rgba(0, 0, 0, 0.3);
+
     h2,
     p {
       font-size: 0.7rem;
@@ -39,11 +43,30 @@ const Wrapper = styled.section`
     }
   }
 
+  .form-wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--black);
+  }
+
+  .lets-connect {
+    margin: 2.5rem 0;
+    font-size: 1.8rem;
+  }
+
   @media (min-width: 480px) {
-      header {
-    h2,
-    p {
-      font-size: 0.8rem;
+    header {
+      h2,
+      p {
+        font-size: 0.8rem;
+      }
+    }
+    .lets-connect {
+      margin: 4rem 0;
+      font-size: 2rem;
     }
   }
 
@@ -53,6 +76,7 @@ const Wrapper = styled.section`
       p {
         font-size: 1rem;
       }
+    }
   }
 `;
 
