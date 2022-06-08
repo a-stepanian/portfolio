@@ -1,4 +1,12 @@
-import { Navbar, Sidebar, Projects, Contact, Hero, Footer } from "./components";
+import {
+  Navbar,
+  Sidebar,
+  Projects,
+  Experience,
+  Contact,
+  Hero,
+  Footer,
+} from "./components";
 import styled from "styled-components";
 import { useEffect } from "react";
 
@@ -22,7 +30,7 @@ function App() {
         <Hero />
         <div className="content-wrapper">
           <Projects />
-          {/* <Experience /> */}
+          <Experience />
           <Contact />
         </div>
         <Footer />
@@ -32,7 +40,6 @@ function App() {
 }
 
 const Wrapper = styled.div`
-  width: 100%;
   .hide-overflow {
     height: 100vh;
     width: 100%;

@@ -22,7 +22,7 @@ const AppProvider = ({ children }) => {
           top: offsetPosition,
           behavior: "smooth",
         });
-      }, 500);
+      }, 400);
     } else {
       window.scrollTo({
         top: offsetPosition,

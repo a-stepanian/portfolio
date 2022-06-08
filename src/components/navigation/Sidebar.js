@@ -132,9 +132,9 @@ const Wrapper = styled.div`
     }
     .divider {
       opacity: 0;
-      width: 0;
+      width: 100%;
       border-top: var(--small-border);
-      transition: opacity var(--hamburger), width var(--hamburger);
+      transition: opacity var(--hamburger);
     }
   }
 
@@ -150,10 +150,8 @@ const Wrapper = styled.div`
         font-size var(--hamburger) var(--hamburger);
     }
     .divider {
-      transition: opacity var(--hamburger) var(--hamburger),
-        width var(--hamburger) var(--hamburger);
+      transition: opacity var(--hamburger) var(--hamburger);
       opacity: 1;
-      width: 100%;
     }
   }
 

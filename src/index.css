@@ -15,7 +15,7 @@
   /* 0.9 = e6 */
 
   --black: #092947;
-  --sidebar-hider: #092947e6;
+  --sidebar-hider: #092947f6;
   --white: #fafdff;
 
   /* hero drawn boxes, experience content boxes */
@@ -29,7 +29,7 @@
   --cube: #c6e1facc;
   --big-cube: #aeff009f;
 
-  --hamburger: 0.5s;
+  --hamburger: 0.4s;
   --info: 0.7s;
   --hero: 2.5s;
   --hero-delay: 2s;
