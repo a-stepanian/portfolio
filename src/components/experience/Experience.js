@@ -104,6 +104,7 @@ const Experience = () => {
 const Wrapper = styled.section`
   background-color: var(--main-bg);
   /* BACKGROUND 2.0 BLACK STICKY BANNER*/
+  width: 100%;
   .background-sticky {
     width: 100%;
     z-index: 3;

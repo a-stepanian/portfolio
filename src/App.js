@@ -40,6 +40,7 @@ function App() {
 }
 
 const Wrapper = styled.div`
+  width: 100%;
   .hide-overflow {
     height: 100vh;
     width: 100%;

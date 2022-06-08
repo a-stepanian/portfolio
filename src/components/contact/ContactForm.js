@@ -35,6 +35,7 @@ const Wrapper = styled.form`
   flex-direction: column;
   label,
   button {
+    color: var(--black);
     font-family: "Bebas Neue", cursive;
     font-size: 1.2rem;
     line-height: 1.2rem;
@@ -47,6 +48,7 @@ const Wrapper = styled.form`
   textarea {
     padding: 0.15rem;
     border: 0.15rem solid var(--black);
+    border-radius: none;
     background-color: var(--white);
     &:focus {
       outline: none;

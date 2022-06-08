@@ -28,9 +28,12 @@ const Job = ({ job }) => {
 };
 
 const Wrapper = styled.article`
+  width: 100%;
   color: var(--black);
   background-color: var(--white-opaque);
   .job-header {
+    width: 100%;
+    overflow-x: hidden;
     z-index: 1;
     position: sticky;
     top: 6.95rem;
@@ -78,7 +81,7 @@ const Wrapper = styled.article`
     list-style-type: square;
     .duty {
       padding-bottom: 3rem;
-      font-size: 0.8rem;
+      font-size: 1rem;
     }
   }
 
@@ -92,11 +95,6 @@ const Wrapper = styled.article`
         margin-top: 0.4rem;
         font-size: 1.9rem;
         line-height: 1.8rem;
-      }
-    }
-    ul {
-      .duty {
-        font-size: 1rem;
       }
     }
   }

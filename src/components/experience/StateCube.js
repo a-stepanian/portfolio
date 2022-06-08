@@ -52,7 +52,7 @@ const StateCube = ({ cubeFace }) => {
         <div className="face psu">
           <img src="psu.png" alt={`Penn State University Logo`} />
           <div className="location-date">
-            <h5>State College, PA</h5>
+            <h5 className="state-college">State College, PA</h5>
             <h6>2008 - 2012</h6>
           </div>
         </div>
@@ -108,6 +108,9 @@ const Wrapper = styled.div`
       text-align: center;
       font-size: 0.5rem;
       font-weight: 900;
+    }
+    .state-college {
+      font-size: 0.45rem;
     }
   }
 

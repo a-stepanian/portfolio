@@ -14,11 +14,10 @@ const InnerBox = () => {
 const Wrapper2 = styled.div`
   position: absolute;
   top: 0;
-  left: 0;
+  left: 2.1rem;
   height: 100%;
   width: calc(100% - 2.1rem);
   overflow: hidden;
-  margin-left: 2.1rem;
   z-index: 4;
   display: flex;
   align-items: center;
