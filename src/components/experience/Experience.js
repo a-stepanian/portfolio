@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import { experience, education } from "../../data";
-import { Job, BigCube, School } from "../index";
+import { Job, StateCube, BigCube, School } from "../index";
 import { MdFactCheck } from "react-icons/md";
 import { FaPeopleCarry } from "react-icons/fa";
 import { GiProgression } from "react-icons/gi";
@@ -93,7 +93,7 @@ const Experience = () => {
         </div>
 
         <div className="cube-wrapper">
-          {/* <StateCube cubeFace={cubeFace} /> */}
+          <StateCube cubeFace={cubeFace} />
           <BigCube bigCubeFace={bigCubeFace} />
         </div>
       </section>
@@ -146,6 +146,7 @@ const Wrapper = styled.section`
   }
 
   .work-history-container {
+    max-width: 100%;
     display: flex;
 
     .experience-wrapper {
