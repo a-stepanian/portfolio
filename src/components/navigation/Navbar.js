@@ -103,6 +103,12 @@ const Wrapper = styled.header`
     display: none;
   }
 
+  /* for hamburger menu component when button is clicked*/
+  .ham-open {
+    background-color: var(--white);
+    transition: background-color 0.5s;
+  }
+
   @media (min-width: 992px) {
     @media (min-width: 480px) {
       .logo {

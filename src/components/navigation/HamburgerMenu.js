@@ -6,7 +6,12 @@ const HamburgerMenu = () => {
   const { isSidebarOpen, toggleSidebar } = useGlobalContext();
 
   return (
-    <Wrapper type="button" onClick={toggleSidebar} aria-label="Navigation Menu">
+    <Wrapper
+      type="button"
+      onClick={toggleSidebar}
+      aria-label="Navigation Menu"
+      className={`${isSidebarOpen ? "ham-open" : ""}`}
+    >
       <div
         className={`${isSidebarOpen ? "line top open-top" : "line top"}`}
       ></div>
@@ -30,7 +35,8 @@ const Wrapper = styled.button`
   height: 100%;
   border: none;
   border-left: var(--small-border);
-  background-color: var(--white);
+  background-color: var(--main);
+  transition: background-color 0.5s 0.5s;
 
   &:hover {
     cursor: pointer;

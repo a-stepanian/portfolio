@@ -28,7 +28,6 @@ const Wrapper = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
-  overflow-x: hidden;
 
   header {
     width: 100%;
