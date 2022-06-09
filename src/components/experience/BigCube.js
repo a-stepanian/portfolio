@@ -79,7 +79,7 @@ const Wrapper = styled.div`
     width: var(--big-cube-width);
     height: var(--big-cube-width);
     perspective: calc(var(--big-cube-width) * 2); //zoom in and out of cube
-    padding-bottom: 15rem;
+    padding-bottom: 15.7rem;
     display: block;
 
     .cube {
@@ -90,6 +90,7 @@ const Wrapper = styled.div`
       transform-style: preserve-3d;
       transition: transform 0.4s;
     }
+
     .face {
       position: absolute;
       width: var(--big-cube-width);
@@ -175,11 +176,25 @@ const Wrapper = styled.div`
   }
 
   @media (min-width: 992px) {
+    padding-bottom: 17.7rem;
     transform: translateX(1rem);
+    .face {
+      h5,
+      h6 {
+        font-size: 0.9rem;
+      }
+    }
   }
 
   @media (min-width: 1200px) {
+    padding-bottom: 20.7rem;
     transform: translateX(-1rem);
+    .face {
+      h5,
+      h6 {
+        font-size: 1rem;
+      }
+    }
   }
 `;
 

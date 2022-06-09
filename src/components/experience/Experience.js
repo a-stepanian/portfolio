@@ -108,9 +108,10 @@ const Experience = () => {
 const Wrapper = styled.section`
   background-color: var(--main-bg);
   /* BACKGROUND 2.0 BLACK STICKY BANNER*/
-  width: 100%;
+  max-width: 100vw;
+  overflow-x: hidden;
   .background-sticky {
-    width: 100%;
+    max-width: 100%;
     z-index: 3;
     position: sticky;
     top: 4.95rem;
@@ -131,7 +132,7 @@ const Wrapper = styled.section`
   }
 
   .story-wrapper {
-    width: 100%;
+    max-width: 100%;
     display: flex;
     justify-content: center;
   }
@@ -160,11 +161,11 @@ const Wrapper = styled.section`
     display: flex;
 
     .experience-wrapper {
-      width: 100%;
+      max-width: 100%;
     }
 
     .cube-wrapper {
-      width: 0;
+      max-width: 0;
     }
   }
 
