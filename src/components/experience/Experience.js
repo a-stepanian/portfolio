@@ -66,22 +66,26 @@ const Experience = () => {
             : "2.0"
         }`}</p>
       </header>
-      <div className="story">
-        <GiProgression className="background-icon" />
-        <p>
-          I have spent the past decade solving problems of all shapes and sizes.
-        </p>
-        <FaPeopleCarry className="background-icon" />
-        <p>
-          I have worked on many teams, large and small, near and far, and I
-          thrive working independently as well.
-        </p>
-        <MdFactCheck className="background-icon" />
-        <p>
-          I've had complete ownership and accountability of numerous projects
-          and initiatives throughout my career.
-        </p>
+      <div className="story-wrapper">
+        <div className="story">
+          <GiProgression className="background-icon" />
+          <p>
+            I have spent the past decade solving problems of all shapes and
+            sizes.
+          </p>
+          <FaPeopleCarry className="background-icon" />
+          <p>
+            I have worked on many teams, large and small, near and far, and I
+            thrive working independently as well.
+          </p>
+          <MdFactCheck className="background-icon" />
+          <p>
+            I've had complete ownership and accountability of numerous projects
+            and initiatives throughout my career.
+          </p>
+        </div>
       </div>
+
       <section className="work-history-container">
         <div className="experience-wrapper">
           {experience.map((job, index) => {
@@ -124,6 +128,12 @@ const Wrapper = styled.section`
       font-size: 0.7rem;
       font-weight: 500;
     }
+  }
+
+  .story-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
   }
 
   .story {
@@ -191,7 +201,12 @@ const Wrapper = styled.section`
     }
 
     .story {
-      margin: 5rem 10%;
+      row-gap: 3rem;
+      margin: 7rem 10%;
+      p {
+        font-size: 1.4rem;
+        line-height: 2rem;
+      }
     }
 
     .work-history-container {

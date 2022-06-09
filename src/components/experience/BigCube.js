@@ -78,7 +78,7 @@ const Wrapper = styled.div`
     transform: translateX(5rem);
     width: var(--big-cube-width);
     height: var(--big-cube-width);
-    perspective: 20rem; //zoom in and out of cube
+    perspective: calc(var(--big-cube-width) * 2); //zoom in and out of cube
     padding-bottom: 15rem;
     display: block;
 
@@ -119,22 +119,29 @@ const Wrapper = styled.div`
     /* ------------------------------------- */
 
     .oregon {
-      transform: rotateY(0deg) translateZ(8.67rem);
+      --big-cube-z-move: ;
+      transform: rotateY(0deg)
+        translateZ(calc(var(--big-cube-width) / 2 / 0.5774));
     }
     .georgia {
-      transform: rotateY(60deg) translateZ(8.67rem);
+      transform: rotateY(60deg)
+        translateZ(calc(var(--big-cube-width) / 2 / 0.5774));
     }
     .maryland {
-      transform: rotateY(120deg) translateZ(8.67rem);
+      transform: rotateY(120deg)
+        translateZ(calc(var(--big-cube-width) / 2 / 0.5774));
     }
     .pennsylvania {
-      transform: rotateY(180deg) translateZ(8.67rem);
+      transform: rotateY(180deg)
+        translateZ(calc(var(--big-cube-width) / 2 / 0.5774));
     }
     .psu {
-      transform: rotateY(240deg) translateZ(8.67rem);
+      transform: rotateY(240deg)
+        translateZ(calc(var(--big-cube-width) / 2 / 0.5774));
     }
     .washington {
-      transform: rotateY(300deg) translateZ(8.67rem);
+      transform: rotateY(300deg)
+        translateZ(calc(var(--big-cube-width) / 2 / 0.5774));
     }
 
     /* ------------------------------------------------ */
@@ -142,23 +149,37 @@ const Wrapper = styled.div`
     /* ------------------------------------------------ */
 
     .show-oregon {
-      transform: translateZ(-8.67rem) rotateY(0deg);
+      transform: translateZ(calc(var(--big-cube-width) / 2 / -0.5774))
+        rotateY(0deg);
     }
     .show-georgia {
-      transform: translateZ(-8.67rem) rotateY(-60deg);
+      transform: translateZ(calc(var(--big-cube-width) / 2 / -0.5774))
+        rotateY(-60deg);
     }
     .show-maryland {
-      transform: translateZ(-8.67rem) rotateY(-120deg);
+      transform: translateZ(calc(var(--big-cube-width) / 2 / -0.5774))
+        rotateY(-120deg);
     }
     .show-pennsylvania {
-      transform: translateZ(-8.67rem) rotateY(-180deg);
+      transform: translateZ(calc(var(--big-cube-width) / 2 / -0.5774))
+        rotateY(-180deg);
     }
     .show-psu {
-      transform: translateZ(-8.67rem) rotateY(-240deg);
+      transform: translateZ(calc(var(--big-cube-width) / 2 / -0.5774))
+        rotateY(-240deg);
     }
     .show-washington {
-      transform: translateZ(-8.67rem) rotateY(-300deg);
+      transform: translateZ(calc(var(--big-cube-width) / 2 / -0.5774))
+        rotateY(-300deg);
     }
+  }
+
+  @media (min-width: 992px) {
+    transform: translateX(1rem);
+  }
+
+  @media (min-width: 1200px) {
+    transform: translateX(-1rem);
   }
 `;
 
