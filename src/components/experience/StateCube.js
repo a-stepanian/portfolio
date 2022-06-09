@@ -3,64 +3,66 @@ import styled from "styled-components";
 const StateCube = ({ cubeFace }) => {
   return (
     <Wrapper>
-      <div
-        className={`${
-          cubeFace === "oregon"
-            ? "cube show-oregon"
-            : cubeFace === null
-            ? "cube show-oregon"
-            : cubeFace === "georgia"
-            ? "cube show-georgia"
-            : cubeFace === "maryland"
-            ? "cube show-maryland"
-            : cubeFace === "pennsylvania"
-            ? "cube show-pennsylvania"
-            : cubeFace === "psu"
-            ? "cube show-psu"
-            : "cube show-washington"
-        }`}
-      >
-        <div className="face oregon">
-          <img src="or.png" alt={`Outline of the Oregon state map`} />
-          <div className="location-date">
-            <h5>Rainier, OR</h5>
-            <h6>2020 - 2021</h6>
+      <div className="cube-positioner">
+        <div
+          className={`${
+            cubeFace === "oregon"
+              ? "cube show-oregon"
+              : cubeFace === null
+              ? "cube show-oregon"
+              : cubeFace === "georgia"
+              ? "cube show-georgia"
+              : cubeFace === "maryland"
+              ? "cube show-maryland"
+              : cubeFace === "pennsylvania"
+              ? "cube show-pennsylvania"
+              : cubeFace === "psu"
+              ? "cube show-psu"
+              : "cube show-washington"
+          }`}
+        >
+          <div className="face oregon">
+            <img src="or.png" alt={`Outline of the Oregon state map`} />
+            <div className="location-date">
+              <h5>Rainier, OR</h5>
+              <h6>2020 - 2021</h6>
+            </div>
           </div>
-        </div>
-        <div className="face georgia">
-          <img src="ga.png" alt={`Outline of the Georgia state map`} />
-          <div className="location-date">
-            <h5>Chamblee, GA</h5>
-            <h6>2017 - 2020</h6>
+          <div className="face georgia">
+            <img src="ga.png" alt={`Outline of the Georgia state map`} />
+            <div className="location-date">
+              <h5>Chamblee, GA</h5>
+              <h6>2017 - 2020</h6>
+            </div>
           </div>
-        </div>
-        <div className="face maryland">
-          <img src="md.png" alt={`Outline of the Maryland state map`} />
-          <div className="location-date">
-            <h5>Baltimore, MD</h5>
-            <h6>2013 - 2017</h6>
+          <div className="face maryland">
+            <img src="md.png" alt={`Outline of the Maryland state map`} />
+            <div className="location-date">
+              <h5>Baltimore, MD</h5>
+              <h6>2013 - 2017</h6>
+            </div>
           </div>
-        </div>
-        <div className="face pennsylvania">
-          <img src="pa.png" alt={`Outline of the Pennsylvania state map`} />
-          <div className="location-date">
-            <h5>Shady Grove, PA</h5>
-            <h6>2012</h6>
+          <div className="face pennsylvania">
+            <img src="pa.png" alt={`Outline of the Pennsylvania state map`} />
+            <div className="location-date">
+              <h5>Shady Grove, PA</h5>
+              <h6>2012</h6>
+            </div>
           </div>
-        </div>
 
-        <div className="face psu">
-          <img src="psu.png" alt={`Penn State University Logo`} />
-          <div className="location-date">
-            <h5 className="state-college">State College, PA</h5>
-            <h6>2008 - 2012</h6>
+          <div className="face psu">
+            <img src="psu.png" alt={`Penn State University Logo`} />
+            <div className="location-date">
+              <h5 className="state-college">State College, PA</h5>
+              <h6>2008 - 2012</h6>
+            </div>
           </div>
-        </div>
-        <div className="face washington">
-          <img src="wa.png" alt={`Outline of the Washington state map`} />
-          <div className="location-date">
-            <h5>Washington</h5>
-            <h6>2021 - Present</h6>
+          <div className="face washington">
+            <img src="wa.png" alt={`Outline of the Washington state map`} />
+            <div className="location-date">
+              <h5>Washington</h5>
+              <h6>2021 - Present</h6>
+            </div>
           </div>
         </div>
       </div>
@@ -72,11 +74,16 @@ const Wrapper = styled.div`
   position: sticky;
   top: 7rem;
   z-index: 2;
-  transform: translateX(-6.1rem);
-  width: var(--cube-width);
-  height: var(--cube-width);
-  perspective: 8rem; //zoom in and out of cube
-  padding-bottom: 6.55rem;
+  width: 7rem;
+  transform: translateX(-7rem);
+  overflow: hidden;
+  .cube-positioner {
+    transform: translateX(0.9rem);
+    width: var(--cube-width);
+    height: var(--cube-width);
+    perspective: 8rem; //zoom in and out of cube
+    padding-bottom: 6.55rem;
+  }
 
   .cube {
     width: 100%;
