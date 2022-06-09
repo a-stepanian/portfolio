@@ -109,7 +109,6 @@ const Wrapper = styled.section`
   background-color: var(--main-bg);
   /* BACKGROUND 2.0 BLACK STICKY BANNER*/
   max-width: 100vw;
-  overflow-x: hidden;
   .background-sticky {
     max-width: 100%;
     z-index: 3;
