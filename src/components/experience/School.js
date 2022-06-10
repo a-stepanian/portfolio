@@ -1,30 +1,22 @@
 import styled from "styled-components";
 
 const School = ({ school }) => {
-  const {
-    id,
-    company,
-    location,
-    date,
-    major,
-    minor,
-    course,
-    instructor,
-    schoolUrl,
-    logo,
-  } = school;
+  const { id, company, location, date, major, minor, course, instructor } =
+    school;
 
   return (
     <Wrapper>
       <header className={`school-header ${id}`}>
         <div className="title-company" target="_blank" rel="noreferrer">
-          <h3>{major}</h3>
-          <a href={schoolUrl}>
+          <h3>{company}</h3>
+          {/* <a href={schoolUrl}>
             <img src={logo} alt={`${company} logo`} />
             <h4>{company}</h4>
-          </a>
+          </a> */}
         </div>
       </header>
+      <p className="major">{major}</p>
+      <p className="minor">{minor}</p>
       <ul>
         <li className="duty">{location}</li>
         <li className="duty">{date}</li>
@@ -59,8 +51,8 @@ const Wrapper = styled.article`
     h3 {
       font-family: "Bebas Neue", cursive;
       margin-top: 0.5rem;
-      font-size: 1.3rem;
-      line-height: 1.2rem;
+      font-size: 1.8rem;
+      line-height: 1.8rem;
     }
 
     a {
@@ -81,6 +73,14 @@ const Wrapper = styled.article`
         margin: 0.2rem 0.2rem;
       }
     }
+  }
+
+  .major,
+  .minor {
+    font-family: "Bebas Neue", cursive;
+    padding: 3rem 0.5rem 0;
+    font-size: 2.6rem;
+    line-height: 2.6rem;
   }
 
   ul {

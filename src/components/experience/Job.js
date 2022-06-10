@@ -8,11 +8,11 @@ const Job = ({ job }) => {
       <header className={`job-header ${id}`}>
         <div className="title-company">
           <h3>{title}</h3>
-          <a href={companyUrl} target="_blank" rel="noreferrer">
-            <img src={logo} alt={`${company} logo`} />
-            <h4>{company}</h4>
-          </a>
         </div>
+        <a href={companyUrl} target="_blank" rel="noreferrer">
+          <img src={logo} alt={`${company} logo`} />
+          <h4>{company}</h4>
+        </a>
       </header>
       <ul>
         {description.map((jobDuty, index) => {
@@ -38,25 +38,26 @@ const Wrapper = styled.article`
     position: sticky;
     top: 6.95rem;
     width: 100%;
-    height: 6.6rem;
+    height: 7.5rem;
     background: var(--main-muted);
     padding-right: 7rem;
     padding-left: 0.3rem;
     border-bottom: var(--small-border);
     .title-company {
-      padding: 0.5rem 0;
       height: 100%;
       display: flex;
-      flex-direction: column;
-      justify-content: space-between;
+      align-items: center;
     }
     h3 {
       font-family: "Bebas Neue", cursive;
-      font-size: 1.8rem;
-      line-height: 1.8rem;
+      font-size: 1.6rem;
+      line-height: 1.6rem;
     }
 
     a {
+      position: absolute;
+      bottom: 0;
+      right: 0;
       height: 1.2rem;
       text-decoration: none;
       background-color: var(--black);
@@ -67,6 +68,7 @@ const Wrapper = styled.article`
         padding: 0.1rem;
         color: var(--white);
         font-size: 0.6rem;
+        letter-spacing: -0.02rem;
         white-space: nowrap;
       }
       img {
@@ -89,7 +91,16 @@ const Wrapper = styled.article`
   /* MEDIA QUERIES */
   /* ------------- */
 
-  @media (min-width: 480px) {
+  @media (min-width: 330px) {
+    .job-header {
+      h3 {
+        font-size: 1.8rem;
+        line-height: 1.8rem;
+      }
+    }
+  }
+
+  @media (min-width: 380px) {
     .job-header {
       h3 {
         margin-top: 0.4rem;
@@ -104,14 +115,23 @@ const Wrapper = styled.article`
     border: var(--small-border);
     border-right: none;
     .job-header {
-      padding-right: 0.3rem;
-      padding-left: 0.3rem;
+      padding: 0.3rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      .title-company {
+        height: auto;
+        display: flex;
+        align-items: center;
+      }
       h3 {
         font-size: 2.4rem;
         line-height: 2rem;
       }
+      a {
+        position: relative;
+      }
     }
-
     ul {
       .duty {
         font-size: 1.1rem;
@@ -122,6 +142,7 @@ const Wrapper = styled.article`
   @media (min-width: 992px) {
     border: var(--small-border);
     .job-header {
+      align-items: center;
       h3 {
         font-size: 2.5rem;
       }

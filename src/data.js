@@ -115,8 +115,9 @@ export const experience = [
     title: "Reliability and Project Engineer",
     date: "2013 - 2017",
     description: [
+      "Lead the implementation of Lean Management in the Joint Treatment and Loading Departments.",
+      "Facilitated production efficiency improvement projects and trained associates to lead their own projects.",
       "Lead numerous reliability and process improvement projects throughout the plant.",
-      "Facilitated efficiency improvement projects and trained associates to lead their own projects.",
       "Conducted training and mentored employees on problem solving techniques.",
       "Oversaw the equipment reliability and maintenance program for a multi-departmental production facility.",
       "Planned and executed multiple concurrent capital investment projects on time and under budget.",

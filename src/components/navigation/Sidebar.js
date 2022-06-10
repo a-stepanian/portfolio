@@ -124,9 +124,9 @@ const Wrapper = styled.div`
     button {
       border: none;
       background: transparent;
-      font-size: 0.5rem;
+      font-size: 1.5rem;
       opacity: 0;
-      transition: opacity var(--hamburger), font-size var(--hamburger);
+      transition: opacity var(--hamburger);
       color: var(--black);
       text-decoration: none;
     }
@@ -143,15 +143,10 @@ const Wrapper = styled.div`
   /* ---------------------------------- */
 
   .nav-links-open {
-    button {
-      font-size: 1.5rem;
-      opacity: 1;
-      transition: opacity var(--hamburger) var(--hamburger),
-        font-size var(--hamburger) var(--hamburger);
-    }
+    button,
     .divider {
-      transition: opacity var(--hamburger) var(--hamburger);
       opacity: 1;
+      transition: opacity var(--hamburger) var(--hamburger);
     }
   }
 

@@ -89,7 +89,7 @@ const Wrapper = styled.div`
     width: 100%;
     height: 100%;
     position: relative;
-    padding-top: 0.75rem;
+    padding-top: 0.5rem;
     transform-style: preserve-3d;
     transition: transform 0.4s;
   }

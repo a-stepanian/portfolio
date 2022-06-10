@@ -28,6 +28,7 @@ const Wrapper = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 5rem;
 
   header {
     width: 100%;
@@ -50,7 +51,7 @@ const Wrapper = styled.section`
   }
 
   .instructions {
-    margin-top: 2.5rem;
+    margin: 7.5rem 0 5rem;
     padding: 0 5%;
     font-size: 1.8rem;
     line-height: 2.2rem;

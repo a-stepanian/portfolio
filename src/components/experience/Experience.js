@@ -131,6 +131,7 @@ const Wrapper = styled.section`
   }
 
   .story-wrapper {
+    margin: 2.5rem 0;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -143,7 +144,7 @@ const Wrapper = styled.section`
     row-gap: 1.8rem;
     margin: 2.5rem 0;
     padding: 0 5%;
-    font-size: 1rem;
+    font-size: 1.1rem;
     line-height: 1.5rem;
     color: var(--black);
     font-weight: 900;
