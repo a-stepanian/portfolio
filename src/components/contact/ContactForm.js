@@ -9,7 +9,7 @@ const ContactForm = () => {
 
   return (
     <Wrapper onSubmit={handleSubmit}>
-      <label for="full-name">NAME</label>
+      <label htmlFor="full-name">NAME</label>
       <input type="text" name="name" id="full-name" required="" />
       <label htmlFor="email">EMAIL</label>
       <input id="email" type="email" name="email" />
