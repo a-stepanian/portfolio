@@ -13,7 +13,7 @@ const data = [
       "Mapbox API",
       "Unsplash API",
     ],
-    url: "https://beersource.herokuapp.com/",
+    url: "https://beersource.netlify.app/",
     thumbnail: "beersource.png",
     learnings: "learned alot",
     repo: "https://github.com/a-stepanian/beersource",

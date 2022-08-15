@@ -38,7 +38,7 @@ const Wrapper = styled.article`
     position: sticky;
     top: 6.95rem;
     width: 100%;
-    height: 7.5rem;
+    height: 6.3rem;
     background: var(--main-muted);
     padding-right: 7rem;
     padding-left: 0.3rem;
@@ -60,13 +60,13 @@ const Wrapper = styled.article`
       right: 0;
       height: 1.2rem;
       text-decoration: none;
-      background-color: var(--black);
+      background-color: var(--main);
       display: flex;
       align-items: center;
-      width: min-content;
+      width: 100%;
       h4 {
         padding: 0.1rem;
-        color: var(--white);
+        color: var(--black);
         font-size: 0.6rem;
         letter-spacing: -0.02rem;
         white-space: nowrap;
@@ -125,8 +125,8 @@ const Wrapper = styled.article`
         align-items: center;
       }
       h3 {
-        font-size: 2.4rem;
-        line-height: 2rem;
+        font-size: 2.2rem;
+        line-height: 1.9rem;
       }
       a {
         position: relative;

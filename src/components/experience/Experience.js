@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import { experience, education } from "../../data";
-import { Job, StateCube, BigCube, School } from "../index";
+import { Job, StateCube, BigCube, School, OnlineSchool } from "../index";
 import { MdFactCheck } from "react-icons/md";
 import { FaPeopleCarry } from "react-icons/fa";
 import { GiProgression } from "react-icons/gi";
@@ -23,7 +23,7 @@ const Experience = () => {
         "washington3",
       ];
 
-      for (let i = 0; i < 8; i++) {
+      for (let i = 0; i < 6; i++) {
         // select job title header element
         const jobHeader = document.querySelectorAll(".title-company")[i];
         // get distance from the top of the viewport
@@ -36,12 +36,8 @@ const Experience = () => {
           setBigCubeFace(states[i]);
         }
       }
-
-      //Set the state to null after scrolling above oregon section.
-      const oregon = document.querySelector(".title-company");
-      const oregonDistanceFromTop = oregon.getBoundingClientRect().top;
-      if (oregonDistanceFromTop > 150) setCubeFace(null);
     };
+
     window.addEventListener("scroll", handleScroll);
 
     return () => window.removeEventListener("scroll", handleScroll);
@@ -66,6 +62,7 @@ const Experience = () => {
             : "2.0"
         }`}</p>
       </header>
+
       <div className="story-wrapper">
         <div className="story">
           <GiProgression className="background-icon" />
@@ -91,9 +88,8 @@ const Experience = () => {
           {experience.map((job, index) => {
             return <Job key={index} job={job} />;
           })}
-          {education.map((school, index) => {
-            return <School key={index} school={school} />;
-          })}
+          <OnlineSchool />
+          <School />
         </div>
 
         <div className="cube-wrapper">

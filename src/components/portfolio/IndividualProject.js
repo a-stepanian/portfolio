@@ -85,7 +85,7 @@ const Wrapper = styled.article`
     width: 100%;
     padding: 0 0.5rem;
     background-color: var(--main-muted);
-    transition: height var(--info), padding var(--info);
+    transition: height var(--info);
     box-shadow: inset 0 3px 3px rgba(0, 0, 0, 0.1),
       inset 3px 0 3px rgba(0, 0, 0, 0.1);
     overflow: hidden;
@@ -134,10 +134,6 @@ const Wrapper = styled.article`
   }
   .info-open {
     height: 100%;
-    padding: 0.5rem;
-    span {
-      opacity: 1;
-    }
   }
 
   footer {

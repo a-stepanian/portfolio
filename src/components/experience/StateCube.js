@@ -138,10 +138,10 @@ const Wrapper = styled.div`
   .pennsylvania {
     transform: rotateY(180deg) translateZ(4.3rem);
   }
-  .psu {
+  .washington {
     transform: rotateY(240deg) translateZ(4.3rem);
   }
-  .washington {
+  .psu {
     transform: rotateY(300deg) translateZ(4.3rem);
   }
 

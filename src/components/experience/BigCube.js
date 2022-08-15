@@ -136,11 +136,11 @@ const Wrapper = styled.div`
       transform: rotateY(180deg)
         translateZ(calc(var(--big-cube-width) / 2 / 0.5774));
     }
-    .psu {
+    .washington {
       transform: rotateY(240deg)
         translateZ(calc(var(--big-cube-width) / 2 / 0.5774));
     }
-    .washington {
+    .psu {
       transform: rotateY(300deg)
         translateZ(calc(var(--big-cube-width) / 2 / 0.5774));
     }

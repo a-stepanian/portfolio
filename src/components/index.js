@@ -26,6 +26,7 @@ import Job from "./experience/Job";
 import StateCube from "./experience/StateCube";
 import BigCube from "./experience/BigCube";
 import School from "./experience/School";
+import OnlineSchool from "./experience/OnlineSchool";
 
 // contact components
 import Contact from "./contact/Contact";
@@ -59,4 +60,5 @@ export {
   HeroCube,
   Footer,
   ContactForm,
+  OnlineSchool,
 };

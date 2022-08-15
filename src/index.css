@@ -29,10 +29,10 @@
   --cube: #c6e1facc;
   --big-cube: #c6e1facc;
 
-  --hamburger: 0.4s;
+  --hamburger: 0.5s;
   --info: 0.7s;
-  --hero: 2s;
-  --hero-delay: 1.5s;
+  --hero: 2.5s;
+  --hero-delay: 2s;
 
   --small-border: 0.2rem solid var(--black);
 

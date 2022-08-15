@@ -28,7 +28,6 @@ const Wrapper = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 5rem;
 
   header {
     width: 100%;
@@ -59,7 +58,7 @@ const Wrapper = styled.section`
   }
 
   .project-wrapper {
-    padding: 2.5rem 5%;
+    padding: 2.5rem 5% 7.5rem;
     display: grid;
     row-gap: 5rem;
     justify-items: center;
