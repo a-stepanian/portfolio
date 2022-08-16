@@ -36,7 +36,7 @@ const School = () => {
   return (
     <Wrapper>
       <header className="school-header">
-        <div className="title-company" target="_blank" rel="noreferrer">
+        <div className="title-company">
           <h3>The Pennsylvania State University</h3>
         </div>
       </header>
@@ -73,8 +73,7 @@ const Wrapper = styled.article`
       padding: 0.5rem 0;
       height: 100%;
       display: flex;
-      flex-direction: column;
-      justify-content: space-between;
+      align-items: center;
     }
     h3 {
       font-family: "Bebas Neue", cursive;
@@ -103,7 +102,7 @@ const Wrapper = styled.article`
 
   .psu-seal {
     padding: 5rem 5%;
-    width: 90%;
+    width: 70%;
     img {
       width: 100%;
     }
@@ -135,6 +134,9 @@ const Wrapper = styled.article`
         font-size: 1rem;
       }
     }
+    .psu-seal {
+      width: 60%;
+    }
   }
 
   @media (min-width: 768px) {
@@ -144,6 +146,8 @@ const Wrapper = styled.article`
     .school-header {
       padding-right: 0.3rem;
       padding-left: 0.3rem;
+      display: flex;
+      justify-content: center;
       h3 {
         font-size: 2.4rem;
         line-height: 2rem;

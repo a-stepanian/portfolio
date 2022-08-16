@@ -2,7 +2,11 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 :root {
@@ -69,12 +73,12 @@
 
 @media (min-width: 992px) {
   :root {
-  --big-cube-width: 12rem;
+    --big-cube-width: 12rem;
   }
 }
 
 @media (min-width: 1200px) {
   :root {
-  --big-cube-width: 15rem;
+    --big-cube-width: 15rem;
   }
 }

@@ -24,7 +24,7 @@ const Wrapper = styled.footer`
     font-family: "Bebas Neue", cursive;
     font-size: 1.5rem;
     text-align: center;
-    text-shadow: 1px 6px 2px rgba(0, 0, 0, 0.2);
+    text-shadow: 1px 5px 2px rgba(0, 0, 0, 0.15);
     span {
       font-size: 1.4rem;
       white-space: nowrap;

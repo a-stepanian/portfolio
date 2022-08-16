@@ -68,44 +68,93 @@ const OnlineSchool = () => {
     "styled-components",
   ];
 
+  const fcc1Skills = [
+    "HTML5",
+    "Basic CSS",
+    "Applied Visual Design",
+    "Applied Accessibility",
+    "Responsive Web Design Principles",
+    "CSS Flexbox & Grid",
+  ];
+
+  const fcc2Skills = [
+    "Basic fundamental programing concepts with Javascript",
+    "ES6",
+    "RegEx",
+    "Debugging",
+    "Basic Data Structures",
+    "Basic & Intermediate Algorithm Scripting",
+    "OOP & Functional Programming",
+  ];
+
   return (
     <Wrapper>
       <header className="school-header">
-        <div className="title-company" target="_blank" rel="noreferrer">
+        <div className="title-company">
           <h3>Independent Courses</h3>
         </div>
       </header>
-      <p className="course">The Web Developer Bootcamp</p>
-      <div className="certificate-wrapper">
-        <img
-          src="webdevcertificatelarge.png"
-          alt="Web Developer Bootcamp Certificate of Completion"
-        />
-      </div>
-      <ul>
-        {webDevSkills.map((skill, index) => {
-          return <li key={index}>{skill}</li>;
-        })}
-      </ul>
+      <div className="courses">
+        <p className="course">React Tutorial and Projects Course</p>
+        <div className="certificate-wrapper">
+          <img src="react.jpg" alt="React Course Certificate of Completion" />
+        </div>
+        <ul>
+          {reactSkills.map((skill, index) => {
+            return <li key={index}>{skill}</li>;
+          })}
+        </ul>
+        <div className="line"></div>
 
-      <p className="course">The Git and Github Bootcamp</p>
-      <div className="certificate-wrapper">
-        <img
-          src="gitbootcamplarge.png"
-          alt="Web Developer Bootcamp Certificate of Completion"
-        />
+        <p className="course">The Git and Github Bootcamp</p>
+        <div className="certificate-wrapper">
+          <img
+            src="gitbootcamplarge.png"
+            alt="Web Developer Bootcamp Certificate of Completion"
+          />
+        </div>
+        <ul>
+          {gitSkills.map((skill, index) => {
+            return <li key={index}>{skill}</li>;
+          })}
+        </ul>
+        <div className="line"></div>
+
+        <p className="course">The Web Developer Bootcamp</p>
+        <div className="certificate-wrapper">
+          <img
+            src="webdevcertificatelarge.png"
+            alt="Web Developer Bootcamp Certificate of Completion"
+          />
+        </div>
+        <ul>
+          {webDevSkills.map((skill, index) => {
+            return <li key={index}>{skill}</li>;
+          })}
+        </ul>
+        <div className="line"></div>
+
+        <p className="course">JavaScript Algorithms and Data Structures</p>
+        <div className="certificate-wrapper">
+          <img src="fcc2.png" alt="Free code camp certificate" />
+        </div>
+        <ul>
+          {fcc2Skills.map((skill, index) => {
+            return <li key={index}>{skill}</li>;
+          })}
+        </ul>
+        <div className="line"></div>
+
+        <p className="course">Responsive Web Design</p>
+        <div className="certificate-wrapper">
+          <img src="fcc1.png" alt="Free code camp certificate" />
+        </div>
+        <ul>
+          {fcc1Skills.map((skill, index) => {
+            return <li key={index}>{skill}</li>;
+          })}
+        </ul>
       </div>
-      <ul>
-        {gitSkills.map((skill, index) => {
-          return <li key={index}>{skill}</li>;
-        })}
-      </ul>
-      <p className="course">React Tutorial and Projects Course</p>
-      <ul>
-        {reactSkills.map((skill, index) => {
-          return <li key={index}>{skill}</li>;
-        })}
-      </ul>
     </Wrapper>
   );
 };
@@ -126,8 +175,7 @@ const Wrapper = styled.article`
       padding: 0.5rem 0;
       height: 100%;
       display: flex;
-      flex-direction: column;
-      justify-content: space-between;
+      align-items: center;
     }
     h3 {
       font-family: "Bebas Neue", cursive;
@@ -136,16 +184,24 @@ const Wrapper = styled.article`
       line-height: 1.8rem;
     }
   }
+  .courses {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 
   .course {
+    width: 100%;
+    text-align: center;
     font-family: "Bebas Neue", cursive;
-    padding: 3rem 0.5rem 0;
+    padding: 7.5rem 0.5rem 2.5rem;
     font-size: 2.6rem;
     line-height: 2.6rem;
   }
   .certificate-wrapper {
     margin: 0 5%;
     width: 90%;
+    max-width: 400px;
     box-shadow: 3px 3px 8px black;
     img {
       width: 100%;
@@ -159,6 +215,11 @@ const Wrapper = styled.article`
       margin-right: 2rem;
       font-size: 0.8rem;
     }
+  }
+
+  .line {
+    width: 90%;
+    border-bottom: var(--small-border);
   }
 
   /* ------------- */
@@ -187,6 +248,8 @@ const Wrapper = styled.article`
     .school-header {
       padding-right: 0.3rem;
       padding-left: 0.3rem;
+      display: flex;
+      justify-content: center;
       h3 {
         font-size: 2.4rem;
         line-height: 2rem;

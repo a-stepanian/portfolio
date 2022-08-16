@@ -11,9 +11,7 @@ const Projects = () => {
         <h2>PORTFOLIO</h2>
         <p>1.0</p>
       </header>
-      <h3 className="instructions">
-        Choose a project to check out the website or view the code on github.
-      </h3>
+      <h3 className="instructions">Select a project below to get started.</h3>
       <div className="project-wrapper">
         {data.map((site) => {
           return <IndividualProject key={site.id} site={site} />;
@@ -75,7 +73,9 @@ const Wrapper = styled.section`
       padding: 5rem 10%;
     }
     .instructions {
-      margin-top: 5rem;
+      margin: 15rem 0 5rem;
+      font-size: 2.4rem;
+      line-height: 2.8rem;
       padding: 5%;
       text-align: center;
     }
@@ -89,7 +89,9 @@ const Wrapper = styled.section`
       }
     }
     .instructions {
-      margin-top: 5rem;
+      margin: 20rem 0 17.5rem;
+      font-size: 3rem;
+      line-height: 3.2rem;
       padding: 0;
       max-width: 40rem;
     }
@@ -111,6 +113,7 @@ const Wrapper = styled.section`
 
   @media (min-width: 1200px) {
     .instructions {
+      margin: 15rem 0 7.5rem;
       font-size: 2.6rem;
       line-height: 2.8rem;
       max-width: 56rem;

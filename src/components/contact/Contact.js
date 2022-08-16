@@ -10,7 +10,7 @@ const Contact = () => {
         <h2>CONTACT</h2>
         <p>3.0</p>
       </header>
-      <div className="form-wrapper">
+      <div className="form-wrapper" id="contact">
         <h3 className="lets-connect">Let's connect!</h3>
         <ContactForm />
       </div>

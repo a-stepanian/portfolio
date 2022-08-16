@@ -4,25 +4,43 @@ import styled from "styled-components";
 const ContactForm = () => {
   const [state, handleSubmit] = useForm("xqknjpzd");
   if (state.succeeded) {
-    return <p>Thank you for the email!</p>;
+    return (
+      <Thanks>
+        <p className="thanks">
+          Thanks for your message! <br /> I will be in contact soon.
+        </p>
+        <p>- Alex</p>
+      </Thanks>
+    );
   }
 
   return (
     <Wrapper onSubmit={handleSubmit}>
-      <label htmlFor="full-name">NAME</label>
-      <input type="text" name="name" id="full-name" required="" />
-      <label htmlFor="email">EMAIL</label>
-      <input id="email" type="email" name="email" />
+      <label htmlFor="full-name">YOUR NAME</label>
+      <input type="text" name="name" id="full-name" required="true" />
+      <label htmlFor="email">YOUR CONTACT EMAIL</label>
+      <input id="email" type="email" name="email" required="true" />
       <ValidationError prefix="Email" field="email" errors={state.errors} />
-      <label htmlFor="message">MESSAGE</label>
+      <label htmlFor="message">LEAVE A MESSAGE</label>
       <textarea id="message" name="message" rows="4" />
       <ValidationError prefix="Message" field="message" errors={state.errors} />
       <button type="submit" disabled={state.submitting}>
-        Submit
+        Send!
       </button>
     </Wrapper>
   );
 };
+
+const Thanks = styled.div`
+  background-color: var(--white);
+  padding: 1.5rem 1rem;
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
+  margin: 7.5rem 0.5rem;
+  font-size: 1.2rem;
+  @media (min-width: 480px) {
+    font-size: 1.5rem;
+  }
+`;
 
 const Wrapper = styled.form`
   border: var(--small-border);

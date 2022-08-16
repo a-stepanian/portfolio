@@ -45,19 +45,31 @@ const Navbar = () => {
       </div>
       <HamburgerMenu />
       <div className="right-box">
-        <a href="/">
+        <a
+          href="https://www.linkedin.com/in/alexander-stepanian/"
+          target="_blank"
+          rel="noreferrer"
+          className="linkedin"
+        >
           <BsLinkedin />
         </a>
         <a
           href="https://github.com/a-stepanian"
           target="_blank"
           rel="noreferrer"
+          className="github"
         >
           <BsGithub />
         </a>
-        <a href="/">
+        <button
+          className="email-button"
+          type="button"
+          onClick={() =>
+            scrollToTargetAdjusted(".contact-section-scroll-target")
+          }
+        >
           <AiTwotoneMail />
-        </a>
+        </button>
       </div>
     </Wrapper>
   );
@@ -149,7 +161,10 @@ const Wrapper = styled.header`
       background-color: var(--main);
       justify-content: space-evenly;
       align-items: center;
-      a {
+      a,
+      .email-button {
+        border: none;
+        background-color: transparent;
         height: 2.5rem;
         width: 2.5rem;
         color: var(--black);
@@ -157,23 +172,24 @@ const Wrapper = styled.header`
         display: flex;
         align-items: center;
         justify-content: center;
-        &:nth-of-type(1) {
-          font-size: 1.5rem;
-          &:hover {
-            font-size: 2rem;
-          }
+      }
+      .linkedin {
+        font-size: 1.5rem;
+        &:hover {
+          font-size: 2rem;
         }
-        &:nth-of-type(2) {
-          font-size: 1.6rem;
-          &:hover {
-            font-size: 2.2rem;
-          }
+      }
+      .github {
+        font-size: 1.6rem;
+        &:hover {
+          font-size: 2.2rem;
         }
-        &:nth-of-type(3) {
-          font-size: 1.7rem;
-          &:hover {
-            font-size: 2.3rem;
-          }
+      }
+      .email-button {
+        font-size: 1.7rem;
+        &:hover {
+          font-size: 2.3rem;
+          cursor: pointer;
         }
       }
     }
