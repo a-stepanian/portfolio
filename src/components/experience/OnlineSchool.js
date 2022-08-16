@@ -1,13 +1,6 @@
 import styled from "styled-components";
 
 const OnlineSchool = () => {
-  const randomSkills = [
-    "Postman to send requests",
-    "Axios for making requests",
-    "Auth0",
-    "Joi Validation",
-  ];
-
   const webDevSkills = [
     "HTML5",
     "CSS3",

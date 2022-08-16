@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
-import { experience, education } from "../../data";
+import { experience } from "../../data";
 import { Job, StateCube, BigCube, School, OnlineSchool } from "../index";
 import { MdFactCheck } from "react-icons/md";
 import { FaPeopleCarry } from "react-icons/fa";
