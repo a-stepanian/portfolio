@@ -1,5 +1,24 @@
 const data = [
   {
+    id: "5",
+    title: "BookWorm",
+    description:
+      "Full stack CRUD application to join a club, add books, and leave reviews.",
+    builtWith: [
+      "Javascript",
+      "EJS Templating",
+      "css",
+      "MongoDB",
+      "Express",
+      "Node",
+      "Open Library API",
+    ],
+    url: "https://evening-shore-85582.herokuapp.com/",
+    thumbnail: "bookshelf.png",
+    learnings: "learned alot",
+    repo: "https://github.com/a-stepanian/BookShelf",
+  },
+  {
     id: "1",
     title: "BeerSource",
     description: "Find local breweries or brew your own with recipes",
@@ -42,7 +61,7 @@ const data = [
     id: "4",
     title: "just the weather",
     description:
-      "Just the Weather, none of the ads.  Disclaimer: Forecast is only as accurate as the API data.",
+      "Just the weather, none of the ads.  Disclaimer: Forecast is only as accurate as the API data.",
     builtWith: [
       "react",
       "Javascript",
@@ -56,25 +75,6 @@ const data = [
     thumbnail: "justtheweather.png",
     learnings: "learned alot",
     repo: "https://github.com/a-stepanian/just-weather",
-  },
-  {
-    id: "5",
-    title: "BookWorm",
-    description:
-      "Full stack CRUD application to join a club, add books, and leave reviews.",
-    builtWith: [
-      "Javascript",
-      "EJS Templating",
-      "css",
-      "MongoDB",
-      "Express",
-      "Node",
-      "Open Library API",
-    ],
-    url: "https://evening-shore-85582.herokuapp.com/",
-    thumbnail: "bookshelf.png",
-    learnings: "learned alot",
-    repo: "https://github.com/a-stepanian/BookShelf",
   },
 ];
 
