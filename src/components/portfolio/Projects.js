@@ -2,7 +2,6 @@ import React from "react";
 import styled from "styled-components";
 import data from "../../data";
 import IndividualProject from "./IndividualProject";
-import { BsFillStarFill } from "react-icons/bs";
 
 const Projects = () => {
   return (
@@ -13,11 +12,7 @@ const Projects = () => {
         <p>1.0</p>
       </header>
       <h3 className="instructions">Select a project below to get started.</h3>
-      <div className="featured">
-        <BsFillStarFill className="star" />
-        <h4>Featured Project</h4>
-        <BsFillStarFill className="star" />
-      </div>{" "}
+
       <div className="project-wrapper">
         {data.map((site) => {
           return <IndividualProject key={site.id} site={site} />;
@@ -59,32 +54,6 @@ const Wrapper = styled.section`
     font-size: 1.8rem;
     line-height: 2.2rem;
     color: var(--black);
-  }
-
-  .featured {
-    background-color: var(--black);
-    color: var(--main-bg);
-
-    display: flex;
-    align-items: center;
-    max-width: 25rem;
-    h4 {
-      font-size: 1.2rem;
-    }
-    .star {
-      margin: 0.5rem;
-      font-size: 1rem;
-      color: gold;
-      animation: rotate 20s linear infinite;
-    }
-    @keyframes rotate {
-      0% {
-        transform: rotate(0deg);
-      }
-      100% {
-        transform: rotate(360deg);
-      }
-    }
   }
 
   .project-wrapper {

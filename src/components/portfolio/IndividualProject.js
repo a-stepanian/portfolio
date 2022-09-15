@@ -3,6 +3,7 @@ import styled from "styled-components";
 import InfoToggleButton from "./InfoToggleButton";
 import { RiExternalLinkFill } from "react-icons/ri";
 import { BsGithub } from "react-icons/bs";
+import { BsFillStarFill } from "react-icons/bs";
 
 const IndividualProject = ({ site }) => {
   const [isInfoOpen, setIsInfoOpen] = useState(false);
@@ -14,6 +15,14 @@ const IndividualProject = ({ site }) => {
 
   return (
     <Wrapper>
+      {site.repo2 && (
+        <div className="featured">
+          <BsFillStarFill className="star" />
+          <h4>Featured Project</h4>
+          <BsFillStarFill className="star" />
+        </div>
+      )}
+
       <div className="img-container">
         <img
           src={site.thumbnail}
@@ -75,6 +84,35 @@ const Wrapper = styled.article`
   border: 3px solid var(--black);
   padding: 1rem;
   max-width: 25rem;
+  .featured {
+    position: absolute;
+    top: calc(-2rem - 3px);
+    left: calc(50% - 7.5rem - 3px);
+    width: 15rem;
+    background-color: var(--black);
+    color: goldenrod;
+    height: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    h4 {
+      font-size: 1.2rem;
+    }
+    .star {
+      margin: 0 0.5rem;
+      font-size: 1rem;
+      color: gold;
+      animation: rotate 20s linear infinite;
+    }
+    @keyframes rotate {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+  }
   p,
   span {
     font-family: "Lato", sans-serif;
