@@ -1,5 +1,24 @@
 const data = [
   {
+    id: "6",
+    title: "Apply Yourself",
+    description:
+      "Full stack MERN project that allows you to track your job application status and gain insights to your application process.",
+    builtWith: [
+      "MongoDB",
+      "Express.js",
+      "React",
+      "Node.js",
+      "styled-components",
+      "charts.js",
+    ],
+    url: "https://client-apply-yourself.netlify.app/",
+    thumbnail: "apply.png",
+    learnings: "learned alot",
+    repo: "https://github.com/a-stepanian/apply-yourself-client",
+    repo2: "https://github.com/a-stepanian/apply-yourself-server",
+  },
+  {
     id: "5",
     title: "BookWorm",
     description:
@@ -51,7 +70,7 @@ const data = [
     id: "3",
     title: "Wallpaper Finder",
     description: "Search for high quality wallpapers for your device",
-    builtWith: ["React", "Javascript", "html", "css", "Unsplash API"],
+    builtWith: ["React", "Javascript", "css", "Unsplash API"],
     url: "https://minimal-wallpaper-finder.netlify.app/",
     thumbnail: "wallpaperfinder.png",
     learnings: "learned alot",
@@ -63,10 +82,7 @@ const data = [
     description:
       "Just the weather, none of the ads.  Disclaimer: Forecast is only as accurate as the API data.",
     builtWith: [
-      "react",
-      "Javascript",
-      "html",
-      "css",
+      "React",
       "styled-components",
       "OpenWeatherMapAPI",
       "WeatherAPI",

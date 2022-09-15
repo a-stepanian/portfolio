@@ -34,10 +34,23 @@ const IndividualProject = ({ site }) => {
               <RiExternalLinkFill className="web" />
               <span>Website</span>
             </a>
-            <a href={site.repo} target="_blank" rel="noreferrer">
-              <BsGithub />
-              <span>Git Repo</span>
-            </a>
+            {site.repo2 ? (
+              <>
+                <a href={site.repo} target="_blank" rel="noreferrer">
+                  <BsGithub />
+                  <span>Client</span>
+                </a>
+                <a href={site.repo2} target="_blank" rel="noreferrer">
+                  <BsGithub />
+                  <span>Server</span>
+                </a>
+              </>
+            ) : (
+              <a href={site.repo} target="_blank" rel="noreferrer">
+                <BsGithub />
+                <span>Git Repo</span>
+              </a>
+            )}
           </div>
         </div>
       </div>
@@ -61,11 +74,11 @@ const Wrapper = styled.article`
   background-color: var(--main-bg);
   border: 3px solid var(--black);
   padding: 1rem;
+  max-width: 25rem;
   p,
   span {
     font-family: "Lato", sans-serif;
   }
-  max-width: 25rem;
 
   .img-container {
     position: relative;
