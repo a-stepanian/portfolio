@@ -1,23 +1,24 @@
 const data = [
-  // {
-  //   id: "6",
-  //   title: "Apply Yourself",
-  //   description:
-  //     "Full stack MERN project that allows you to track your job application status and gain insights to your application process.",
-  //   builtWith: [
-  //     "MongoDB",
-  //     "Express.js",
-  //     "React",
-  //     "Node.js",
-  //     "styled-components",
-  //     "charts.js",
-  //   ],
-  //   url: "https://client-apply-yourself.netlify.app/",
-  //   thumbnail: "apply.png",
-  //   learnings: "learned alot",
-  //   repo: "https://github.com/a-stepanian/apply-yourself-client",
-  //   repo2: "https://github.com/a-stepanian/apply-yourself-server",
-  // },
+  {
+    id: "6",
+    title: "Apply Yourself",
+    description:
+      "Full stack MERN app that helps you to manage the job application status and gain insights to your application process.",
+    builtWith: [
+      "MongoDB",
+      "Express.js",
+      "React",
+      "Node.js",
+      "styled-components",
+      "charts.js",
+      "bcrypt",
+    ],
+    url: "https://client-apply-yourself.netlify.app/",
+    thumbnail: "apply.png",
+    learnings: "learned alot",
+    repo: "https://github.com/a-stepanian/apply-yourself-client",
+    repo2: "https://github.com/a-stepanian/apply-yourself-server",
+  },
   {
     id: "5",
     title: "BookWorm",
