@@ -1,5 +1,15 @@
 const data = [
   {
+    id: "7",
+    title: "MenuWeb",
+    description: "A CMS that allows a user to create basic websites.",
+    builtWith: ["React", "Bootstrap"],
+    url: "https://menu-site-builder.netlify.app/",
+    thumbnail: "apply.png",
+    learnings: "learned alot",
+    repo: "https://github.com/a-stepanian/restaurant-site-builder",
+  },
+  {
     id: "6",
     title: "Apply Yourself",
     description:
