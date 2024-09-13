@@ -7,8 +7,8 @@ import { Job, StateCube, BigCube, School, OnlineSchool } from "../index";
 // import { GiProgression } from "react-icons/gi";
 
 const Experience = () => {
-  const [cubeFace, setCubeFace] = useState("oregon");
-  const [bigCubeFace, setBigCubeFace] = useState("oregon");
+  const [cubeFace, setCubeFace] = useState("texas");
+  const [bigCubeFace, setBigCubeFace] = useState("texas");
 
   useEffect(() => {
     const handleScroll = () => {
