@@ -4,24 +4,7 @@ const StateCube = ({ cubeFace }) => {
   return (
     <Wrapper>
       <div className="cube-positioner">
-        <div
-          className={`${
-            cubeFace === "oregon"
-              ? "cube show-oregon"
-              : cubeFace === null
-              ? "cube show-texas"
-              : cubeFace === "texas"
-              ? "cube show-texas"
-              : cubeFace === "georgia"
-              ? "cube show-georgia"
-              : cubeFace === "maryland"
-              ? "cube show-maryland"
-              : cubeFace === "pennsylvania"
-              ? "cube show-pennsylvania"
-              : cubeFace === "psu"
-              ? "cube show-psu"
-              : "cube show-washington"
-          }`}>
+        <div className={`cube show-${cubeFace === null ? "texas" : cubeFace}`}>
           <div className="face texas">
             <img src="tx.png" alt={`Outline of the Texas state map`} />
             <div className="location-date">
@@ -57,19 +40,18 @@ const StateCube = ({ cubeFace }) => {
               <h6>2012</h6>
             </div>
           </div>
-
-          <div className="face psu">
-            <img src="psu.png" alt={`Penn State University Logo`} />
-            <div className="location-date">
-              <h5 className="state-college">State College, PA</h5>
-              <h6>2008 - 2012</h6>
-            </div>
-          </div>
           <div className="face washington">
             <img src="wa.png" alt={`Outline of the Washington state map`} />
             <div className="location-date">
               <h5>Longview, WA</h5>
               <h6>2021 - Present</h6>
+            </div>
+          </div>
+          <div className="face psu">
+            <img src="psu.png" alt={`Penn State University Logo`} />
+            <div className="location-date">
+              <h5 className="state-college">State College, PA</h5>
+              <h6>2008 - 2012</h6>
             </div>
           </div>
         </div>

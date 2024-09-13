@@ -42,10 +42,6 @@ const IndividualProject = ({ site }) => {
             </div>
           </div>
           <div className="links">
-            {/* <a href={site.url} target="_blank" rel="noreferrer">
-              <RiExternalLinkFill className="web" />
-              <span>Website</span>
-            </a> */}
             {site.repo2 ? (
               <>
                 <a href={site.repo} target="_blank" rel="noreferrer">
@@ -168,12 +164,11 @@ const Wrapper = styled.article`
     }
     .links {
       display: flex;
-      justify-content: space-evenly;
-      margin-bottom: 1rem;
+      justify-content: space-between;
     }
     a {
-      height: 4.2rem;
-      width: 4.2rem;
+      height: 3.2rem;
+      width: 3.2rem;
       color: var(--black);
       font-size: 1.2rem;
       display: flex;
@@ -203,7 +198,7 @@ const Wrapper = styled.article`
       .project-title {
         font-family: "Bebas Neue", cursive;
         font-size: 1.1rem;
-        font-weight: 600;
+        font-weight: 900;
         padding: 0;
         a {
           color: var(--black);
@@ -257,27 +252,11 @@ const Wrapper = styled.article`
           font-size: 1.1rem;
         }
       }
-      a {
-        color: var(--black);
-        font-size: 2rem;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        text-decoration: none;
-        .web {
-          font-size: 2.3rem;
-        }
-        span {
-          font-size: 1rem;
-          font-weight: 900;
-        }
-      }
     }
     footer {
       div {
         .project-title {
-          font-size: 2.8rem;
+          font-size: 1.5rem;
         }
       }
     }

@@ -4,7 +4,7 @@ const data = [
     title: "Apply Yourself",
     description:
       "A job portal enabling users to sign up, explore job postings, and efficiently manage their entire application process.",
-    builtWith: ["MongoDB", "Express.js", "React", "Node.js", "styled-components", "charts.js", "bcrypt"],
+    builtWith: ["MERN Stack", "styled-components", "charts.js", "bcrypt"],
     url: "https://client-apply-yourself.netlify.app/",
     videoUrl: "applyyourselfsm.mp4",
     thumbnail: "apply.png",
@@ -19,7 +19,7 @@ const data = [
     description: "A simple website builder application that allows a user to create basic websites with ",
     builtWith: ["React", "Bootstrap"],
     url: "https://menu-site-builder.netlify.app/",
-    videoUrl: "menuweb.mp4",
+    videoUrl: "menuwebsm.mp4",
     thumbnail: "apply.png",
     learnings: "learned alot",
     repo: "https://github.com/a-stepanian/restaurant-site-builder",

@@ -12,17 +12,7 @@ const Experience = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      const states = [
-        "texas",
-        "oregon",
-        "georgia",
-        "maryland",
-        "pennsylvania",
-        "psu",
-        "washington1",
-        "washington2",
-        "washington3"
-      ];
+      const states = ["texas", "oregon", "georgia", "maryland", "pennsylvania", "washington", "psu"];
 
       for (let i = 0; i < 6; i++) {
         // select job title header element

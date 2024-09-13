@@ -14,7 +14,7 @@ const Projects = () => {
       <h3 className="instructions">Select a project below to get started.</h3>
 
       <div className="project-wrapper">
-        {data.map((site) => {
+        {data.map(site => {
           return <IndividualProject key={site.id} site={site} />;
         })}
       </div>
@@ -74,7 +74,7 @@ const Wrapper = styled.section`
       padding: 5rem 10%;
     }
     .instructions {
-      margin: 15rem 0 5rem;
+      margin: 10rem 0;
       font-size: 2.4rem;
       line-height: 2.8rem;
       padding: 5%;
@@ -90,7 +90,6 @@ const Wrapper = styled.section`
       }
     }
     .instructions {
-      margin: 20rem 0 17.5rem;
       font-size: 3rem;
       line-height: 3.2rem;
       padding: 0;
@@ -105,7 +104,6 @@ const Wrapper = styled.section`
       margin-bottom: 5rem;
     }
     .instructions {
-      margin: 7.5rem 0 0;
       font-size: 2.4rem;
       line-height: 2.8rem;
       max-width: 52rem;
