@@ -89,7 +89,14 @@ export const experience = [
     logo: "cv.png",
     title: "Front End Developer",
     date: "2022 - 2024",
-    description: ["ieoieuioweqoiruo", "asdf", "asdfasdf"]
+    description: [
+      "Led the front-end development process for multiple concurrent client projects from discovery to production.",
+      "Selected by the CEO to be the sole developer for the company's marketing website, working directly on high-visibility projects to improve our marketing employee efficiency and improve SEO / performance.",
+      "Provided support on legacy codebase projects by rapidly ramping up to fix bugs and build new features.",
+      "Work directly with the CEO to design and develop a custom CMS from scratch for internal and client use.",
+      "Integrate AI features into the CMS to automate content creation and enhance results with user feedback.",
+      "Build back-end endpoints as needed to support various front-end features of the CMS."
+    ]
   },
   {
     id: "rainier",
