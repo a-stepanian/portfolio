@@ -15,7 +15,7 @@ const IndividualProject = ({ site }) => {
 
   return (
     <Wrapper>
-      {site.repo2 && (
+      {site.featured && (
         <div className="featured">
           <BsFillStarFill className="star" />
           <h4>Featured Project</h4>
@@ -24,11 +24,14 @@ const IndividualProject = ({ site }) => {
       )}
 
       <div className="img-container">
-        <img
-          src={site.thumbnail}
-          alt={`screenshot of ${site.title} website`}
-          onClick={toggleInfo}
-        />
+        {site.videoUrl ? (
+          <video className="video" width="320" height="180" controls>
+            <source src={site.videoUrl} type="video/mp4" />
+          </video>
+        ) : (
+          <img src={site.thumbnail} alt={`screenshot of ${site.title} website`} onClick={toggleInfo} loading="lazy" />
+        )}
+        {/* <img src={site.thumbnail} alt={`screenshot of ${site.title} website`} onClick={toggleInfo} /> */}
         <div className={`${isInfoOpen ? "info info-open" : "info"}`}>
           <div>
             <h4>Built with:</h4>
@@ -39,10 +42,10 @@ const IndividualProject = ({ site }) => {
             </div>
           </div>
           <div className="links">
-            <a href={site.url} target="_blank" rel="noreferrer">
+            {/* <a href={site.url} target="_blank" rel="noreferrer">
               <RiExternalLinkFill className="web" />
               <span>Website</span>
-            </a>
+            </a> */}
             {site.repo2 ? (
               <>
                 <a href={site.repo} target="_blank" rel="noreferrer">
@@ -65,11 +68,12 @@ const IndividualProject = ({ site }) => {
       </div>
       <footer onClick={toggleInfo}>
         <div>
-          <h3 className="project-title">{site.title}</h3>
-          <InfoToggleButton
-            isInfoOpen={isInfoOpen}
-            setIsInfoOpen={setIsInfoOpen}
-          />
+          <h3 className="project-title">
+            <a href={site.url} target="_blank" rel="noreferrer" title={site.url}>
+              {site.title} <RiExternalLinkFill className="web" />
+            </a>
+          </h3>
+          <InfoToggleButton isInfoOpen={isInfoOpen} setIsInfoOpen={setIsInfoOpen} />
         </div>
         <p>{site.description}</p>
       </footer>
@@ -84,6 +88,10 @@ const Wrapper = styled.article`
   border: 3px solid var(--black);
   padding: 1rem;
   max-width: 25rem;
+  .video {
+    width: 100%;
+    height: auto;
+  }
   .featured {
     position: absolute;
     top: calc(-2rem - 3px);
@@ -137,8 +145,7 @@ const Wrapper = styled.article`
     padding: 0 0.5rem;
     background-color: var(--main-muted);
     transition: height var(--info);
-    box-shadow: inset 0 3px 3px rgba(0, 0, 0, 0.1),
-      inset 3px 0 3px rgba(0, 0, 0, 0.1);
+    box-shadow: inset 0 3px 3px rgba(0, 0, 0, 0.1), inset 3px 0 3px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     display: flex;
     flex-direction: column;
@@ -195,9 +202,16 @@ const Wrapper = styled.article`
       align-items: center;
       .project-title {
         font-family: "Bebas Neue", cursive;
-        font-size: 2rem;
+        font-size: 1.1rem;
         font-weight: 600;
         padding: 0;
+        a {
+          color: var(--black);
+          text-decoration: none;
+          &:hover {
+            text-decoration: underline;
+          }
+        }
       }
     }
     p {

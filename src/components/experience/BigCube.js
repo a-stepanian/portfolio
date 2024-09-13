@@ -8,7 +8,9 @@ const BigCube = ({ bigCubeFace }) => {
           bigCubeFace === "oregon"
             ? "cube show-oregon"
             : bigCubeFace === null
-            ? "cube show-oregon"
+            ? "cube show-texas"
+            : bigCubeFace === "texas"
+            ? "cube show-texas"
             : bigCubeFace === "georgia"
             ? "cube show-georgia"
             : bigCubeFace === "maryland"
@@ -18,8 +20,14 @@ const BigCube = ({ bigCubeFace }) => {
             : bigCubeFace === "psu"
             ? "cube show-psu"
             : "cube show-washington"
-        }`}
-      >
+        }`}>
+        <div className="face texas">
+          <img src="tx.png" alt={`Outline of the Texas state map`} />
+          <div className="location-date">
+            <h5>Austin, TX (remote)</h5>
+            <h6>2022 - present</h6>
+          </div>
+        </div>
         <div className="face oregon">
           <img src="or.png" alt={`Outline of the Oregon state map`} />
           <div className="location-date">
@@ -81,7 +89,6 @@ const Wrapper = styled.div`
     perspective: calc(var(--big-cube-width) * 2); //zoom in and out of cube
     padding-bottom: 15.7rem;
     display: block;
-
     .cube {
       width: 100%;
       height: 100%;
@@ -90,7 +97,6 @@ const Wrapper = styled.div`
       transform-style: preserve-3d;
       transition: transform 0.4s;
     }
-
     .face {
       position: absolute;
       width: var(--big-cube-width);
@@ -115,63 +121,52 @@ const Wrapper = styled.div`
       }
     }
 
-    /* ------------------------------------- */
     /* INITIAL STATIC POSITION OF CUBE FACES */
-    /* ------------------------------------- */
-
+    .texas {
+      --big-cube-z-move: ;
+      transform: rotateY(0deg) translateZ(calc(var(--big-cube-width) / 2 / 0.485));
+    }
     .oregon {
       --big-cube-z-move: ;
-      transform: rotateY(0deg)
-        translateZ(calc(var(--big-cube-width) / 2 / 0.5774));
+      transform: rotateY(51.43deg) translateZ(calc(var(--big-cube-width) / 2 / 0.485));
     }
     .georgia {
-      transform: rotateY(60deg)
-        translateZ(calc(var(--big-cube-width) / 2 / 0.5774));
+      transform: rotateY(102.86deg) translateZ(calc(var(--big-cube-width) / 2 / 0.485));
     }
     .maryland {
-      transform: rotateY(120deg)
-        translateZ(calc(var(--big-cube-width) / 2 / 0.5774));
+      transform: rotateY(154.29deg) translateZ(calc(var(--big-cube-width) / 2 / 0.485));
     }
     .pennsylvania {
-      transform: rotateY(180deg)
-        translateZ(calc(var(--big-cube-width) / 2 / 0.5774));
+      transform: rotateY(205.72deg) translateZ(calc(var(--big-cube-width) / 2 / 0.485));
     }
     .washington {
-      transform: rotateY(240deg)
-        translateZ(calc(var(--big-cube-width) / 2 / 0.5774));
+      transform: rotateY(257.15deg) translateZ(calc(var(--big-cube-width) / 2 / 0.485));
     }
     .psu {
-      transform: rotateY(300deg)
-        translateZ(calc(var(--big-cube-width) / 2 / 0.5774));
+      transform: rotateY(308.58deg) translateZ(calc(var(--big-cube-width) / 2 / 0.485));
     }
 
-    /* ------------------------------------------------ */
     /* TRANSFORM OPTIONS FOR DISPLAYING A SPECIFIC FACE */
-    /* ------------------------------------------------ */
-
+    .show-texas {
+      transform: translateZ(calc(var(--big-cube-width) / 2 / -0.485)) rotateY(0deg);
+    }
     .show-oregon {
-      transform: translateZ(calc(var(--big-cube-width) / 2 / -0.5774))
-        rotateY(0deg);
+      transform: translateZ(calc(var(--big-cube-width) / 2 / -0.485)) rotateY(-51.43deg);
     }
     .show-georgia {
-      transform: translateZ(calc(var(--big-cube-width) / 2 / -0.5774))
-        rotateY(-60deg);
+      transform: translateZ(calc(var(--big-cube-width) / 2 / -0.485)) rotateY(-102.86deg);
     }
     .show-maryland {
-      transform: translateZ(calc(var(--big-cube-width) / 2 / -0.5774))
-        rotateY(-120deg);
+      transform: translateZ(calc(var(--big-cube-width) / 2 / -0.485)) rotateY(-154.29deg);
     }
     .show-pennsylvania {
-      transform: translateZ(calc(var(--big-cube-width) / 2 / -0.5774))
-        rotateY(-180deg);
+      transform: translateZ(calc(var(--big-cube-width) / 2 / -0.485)) rotateY(-205.72deg);
     }
     .show-psu {
-      transform: translateZ(calc(var(--big-cube-width) / 2 / -0.5774))
-        rotateY(-240deg);
+      transform: translateZ(calc(var(--big-cube-width) / 2 / -0.485)) rotateY(-257.15deg);
     }
     .show-washington {
-      transform: translateZ(calc(var(--big-cube-width) / 2 / -0.5774))
-        rotateY(-300deg);
+      transform: translateZ(calc(var(--big-cube-width) / 2 / -0.485)) rotateY(-308.58deg);
     }
   }
 

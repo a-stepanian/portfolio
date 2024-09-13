@@ -2,9 +2,9 @@ import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import { experience } from "../../data";
 import { Job, StateCube, BigCube, School, OnlineSchool } from "../index";
-import { MdFactCheck } from "react-icons/md";
-import { FaPeopleCarry } from "react-icons/fa";
-import { GiProgression } from "react-icons/gi";
+// import { MdFactCheck } from "react-icons/md";
+// import { FaPeopleCarry } from "react-icons/fa";
+// import { GiProgression } from "react-icons/gi";
 
 const Experience = () => {
   const [cubeFace, setCubeFace] = useState("oregon");
@@ -13,6 +13,7 @@ const Experience = () => {
   useEffect(() => {
     const handleScroll = () => {
       const states = [
+        "texas",
         "oregon",
         "georgia",
         "maryland",
@@ -20,7 +21,7 @@ const Experience = () => {
         "psu",
         "washington1",
         "washington2",
-        "washington3",
+        "washington3"
       ];
 
       for (let i = 0; i < 6; i++) {
@@ -49,10 +50,7 @@ const Experience = () => {
       <header className="background-sticky">
         <h2>BACKGROUND</h2>
         <p>{`${
-          cubeFace === "oregon" ||
-          cubeFace === "georgia" ||
-          cubeFace === "maryland" ||
-          cubeFace === "pennsylvania"
+          cubeFace === "oregon" || cubeFace === "georgia" || cubeFace === "maryland" || cubeFace === "pennsylvania"
             ? "WORK HISTORY 2.1"
             : cubeFace === "psu" ||
               cubeFace === "washington1" ||
@@ -64,23 +62,16 @@ const Experience = () => {
       </header>
 
       <div className="story-wrapper">
-        <div className="story">
+        {/* <div className="story">
           <GiProgression className="background-icon" />
-          <p>
-            I have spent the past decade solving problems of all shapes and
-            sizes.
-          </p>
+          <p>I have spent the past decade solving problems of all shapes and sizes.</p>
           <FaPeopleCarry className="background-icon" />
-          <p>
-            I have worked on many teams, large and small, near and far, and I
-            thrive working independently as well.
-          </p>
+          <p>I have worked on many teams, large and small, near and far, and I thrive working independently as well.</p>
           <MdFactCheck className="background-icon" />
           <p>
-            I've had complete ownership and accountability of numerous projects
-            and initiatives throughout my career.
+            I've had complete ownership and accountability of numerous projects and initiatives throughout my career.
           </p>
-        </div>
+        </div> */}
       </div>
 
       <section className="work-history-container">

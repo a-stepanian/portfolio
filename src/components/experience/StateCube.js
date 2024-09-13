@@ -9,7 +9,9 @@ const StateCube = ({ cubeFace }) => {
             cubeFace === "oregon"
               ? "cube show-oregon"
               : cubeFace === null
-              ? "cube show-oregon"
+              ? "cube show-texas"
+              : cubeFace === "texas"
+              ? "cube show-texas"
               : cubeFace === "georgia"
               ? "cube show-georgia"
               : cubeFace === "maryland"
@@ -19,8 +21,14 @@ const StateCube = ({ cubeFace }) => {
               : cubeFace === "psu"
               ? "cube show-psu"
               : "cube show-washington"
-          }`}
-        >
+          }`}>
+          <div className="face texas">
+            <img src="tx.png" alt={`Outline of the Texas state map`} />
+            <div className="location-date">
+              <h5>Austin, TX(remote)</h5>
+              <h6>2022 - present</h6>
+            </div>
+          </div>
           <div className="face oregon">
             <img src="or.png" alt={`Outline of the Oregon state map`} />
             <div className="location-date">
@@ -60,7 +68,7 @@ const StateCube = ({ cubeFace }) => {
           <div className="face washington">
             <img src="wa.png" alt={`Outline of the Washington state map`} />
             <div className="location-date">
-              <h5>Washington</h5>
+              <h5>Longview, WA</h5>
               <h6>2021 - Present</h6>
             </div>
           </div>
@@ -81,7 +89,7 @@ const Wrapper = styled.div`
     transform: translateX(0.9rem);
     width: var(--cube-width);
     height: var(--cube-width);
-    perspective: 8rem; //zoom in and out of cube
+    perspective: 6rem; //zoom in and out of cube
     padding-bottom: 6.55rem;
   }
 
@@ -122,50 +130,52 @@ const Wrapper = styled.div`
     }
   }
 
-  /* ------------------------------------- */
   /* INITIAL STATIC POSITION OF CUBE FACES */
-  /* ------------------------------------- */
-
+  .texas {
+    --big-cube-z-move: ;
+    transform: rotateY(0deg) translateZ(5.4rem);
+  }
   .oregon {
-    transform: rotateY(0deg) translateZ(4.3rem);
+    --big-cube-z-move: ;
+    transform: rotateY(51.43deg) translateZ(5.4rem);
   }
   .georgia {
-    transform: rotateY(60deg) translateZ(4.3rem);
+    transform: rotateY(102.86deg) translateZ(5.4rem);
   }
   .maryland {
-    transform: rotateY(120deg) translateZ(4.3rem);
+    transform: rotateY(154.29deg) translateZ(5.4rem);
   }
   .pennsylvania {
-    transform: rotateY(180deg) translateZ(4.3rem);
+    transform: rotateY(205.72deg) translateZ(5.4rem);
   }
   .washington {
-    transform: rotateY(240deg) translateZ(4.3rem);
+    transform: rotateY(257.15deg) translateZ(5.4rem);
   }
   .psu {
-    transform: rotateY(300deg) translateZ(4.3rem);
+    transform: rotateY(308.58deg) translateZ(5.4rem);
   }
 
-  /* ------------------------------------------------ */
   /* TRANSFORM OPTIONS FOR DISPLAYING A SPECIFIC FACE */
-  /* ------------------------------------------------ */
-
+  .show-texas {
+    transform: translateZ(-5.4rem) rotateY(0deg);
+  }
   .show-oregon {
-    transform: translateZ(-4.3rem) rotateY(0deg);
+    transform: translateZ(-5.4rem) rotateY(-51.43deg);
   }
   .show-georgia {
-    transform: translateZ(-4.3rem) rotateY(-60deg);
+    transform: translateZ(-5.4rem) rotateY(-102.86deg);
   }
   .show-maryland {
-    transform: translateZ(-4.3rem) rotateY(-120deg);
+    transform: translateZ(-5.4rem) rotateY(-154.29deg);
   }
   .show-pennsylvania {
-    transform: translateZ(-4.3rem) rotateY(-180deg);
+    transform: translateZ(-5.4rem) rotateY(-205.72deg);
   }
   .show-psu {
-    transform: translateZ(-4.3rem) rotateY(-240deg);
+    transform: translateZ(-5.4rem) rotateY(-257.15deg);
   }
   .show-washington {
-    transform: translateZ(-4.3rem) rotateY(-300deg);
+    transform: translateZ(-5.4rem) rotateY(-308.58deg);
   }
 
   @media (min-width: 768px) {

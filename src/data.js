@@ -1,70 +1,49 @@
 const data = [
   {
     id: "7",
-    title: "MenuWeb",
-    description: "A CMS that allows a user to create basic websites.",
-    builtWith: ["React", "Bootstrap"],
-    url: "https://menu-site-builder.netlify.app/",
-    thumbnail: "apply.png",
-    learnings: "learned alot",
-    repo: "https://github.com/a-stepanian/restaurant-site-builder",
-  },
-  {
-    id: "6",
     title: "Apply Yourself",
     description:
-      "Full stack MERN app that helps you to manage the job application status and gain insights to your application process.",
-    builtWith: [
-      "MongoDB",
-      "Express.js",
-      "React",
-      "Node.js",
-      "styled-components",
-      "charts.js",
-      "bcrypt",
-    ],
+      "A job portal enabling users to sign up, explore job postings, and efficiently manage their entire application process.",
+    builtWith: ["MongoDB", "Express.js", "React", "Node.js", "styled-components", "charts.js", "bcrypt"],
     url: "https://client-apply-yourself.netlify.app/",
+    videoUrl: "applyyourselfsm.mp4",
     thumbnail: "apply.png",
     learnings: "learned alot",
     repo: "https://github.com/a-stepanian/apply-yourself-client",
     repo2: "https://github.com/a-stepanian/apply-yourself-server",
+    featured: true
   },
   {
-    id: "5",
-    title: "BookWorm",
-    description:
-      "Full stack CRUD application to join a club, add books, and leave reviews.",
-    builtWith: [
-      "Javascript",
-      "EJS Templating",
-      "css",
-      "MongoDB",
-      "Express",
-      "Node",
-      "Open Library API",
-    ],
-    url: "https://evening-shore-85582.herokuapp.com/",
-    thumbnail: "bookshelf.png",
+    id: "6",
+    title: "MenuWeb",
+    description: "A simple website builder application that allows a user to create basic websites with ",
+    builtWith: ["React", "Bootstrap"],
+    url: "https://menu-site-builder.netlify.app/",
+    videoUrl: "menuweb.mp4",
+    thumbnail: "apply.png",
     learnings: "learned alot",
-    repo: "https://github.com/a-stepanian/BookShelf",
+    repo: "https://github.com/a-stepanian/restaurant-site-builder",
+    featured: true
   },
+  // {
+  //   id: "5",
+  //   title: "BookWorm",
+  //   description: "Full stack CRUD application to join a club, add books, and leave reviews.",
+  //   builtWith: ["Javascript", "EJS Templating", "css", "MongoDB", "Express", "Node", "Open Library API"],
+  //   url: "https://evening-shore-85582.herokuapp.com/",
+  //   thumbnail: "bookshelf.png",
+  //   learnings: "learned alot",
+  //   repo: "https://github.com/a-stepanian/BookShelf"
+  // },
   {
     id: "1",
     title: "BeerSource",
     description: "Find local breweries or brew your own with recipes",
-    builtWith: [
-      "React",
-      "React-Router",
-      "Javascript",
-      "css",
-      "Open Brewery API",
-      "Mapbox API",
-      "Unsplash API",
-    ],
+    builtWith: ["React", "React-Router", "Javascript", "css", "Open Brewery API", "Mapbox API", "Unsplash API"],
     url: "https://beersource.netlify.app/",
     thumbnail: "beersource.png",
     learnings: "learned alot",
-    repo: "https://github.com/a-stepanian/beersource",
+    repo: "https://github.com/a-stepanian/beersource"
   },
   {
     id: "2",
@@ -74,7 +53,7 @@ const data = [
     url: "https://all-the-views.netlify.app/",
     thumbnail: "alltheviews.png",
     learnings: "learned alot",
-    repo: "https://github.com/a-stepanian/all-the-views",
+    repo: "https://github.com/a-stepanian/all-the-views"
   },
   {
     id: "3",
@@ -84,44 +63,48 @@ const data = [
     url: "https://minimal-wallpaper-finder.netlify.app/",
     thumbnail: "wallpaperfinder.png",
     learnings: "learned alot",
-    repo: "https://github.com/a-stepanian/wallpaper-finder",
-  },
-  {
-    id: "4",
-    title: "just the weather",
-    description:
-      "Just the weather, none of the ads.  Disclaimer: Forecast is only as accurate as the API data.",
-    builtWith: [
-      "React",
-      "TypeScript",
-      "styled-components",
-      "OpenWeatherMapAPI",
-      "WeatherAPI",
-    ],
-    url: "https://just-the-weather.netlify.app/",
-    thumbnail: "justtheweather.png",
-    learnings: "learned alot",
-    repo: "https://github.com/a-stepanian/just-weather",
-  },
+    repo: "https://github.com/a-stepanian/wallpaper-finder"
+  }
+  // {
+  //   id: "4",
+  //   title: "just the weather",
+  //   description: "Just the weather, none of the ads.  Disclaimer: Forecast is only as accurate as the API data.",
+  //   builtWith: ["React", "TypeScript", "styled-components", "OpenWeatherMapAPI", "WeatherAPI"],
+  //   url: "https://just-the-weather.netlify.app/",
+  //   thumbnail: "justtheweather.png",
+  //   learnings: "learned alot",
+  //   repo: "https://github.com/a-stepanian/just-weather"
+  // }
 ];
 
 export default data;
 
 export const experience = [
   {
+    id: "washington",
+    company: "Clarity Ventures",
+    location: "Austin, TX (Fully Remote)",
+    stateImg: "tx.png",
+    companyUrl: "https://www.clarity-ventures.com",
+    logo: "cv.png",
+    title: "Front End Developer",
+    date: "2022 - 2024",
+    description: ["ieoieuioweqoiruo", "asdf", "asdfasdf"]
+  },
+  {
     id: "rainier",
     company: "United States Gypsum",
     location: "Rainier, OR",
     stateImg: "or.png",
     companyUrl: "https://www.usg.com/",
-    logo: "usglogobw.bmp",
+    logo: "usg-logo.png",
     title: "Engineering and Mill Manager",
     date: "2020 - 2021",
     description: [
       "Manage the safety, development, productivity and engagement of 36 employees comprised of PLC Programmers, electricians, engineers, and other plant staff.",
       "Define and implement the long-term capital strategy of the plant and execute over $4MM in project work.",
-      "Evaluate improvement efforts to improve profitability of the facility and grow the business.",
-    ],
+      "Evaluate improvement efforts to improve profitability of the facility and grow the business."
+    ]
   },
   {
     id: "chamblee",
@@ -129,7 +112,7 @@ export const experience = [
     location: "Chamblee, GA",
     stateImg: "ga.png",
     companyUrl: "https://www.usg.com/",
-    logo: "usglogobw.bmp",
+    logo: "usg-logo.png",
     title: "Engineering and Operations Manager",
     date: "2017 - 2020",
     description: [
@@ -138,8 +121,8 @@ export const experience = [
       "Increased Dry Joint efficiency 5% YTD in 2020 over 2019 by keeping employees focused and engaged.",
       "Strategically reduced annual maintenance material spending by 41% ($174,000) in 2018.",
       "Reduced energy consumption by 35%, saving the facility $90,000 annually.",
-      "Installed new automation equipment to improve safety and reduce Sherwin Williams product delay by 24%.",
-    ],
+      "Installed new automation equipment to improve safety and reduce Sherwin Williams product delay by 24%."
+    ]
   },
   {
     id: "baltimore",
@@ -147,7 +130,7 @@ export const experience = [
     location: "Baltimore, MD",
     stateImg: "md.png",
     companyUrl: "https://www.usg.com/",
-    logo: "usglogobw.bmp",
+    logo: "usg-logo.png",
     title: "Reliability and Project Engineer",
     date: "2013 - 2017",
     description: [
@@ -156,8 +139,8 @@ export const experience = [
       "Lead numerous reliability and process improvement projects throughout the plant.",
       "Conducted training and mentored employees on problem solving techniques.",
       "Oversaw the equipment reliability and maintenance program for a multi-departmental production facility.",
-      "Planned and executed multiple concurrent capital investment projects on time and under budget.",
-    ],
+      "Planned and executed multiple concurrent capital investment projects on time and under budget."
+    ]
   },
   {
     id: "pa",
@@ -171,9 +154,9 @@ export const experience = [
     description: [
       "Combined multiple product lines into a single production line to increase throughput.",
       "Implement 5S and other organizational techniques to improve workplace efficiency.",
-      "Trial new technology to speed up a key manufacturing bottleneck.",
-    ],
-  },
+      "Trial new technology to speed up a key manufacturing bottleneck."
+    ]
+  }
 ];
 
 export const education = [
@@ -192,19 +175,19 @@ export const education = [
       {
         title: "CMPSC 200: Programming for Engineers with MATLAB",
         description:
-          "This course introduces basic programming concepts including algorithm development, simple data types, number representation, control structures, functions, plotting, and basic numerical analysis techniques, all in the context of science and engineering. The course enables students to develop computer programs in a scientific programming language to solve simple engineering and science problems. The basic numerical analysis techniques covered in the course include matrix operations, systems of equations, solving equations, roots, curve fitting, interpolation, numerical integration, and numerical solutions of ordinary differential equations. Students analyze engineering and science problems, develop algorithms to solve those problems, implement their algorithms in an appropriate programming language, and produce informative output in both numerical and graphical form. The general programming concepts learned in the course are commonly found in most programming languages. The problem-solving skills learned in the course can then be utilized in upper-level engineering and science courses. This course includes an exploration of the conceptual and syntactical background needed for the successful completion of practical programming assignments. The course also includes an emphasis on the actual design and implementation of computer programs necessary for solving computational problems",
+          "This course introduces basic programming concepts including algorithm development, simple data types, number representation, control structures, functions, plotting, and basic numerical analysis techniques, all in the context of science and engineering. The course enables students to develop computer programs in a scientific programming language to solve simple engineering and science problems. The basic numerical analysis techniques covered in the course include matrix operations, systems of equations, solving equations, roots, curve fitting, interpolation, numerical integration, and numerical solutions of ordinary differential equations. Students analyze engineering and science problems, develop algorithms to solve those problems, implement their algorithms in an appropriate programming language, and produce informative output in both numerical and graphical form. The general programming concepts learned in the course are commonly found in most programming languages. The problem-solving skills learned in the course can then be utilized in upper-level engineering and science courses. This course includes an exploration of the conceptual and syntactical background needed for the successful completion of practical programming assignments. The course also includes an emphasis on the actual design and implementation of computer programs necessary for solving computational problems"
       },
       {
         title: "IE 330 Engineering Analytics",
         description:
-          "The study and application of Computing, Information Technology and Analytics to Industrial Engineering. IE 330 Engineering Analytics (3) Engineering Analytics is a required course for all baccalaureate students in the Industrial Engineering major. It provides students with a quantitative background in descriptive analytics which deals with data mining, predictive analytics which deals with forecasting, and the use of Big Data in analysis. Examples of analytics will be presented in various industries including manufacturing, healthcare, and distribution. The students will learn to work in settings to make data-informed decisions from large data sets. Students taking this course should be familiar with differential and integral calculus, statistics, and basic computing.",
+          "The study and application of Computing, Information Technology and Analytics to Industrial Engineering. IE 330 Engineering Analytics (3) Engineering Analytics is a required course for all baccalaureate students in the Industrial Engineering major. It provides students with a quantitative background in descriptive analytics which deals with data mining, predictive analytics which deals with forecasting, and the use of Big Data in analysis. Examples of analytics will be presented in various industries including manufacturing, healthcare, and distribution. The students will learn to work in settings to make data-informed decisions from large data sets. Students taking this course should be familiar with differential and integral calculus, statistics, and basic computing."
       },
       {
         title: "IE 408 Cognitive Work Design",
         description:
-          "Design and evaluation of cognitive work, including the human/computer interface, visual displays, software design, and automated system monitoring, with emphasis on human performance. I E 408 Cognitive Work Design (3)Cognitive Work Designis a senior level course offered in the Department of Industrial and Manufacturing Engineering. It is one of two courses which follow I E 327, Introduction to Work Design. This course focuses on the cognitive part of human factors and work design. It will be offered in fall and spring semesters. This course will enable students to design, implement, and evaluate human-computer interfaces according to principles outlined in foundational human-computer interaction readings. Students will be engaged in the active learning of design, programming, and usability concepts by way of building interfaces on the personal computer.Students taking this course should be familiar with computer programming and introduction to work design.",
-      },
-    ],
+          "Design and evaluation of cognitive work, including the human/computer interface, visual displays, software design, and automated system monitoring, with emphasis on human performance. I E 408 Cognitive Work Design (3)Cognitive Work Designis a senior level course offered in the Department of Industrial and Manufacturing Engineering. It is one of two courses which follow I E 327, Introduction to Work Design. This course focuses on the cognitive part of human factors and work design. It will be offered in fall and spring semesters. This course will enable students to design, implement, and evaluate human-computer interfaces according to principles outlined in foundational human-computer interaction readings. Students will be engaged in the active learning of design, programming, and usability concepts by way of building interfaces on the personal computer.Students taking this course should be familiar with computer programming and introduction to work design."
+      }
+    ]
   },
   {
     id: "washington",
@@ -248,8 +231,8 @@ export const education = [
       "Deploying Apps",
       "Cloud Databases",
       "Image Upload and Storage",
-      "Maps and Geocoding",
-    ],
+      "Maps and Geocoding"
+    ]
   },
   {
     id: "washington",
@@ -280,8 +263,8 @@ export const education = [
       "Mark releases and versions using Git tags",
       "Host static websites using Github Pages",
       "Create markdown READMEs",
-      "Share code and snippets using Github Gists",
-    ],
+      "Share code and snippets using Github Gists"
+    ]
   },
   {
     id: "washington",
@@ -294,6 +277,6 @@ export const education = [
     minor: "",
     course: "React Tutorial and Projects Course (2022)",
     instructor: "John Smigla",
-    logo: "udemy.bmp",
-  },
+    logo: "udemy.bmp"
+  }
 ];

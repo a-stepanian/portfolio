@@ -5,7 +5,7 @@ const Footer = () => {
     <Wrapper>
       <p>
         Designed and Developed by <br />
-        <span>Alex Stepanian &copy; 2022</span>
+        <span>Alex Stepanian &copy; 2024</span>
       </p>
     </Wrapper>
   );
