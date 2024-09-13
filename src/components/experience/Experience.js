@@ -14,7 +14,7 @@ const Experience = () => {
     const handleScroll = () => {
       const states = ["texas", "oregon", "georgia", "maryland", "pennsylvania", "washington", "psu"];
 
-      for (let i = 0; i < 6; i++) {
+      for (let i = 0; i < 7; i++) {
         // select job title header element
         const jobHeader = document.querySelectorAll(".title-company")[i];
         // get distance from the top of the viewport

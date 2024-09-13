@@ -7,8 +7,6 @@ const BigCube = ({ bigCubeFace }) => {
         className={`${
           bigCubeFace === "oregon"
             ? "cube show-oregon"
-            : bigCubeFace === null
-            ? "cube show-texas"
             : bigCubeFace === "texas"
             ? "cube show-texas"
             : bigCubeFace === "georgia"
@@ -19,7 +17,9 @@ const BigCube = ({ bigCubeFace }) => {
             ? "cube show-pennsylvania"
             : bigCubeFace === "psu"
             ? "cube show-psu"
-            : "cube show-washington"
+            : bigCubeFace === "washington"
+            ? "cube show-washington"
+            : "cube show-texas"
         }`}>
         <div className="face texas">
           <img src="tx.png" alt={`Outline of the Texas state map`} />
@@ -56,19 +56,18 @@ const BigCube = ({ bigCubeFace }) => {
             <h6>2012</h6>
           </div>
         </div>
-
-        <div className="face psu">
-          <img src="psu.png" alt={`Penn State University Logo`} />
-          <div className="location-date">
-            <h5>State College, PA</h5>
-            <h6>2008 - 2012</h6>
-          </div>
-        </div>
         <div className="face washington">
           <img src="wa.png" alt={`Outline of the Washington state map`} />
           <div className="location-date">
             <h5>Washington</h5>
             <h6>2021 - Present</h6>
+          </div>
+        </div>
+        <div className="face psu">
+          <img src="psu.png" alt={`Penn State University Logo`} />
+          <div className="location-date">
+            <h5>State College, PA</h5>
+            <h6>2008 - 2012</h6>
           </div>
         </div>
       </div>
@@ -162,10 +161,10 @@ const Wrapper = styled.div`
     .show-pennsylvania {
       transform: translateZ(calc(var(--big-cube-width) / 2 / -0.485)) rotateY(-205.72deg);
     }
-    .show-psu {
+    .show-washington {
       transform: translateZ(calc(var(--big-cube-width) / 2 / -0.485)) rotateY(-257.15deg);
     }
-    .show-washington {
+    .show-psu {
       transform: translateZ(calc(var(--big-cube-width) / 2 / -0.485)) rotateY(-308.58deg);
     }
   }

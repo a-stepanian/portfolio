@@ -153,10 +153,10 @@ const Wrapper = styled.div`
   .show-pennsylvania {
     transform: translateZ(-5.4rem) rotateY(-205.72deg);
   }
-  .show-psu {
+  .show-washington {
     transform: translateZ(-5.4rem) rotateY(-257.15deg);
   }
-  .show-washington {
+  .show-psu {
     transform: translateZ(-5.4rem) rotateY(-308.58deg);
   }
 
